@@ -1,0 +1,23 @@
+# Jupyter Notebook 备份
+.ipynb_checkpoints/
+*.ipynb_checkpoints/*
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 虚拟环境
+venv/
+env/
+.venv/
+
+# 敏感信息
+.env
+*.key
+*.pem
+
+# 大型数据文件（如果不需要版本控制）
+data/*/*.json
+!data/.gitkeep  # 保留目录结构

@@ -1,0 +1,72 @@
+{
+  "cluster": 32,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[credibility-appeal, emotion-appeal, proposition-of-donation]",
+        "[credibility-appeal, logical-appeal, emotion-appeal]",
+        "[donation-information, emotion-appeal]",
+        "[donation-information, credibility-appeal]",
+        "[credibility-appeal, donation-information]",
+        "[credibility-appeal]",
+        "[proposition-of-donation, foot-in-the-door]",
+        "[thank]",
+        "[closing]"
+      ],
+      "score": 3.3444552665381466,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.357618912923077
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal, emotion-appeal]",
+        "[credibility-appeal, donation-information]",
+        "[proposition-of-donation, logical-appeal]",
+        "[ask-donate-more, self-modeling]",
+        "[credibility-appeal, donation-information]",
+        "[emotion-appeal, credibility-appeal]",
+        "[credibility-appeal, logical-appeal]",
+        "[praise-user, emotion-appeal]"
+      ],
+      "score": 3.303419603811644,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.40463917740000005
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal, emotion-appeal]",
+        "[credibility-appeal, emotion-appeal]",
+        "[proposition-of-donation, foot-in-the-door]",
+        "[logical-appeal, emotion-appeal, proposition-of-donation]",
+        "[thank, positive-to-inquiry]",
+        "[donation-information]",
+        "[positive-to-inquiry, donation-information]",
+        "[thank, closing]"
+      ],
+      "score": 3.292663034440735,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3991605038181819
+      }
+    }
+  ]
+}

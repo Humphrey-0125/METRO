@@ -1,0 +1,64 @@
+{
+  "cluster": 70,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[praise-user]",
+        "[praise-user]",
+        "[other]",
+        "[logical-appeal]",
+        "[acknowledgement]",
+        "[thank]"
+      ],
+      "score": 2.1599771468616256,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4782969000000001
+      }
+    },
+    {
+      "chain": [
+        "[emotion-appeal]",
+        "[acknowledgement, personal-related-inquiry]",
+        "[acknowledgement, foot-in-the-door]",
+        "[ask-donation-amount, donation-information]",
+        "[thank]",
+        "[confirm-donation]"
+      ],
+      "score": 1.9532867344121558,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4734656181818182
+      }
+    },
+    {
+      "chain": [
+        "[foot-in-the-door, emotion-appeal]",
+        "[praise-user]",
+        "[ask-donation-amount]",
+        "[ask-donate-more]",
+        "[donation-information]"
+      ],
+      "score": 1.8546670925094513,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.5196312000000001
+      }
+    }
+  ]
+}

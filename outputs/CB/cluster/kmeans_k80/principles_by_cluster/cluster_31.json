@@ -1,0 +1,612 @@
+[
+  {
+    "id": "cb_003009:3",
+    "principle_type": "do",
+    "principle_text": "When the seller immediately accepts the buyer's target price, you should confidently make an upfront offer matching your desired price to secure a favorable deal."
+  },
+  {
+    "id": "cb_003009:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller has already accepted the buyer's offer, avoid shifting the focus to logistical arrangements instead of continuing price negotiation to secure a better deal."
+  },
+  {
+    "id": "cb_002291:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the car's maintenance, cleanliness, and functionality, avoid inquiring about its inactivity to prevent reinforcing the higher price and weakening negotiation leverage."
+  },
+  {
+    "id": "cb_002291:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller has already provided specific details in the item description, avoid asking redundant questions that do not create new leverage or pressure for a lower price."
+  },
+  {
+    "id": "cb_002291:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the car's value and low mileage, avoid making significantly lower offers that undermine your leverage and risk immediate rejection."
+  },
+  {
+    "id": "cb_000815:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the rarity and work done on the car, avoid increasing your offer too quickly as it weakens your leverage and may result in a higher counteroffer."
+  },
+  {
+    "id": "cb_002303:3",
+    "principle_type": "do",
+    "principle_text": "When the seller acknowledges a maintenance need like a tune-up, you should use it as leverage to negotiate for a lower price."
+  },
+  {
+    "id": "cb_002303:4",
+    "principle_type": "do",
+    "principle_text": "When the seller confirms the item is accident-free, you should leverage this information to negotiate a lower price by emphasizing the vehicle's desirability and reducing its perceived value to the seller."
+  },
+  {
+    "id": "cb_002303:5",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms a potential downside of the item, avoid discussing features that could justify a lower offer, as it may weaken your negotiation position."
+  },
+  {
+    "id": "cb_000032:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms the good condition of the car's electronics, avoid making this a point of negotiation as it does not directly impact pricing leverage."
+  },
+  {
+    "id": "cb_000032:4",
+    "principle_type": "do",
+    "principle_text": "When the seller offers a counterprice and includes additional items, you should consider meeting in the middle to show flexibility and potentially reach a mutually beneficial agreement."
+  },
+  {
+    "id": "cb_001560:4",
+    "principle_type": "do",
+    "principle_text": "When the seller expresses the need to sell the item due to lack of use, you should anchor your offer close to your target price to negotiate effectively."
+  },
+  {
+    "id": "cb_000831:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller has already lowered their initial price in response to the buyer's offer, avoid proposing a significantly higher counteroffer that weakens your negotiation leverage."
+  },
+  {
+    "id": "cb_003039:2",
+    "principle_type": "do",
+    "principle_text": "When the seller shows willingness to negotiate by offering a lower price in response to the buyer's initial offer, you should continue to push for a further reduction to reach a more favorable outcome."
+  },
+  {
+    "id": "cb_001572:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller offers a counteroffer with added value, avoid making overly aggressive price requests that significantly deviate from the initial target, as it may weaken your negotiating position."
+  },
+  {
+    "id": "cb_000047:3",
+    "principle_type": "avoid",
+    "principle_text": "When the buyer introduces irrelevant negative comments about the item's appearance, avoid reinforcing the initial price without addressing potential concerns or leveraging improvements."
+  },
+  {
+    "id": "cb_002321:2",
+    "principle_type": "do",
+    "principle_text": "When the seller shows willingness to negotiate and provides a counteroffer, you should consider offering a trade-in to potentially reach a mutually beneficial deal."
+  },
+  {
+    "id": "cb_000843:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the product's benefits without addressing pricing, avoid asking questions that do not directly impact price negotiation to ensure progress towards a better deal."
+  },
+  {
+    "id": "cb_000063:2",
+    "principle_type": "avoid",
+    "principle_text": "When the buyer critiques a specific aspect of the item, avoid responding with dismissive jokes or trivializing the concern, as it weakens the buyer's negotiating leverage and fails to address potential price adjustments."
+  },
+  {
+    "id": "cb_000063:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller humorously lists car features without addressing the price gap, avoid shifting the conversation to unrelated topics like dates to maintain focus on negotiation."
+  },
+  {
+    "id": "cb_000063:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller maintains the initial asking price without any concession or new information, avoid asking generic questions that do not address specific value concerns or apply pressure to reduce the price."
+  },
+  {
+    "id": "cb_002339:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller clarifies their listing price and questions the buyer's high counteroffer, avoid making significantly higher offers than the seller's initial price to maintain negotiation leverage."
+  },
+  {
+    "id": "cb_000076:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller clarifies a specific feature of the item, avoid asking questions that do not directly contribute to negotiating the price or terms."
+  },
+  {
+    "id": "cb_001623:2",
+    "principle_type": "do",
+    "principle_text": "When the seller responds by adjusting terms, such as requiring self-pickup and cash payment, in response to a lower counteroffer, you should consider accepting the revised terms to show flexibility and keep the negotiation progressing."
+  },
+  {
+    "id": "cb_003087:1",
+    "principle_type": "avoid",
+    "principle_text": "When the seller describes the car as perfect and well-maintained, avoid not directly addressing pricing or providing actionable leverage in response to buyer inquiries."
+  },
+  {
+    "id": "cb_003087:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confidently denies any accidents and emphasizes their own accident-free driving history, avoid using the car's accident history as a leverage point for negotiating a lower price."
+  },
+  {
+    "id": "cb_003087:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller shows inelasticity by rejecting a higher offer, avoid conceding more than your initial demand as it weakens your negotiating leverage."
+  },
+  {
+    "id": "cb_000092:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller clarifies minor damage on a salvage title car, avoid questioning the cause of the salvage title as it may not lead to a significant price reduction without further negotiation tactics."
+  },
+  {
+    "id": "cb_000092:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the car's higher value and justifies their price, avoid making significantly lower offers than the initial price as it weakens negotiation leverage and discourages further progress."
+  },
+  {
+    "id": "cb_000901:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller's response is vague, avoid asking general questions that do not provide actionable leverage or advance the negotiation towards a lower price."
+  },
+  {
+    "id": "cb_000901:4",
+    "principle_type": "do",
+    "principle_text": "When the seller indicates that the price is negotiable, you should actively engage in price negotiation to explore potential reductions."
+  },
+  {
+    "id": "cb_000914:3",
+    "principle_type": "do",
+    "principle_text": "When the seller has offered a price and not responded to additional non-price conditions, you should consider reinforcing your leverage by seeking price concessions rather than introducing new requests."
+  },
+  {
+    "id": "cb_000124:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the car's excellent condition and immediately restates the asking price, avoid failing to engage in price negotiation or provide additional value to the buyer."
+  },
+  {
+    "id": "cb_002419:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller offers a price reduction, avoid increasing your offer too quickly as it may weaken your negotiating position and reduce your leverage in further negotiations."
+  },
+  {
+    "id": "cb_003130:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the excellent condition of the car, avoid making significantly lowball offers that may appear dismissive of the vehicle's value."
+  },
+  {
+    "id": "cb_001683:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller highlights positive features of the item without addressing pricing, avoid asking questions that do not directly negotiate price or terms to ensure progress in the negotiation."
+  },
+  {
+    "id": "cb_002432:5",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes not being in a hurry to sell, avoid focusing solely on potential maintenance costs as it may not lead to an immediate price concession."
+  },
+  {
+    "id": "cb_003159:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller provides factual information about the car, avoid asking questions that do not directly impact the price negotiation, such as inquiring about MPG without leveraging it for a price adjustment."
+  },
+  {
+    "id": "cb_000975:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms a feature without addressing pricing, avoid asking exploratory questions that do not impact the negotiation's direction."
+  },
+  {
+    "id": "cb_000975:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes exceptional maintenance and non-smoking status, avoid asking questions that inadvertently strengthen the seller's position without creating leverage for negotiating a lower price."
+  },
+  {
+    "id": "cb_000975:5",
+    "principle_type": "do",
+    "principle_text": "When the seller expresses willingness to negotiate but only for the right buyer, you should make a specific and reasonable offer to initiate a successful price reduction discussion."
+  },
+  {
+    "id": "cb_003172:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller immediately accepts a higher offer without hesitation, avoid not pushing for a lower price to maximize negotiation outcomes."
+  },
+  {
+    "id": "cb_003188:2",
+    "principle_type": "do",
+    "principle_text": "When the buyer signals that the initial price is above their budget, you should ask for their target price to open negotiations and allow them to propose a lower offer."
+  },
+  {
+    "id": "cb_002484:5",
+    "principle_type": "do",
+    "principle_text": "When the seller is willing to accept a lower price than their initial ask, you should directly propose a significantly reduced offer to secure a better deal without extensive negotiation."
+  },
+  {
+    "id": "cb_000999:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller introduces additional terms like a promissory note to counter a low offer, avoid allowing the seller to maintain a higher overall value while appearing to concede, as it weakens the buyer's leverage in the negotiation."
+  },
+  {
+    "id": "cb_001006:1",
+    "principle_type": "avoid",
+    "principle_text": "When the seller provides factual data without indicating flexibility on price, avoid revealing potential negotiation strategies that could weaken your position."
+  },
+  {
+    "id": "cb_000245:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms the item is in excellent condition without issues, avoid asking questions that do not advance price negotiation or leverage."
+  },
+  {
+    "id": "cb_000245:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms the vehicle has only regular maintenance and no past issues, avoid asking questions that do not create leverage or pressure to lower the price."
+  },
+  {
+    "id": "cb_000245:4",
+    "principle_type": "do",
+    "principle_text": "When the seller sets an initially high price but shows openness to negotiation, you should explicitly question the price based on objective factors to prompt a significant concession."
+  },
+  {
+    "id": "cb_001123:3",
+    "principle_type": "do",
+    "principle_text": "When the seller agrees to a price closer to their initial offer but accepts additional logistical conditions, you should confirm these terms to solidify the deal without pushing for further price reductions."
+  },
+  {
+    "id": "cb_003228:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller responds to a low cash offer by conditioning acceptance on an additional trade, avoid reiterating the same price without addressing the new trade requirement or clarifying your position on it."
+  },
+  {
+    "id": "cb_003251:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller maintains a high asking price despite a small buyer concession, avoid increasing your offer too quickly as it may weaken your negotiating position."
+  },
+  {
+    "id": "cb_002212:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms the item has no defects or damage, avoid focusing on condition issues that do not provide leverage to lower the price."
+  },
+  {
+    "id": "cb_002212:4",
+    "principle_type": "do",
+    "principle_text": "When the seller provides basic information about the item’s age and usage, you should ask targeted questions to gather critical details that help assess the item’s value and strengthen your negotiation position."
+  },
+  {
+    "id": "cb_002212:5",
+    "principle_type": "avoid",
+    "principle_text": "When the seller rejects a low offer and counters with a higher price, avoid repeating your initial low offer without adding new justification or leverage."
+  },
+  {
+    "id": "cb_002221:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms the vehicle has not been raced or driven on highways, avoid focusing on usage history questions that do not directly influence price negotiation leverage."
+  },
+  {
+    "id": "cb_002221:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller responds to factual questions with a counter-question about your budget, avoid shifting focus prematurely to price without first leveraging the information gained."
+  },
+  {
+    "id": "cb_002221:5",
+    "principle_type": "do",
+    "principle_text": "When the seller shows openness to negotiation and asks for your price, you should present a firm offer with added incentives like immediate payment and pickup to encourage acceptance."
+  },
+  {
+    "id": "cb_003275:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller highlights positive features without discussing price concessions, avoid focusing solely on product attributes instead of steering the conversation toward pricing or value negotiation."
+  },
+  {
+    "id": "cb_003275:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the car's good condition and invites verification, avoid focusing solely on maintenance questions that do not directly influence price negotiation leverage."
+  },
+  {
+    "id": "cb_001192:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller acknowledges a significant drawback like high mileage that limits their pricing, avoid asking only factual questions without linking them to price negotiation or leverage."
+  },
+  {
+    "id": "cb_003326:3",
+    "principle_type": "do",
+    "principle_text": "When the seller counters with a slightly reduced price but insists the buyer's offer is too low, you should firmly reiterate your initial offer to maintain leverage and encourage further concessions."
+  },
+  {
+    "id": "cb_003334:2",
+    "principle_type": "do",
+    "principle_text": "When the seller confirms no accident history and emphasizes proper maintenance, you should ask factual questions to gather information that helps assess the true value of the item."
+  },
+  {
+    "id": "cb_003334:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller provides neutral logistical information without price concessions, avoid focusing on unrelated details that do not influence the negotiation leverage or price adjustment."
+  },
+  {
+    "id": "cb_003334:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller provides only standard payment methods without indicating price flexibility, avoid focusing on procedural questions that do not advance the price negotiation."
+  },
+  {
+    "id": "cb_003334:5",
+    "principle_type": "avoid",
+    "principle_text": "When the seller clearly states a firm lowest acceptable price, avoid making offers significantly below your own initial price as it may weaken your negotiation position and reduce leverage."
+  },
+  {
+    "id": "cb_003354:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller provides factual information about the item's condition without adjusting the price, avoid making purely informational inquiries that do not advance your negotiation position."
+  },
+  {
+    "id": "cb_000443:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller reveals long-term ownership suggesting personal attachment, avoid asking only informational questions that do not create immediate leverage for price negotiation."
+  },
+  {
+    "id": "cb_000443:3",
+    "principle_type": "do",
+    "principle_text": "When the seller responds with a firm but lowered counteroffer after a buyer's cash offer, you should present a clear, realistic offer that respects your own price limits to encourage constructive negotiation."
+  },
+  {
+    "id": "cb_000458:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller reiterates restrictions and emphasizes the item's intended use without offering concessions, avoid asking questions that do not directly address price or create negotiation leverage."
+  },
+  {
+    "id": "cb_003426:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the car runs well despite long storage, avoid pressing only on age-related concerns without linking them to price or maintenance costs."
+  },
+  {
+    "id": "cb_003426:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller provides recent maintenance information and offers documentation or a test drive, avoid asking purely informational questions that do not directly advance price negotiation."
+  },
+  {
+    "id": "cb_003426:4",
+    "principle_type": "do",
+    "principle_text": "When the seller clearly states a firm minimum price above your offer, you should present a reasonable counteroffer that acknowledges their value but opens room for negotiation."
+  },
+  {
+    "id": "cb_000493:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms the vehicle has no accidents or flood damage, avoid relying solely on this information to justify a lower price without considering other factors like mileage and condition."
+  },
+  {
+    "id": "cb_000493:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller responds to a low buyer offer by moderately lowering their price, avoid reducing your offer below your initial reference price as it weakens your negotiating leverage."
+  },
+  {
+    "id": "cb_000493:4",
+    "principle_type": "do",
+    "principle_text": "When the seller counters with a price above your offer, you should increase your offer incrementally to encourage the seller to reduce their price and move closer to your target."
+  },
+  {
+    "id": "cb_003433:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller clarifies or corrects their asking price after a buyer's vague comment, avoid making indirect or unclear value challenges that do not directly address the price."
+  },
+  {
+    "id": "cb_003437:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller provides neutral information about the item's condition without indicating price flexibility, avoid asking only open-ended questions that do not create leverage for negotiation."
+  },
+  {
+    "id": "cb_003437:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller responds with a higher price than their initial asking price, avoid asking open-ended questions like 'How low can you go?' that allow the seller to raise the anchor price."
+  },
+  {
+    "id": "cb_000512:2",
+    "principle_type": "do",
+    "principle_text": "When the seller reveals minor flaws while emphasizing positive features, you should use questions to uncover imperfections that create leverage for negotiating a lower price."
+  },
+  {
+    "id": "cb_000559:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms all paperwork is in order without addressing price concerns, avoid focusing solely on documentation without linking it to price negotiation leverage."
+  },
+  {
+    "id": "cb_000559:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller provides factual information about the product without indicating flexibility on price, avoid asking questions that do not directly create leverage for a better deal."
+  },
+  {
+    "id": "cb_001438:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller states their initial asking price without concessions, avoid asking for the price without leveraging prior information or highlighting reasons for a lower offer."
+  },
+  {
+    "id": "cb_001448:3",
+    "principle_type": "do",
+    "principle_text": "When the seller maintains a firm price citing the item's collector value, you should make a lower counteroffer to anchor the negotiation and potentially shift the seller's minimum price downward."
+  },
+  {
+    "id": "cb_001452:2",
+    "principle_type": "do",
+    "principle_text": "When the seller emphasizes the car's excellent condition and unique features while countering with a price closer to their original, you should make a clear, lower offer to establish a bargaining range and encourage further negotiation."
+  },
+  {
+    "id": "cb_002739:3",
+    "principle_type": "do",
+    "principle_text": "When the seller indicates reluctance to lower the price but offers a smaller reduction, you should directly request a price decrease after confirming your seriousness to encourage movement closer to your target price."
+  },
+  {
+    "id": "cb_002744:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller asserts a high price based on claimed upgrades, avoid increasing your offer without first receiving a counteroffer, as it weakens your negotiating leverage."
+  },
+  {
+    "id": "cb_002768:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms the vehicle has a clean title and Carfax, avoid accepting this information passively without using it to justify a reasonable counteroffer or negotiate price adjustments."
+  },
+  {
+    "id": "cb_002768:3",
+    "principle_type": "do",
+    "principle_text": "When the seller discloses detailed factual information about the item's condition or usage, you should ask targeted questions to uncover data that can justify negotiating a lower price."
+  },
+  {
+    "id": "cb_002768:4",
+    "principle_type": "do",
+    "principle_text": "When the seller responds to a low initial offer by making a smaller counteroffer, you should emphasize your readiness to pay immediately in cash to increase your leverage and encourage the seller to lower their price."
+  },
+  {
+    "id": "cb_001516:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller uses geographic or demographic assumptions to justify their price, avoid revealing personal information that reinforces those stereotypes and strengthens their position."
+  },
+  {
+    "id": "cb_002786:3",
+    "principle_type": "do",
+    "principle_text": "When the seller expresses enthusiasm and positive remarks about the item, you should present a firm cash offer along with urgency to signal seriousness and increase negotiation leverage."
+  },
+  {
+    "id": "cb_002813:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms the item is in good condition with no damages, avoid making uninformed price offers without considering the item's quality and condition."
+  },
+  {
+    "id": "cb_002813:3",
+    "principle_type": "do",
+    "principle_text": "When the seller reveals detailed usage and mileage information that may affect the item's value, you should ask targeted questions to gather leverage for negotiating a better price."
+  },
+  {
+    "id": "cb_002813:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller reiterates their baseline price and adds conditional value to justify it, avoid making aggressive price reductions below your initial offer that signal desperation and weaken your negotiation leverage."
+  },
+  {
+    "id": "cb_002847:1",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the item's condition to justify its value, avoid vague questions that do not directly connect to price or leverage in the negotiation."
+  },
+  {
+    "id": "cb_002847:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller reaffirms the value of the item and maintains the initial price without concession, avoid making casual or unrelated remarks that do not directly address price negotiation or leverage."
+  },
+  {
+    "id": "cb_002847:3",
+    "principle_type": "do",
+    "principle_text": "When the seller states a firm initial price, you should explicitly propose a specific lower price to anchor the negotiation and encourage the seller to make a concession."
+  },
+  {
+    "id": "cb_002890:1",
+    "principle_type": "avoid",
+    "principle_text": "When the seller lowers their minimum acceptable price in response to a buyer's high-value offer, avoid making offers that exceed the seller's updated minimum as it can weaken your leverage for further reductions."
+  },
+  {
+    "id": "cb_002894:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller firmly states their lowest acceptable price, avoid anchoring with an initial offer that is unrealistically low and far from the seller's minimum."
+  },
+  {
+    "id": "cb_002903:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller highlights the item's excellent condition and recent maintenance, avoid asking only neutral questions that allow the seller to reinforce value without creating leverage for price reduction."
+  },
+  {
+    "id": "cb_002903:3",
+    "principle_type": "do",
+    "principle_text": "When the seller shows willingness to accept a lower price with conditions, you should make a significantly lower offer combined with a compelling reason and flexible payment terms to advance the negotiation."
+  },
+  {
+    "id": "cb_002922:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller responds to a low offer by indicating it feels too low and countering with a price closer to their initial ask, avoid increasing your offer too quickly and losing leverage in the negotiation."
+  },
+  {
+    "id": "cb_001947:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller firmly values the item and rejects low offers as too low, avoid making offers significantly below your initial price as it weakens your negotiation leverage."
+  },
+  {
+    "id": "cb_002942:1",
+    "principle_type": "avoid",
+    "principle_text": "When the seller acknowledges willingness to negotiate but emphasizes the item's value, avoid making vague or unsupported requests for a lower price without presenting specific reasons or leverage."
+  },
+  {
+    "id": "cb_000788:2",
+    "principle_type": "do",
+    "principle_text": "When the seller shows willingness to close quickly after a low offer, you should make a significantly lower bid to leverage their readiness and secure a better deal."
+  },
+  {
+    "id": "cb_002988:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller confirms important factual details like no accident history, avoid focusing solely on information gathering without linking it to price negotiation tactics."
+  },
+  {
+    "id": "cb_002988:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller firmly reiterates their initial price with emotional resistance, avoid making your lowest offer immediately without first exploring the seller's willingness to negotiate."
+  },
+  {
+    "id": "cb_001025:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller responds to concerns about the car's condition with unrelated personal stories, avoid relying on emotional appeals that do not address factual issues or leverage price concessions."
+  },
+  {
+    "id": "cb_001025:3",
+    "principle_type": "do",
+    "principle_text": "When the seller maintains a firm but negotiable price, you should make a strong, lower counteroffer to pressure the seller into reducing their price closer to your target."
+  },
+  {
+    "id": "cb_002992:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller firmly states the item is in great condition and rejects a very low offer, avoid making an unreasonably low initial price proposal that undermines your negotiation credibility."
+  },
+  {
+    "id": "cb_002014:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller restates their firm asking price and requests your offer, avoid simply confirming interest without introducing a price negotiation or value argument."
+  },
+  {
+    "id": "cb_003004:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the rarity and recent repairs of the item to justify a higher price, avoid increasing your offer too early as it weakens your negotiation leverage."
+  },
+  {
+    "id": "cb_003007:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the vehicle's good maintenance and reliability without conceding on price, avoid accepting neutral information without leveraging it to negotiate a better deal."
+  },
+  {
+    "id": "cb_001076:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller has justified their price as fair market value and is open to lowering it slightly, avoid making offers significantly below your own initial price as it weakens your negotiation leverage."
+  },
+  {
+    "id": "cb_001088:1",
+    "principle_type": "avoid",
+    "principle_text": "When the seller provides detailed information about potential maintenance needs without conceding on price, avoid asking only informational questions without linking them to price negotiation."
+  },
+  {
+    "id": "cb_001105:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller has established long-term personal ownership of the vehicle, avoid focusing immediately on ownership duration as a tactic to undermine the vehicle’s value."
+  },
+  {
+    "id": "cb_001105:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller provides factual information without price concessions, avoid asking purely informational questions that do not advance your negotiation leverage or influence the price."
+  },
+  {
+    "id": "cb_001105:4",
+    "principle_type": "do",
+    "principle_text": "When the seller indicates they no longer need the item and it has factors that reduce its value, you should highlight these points to justify negotiating a lower price."
+  },
+  {
+    "id": "cb_002175:2",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the car's excellent maintenance and driving condition, avoid focusing solely on informational questions that do not advance price negotiation or leverage."
+  },
+  {
+    "id": "cb_002175:3",
+    "principle_type": "avoid",
+    "principle_text": "When the seller indicates the price is already low and expresses urgency to sell, avoid immediately revealing your budget constraints without proposing a specific counteroffer."
+  },
+  {
+    "id": "cb_002175:4",
+    "principle_type": "avoid",
+    "principle_text": "When the seller emphasizes the car's high value and resists low offers, avoid making significantly lower counteroffers that weaken your negotiating leverage."
+  }
+]

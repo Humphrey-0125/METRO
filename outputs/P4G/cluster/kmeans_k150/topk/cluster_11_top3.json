@@ -1,0 +1,74 @@
+{
+  "cluster": 11,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[donation-information, source-related-inquiry]",
+        "[credibility-appeal, emotion-appeal]",
+        "[emotion-appeal, logical-appeal, task-related-inquiry]",
+        "[emotion-appeal, credibility-appeal, proposition-of-donation]",
+        "[acknowledgement, praise-user, emotion-appeal]",
+        "[credibility-appeal, donation-information]",
+        "[ask-donation-amount, donation-information]",
+        "[praise-user, credibility-appeal]",
+        "[thank, emotion-appeal, credibility-appeal]"
+      ],
+      "score": 3.3841360754370555,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    },
+    {
+      "chain": [
+        "[donation-information, source-related-inquiry]",
+        "[credibility-appeal, emotion-appeal, donation-information]",
+        "[donation-information, credibility-appeal]",
+        "[donation-information, emotion-appeal, logical-appeal]",
+        "[donation-information, proposition-of-donation]",
+        "[donation-information]",
+        "[donation-information, credibility-appeal, emotion-appeal]",
+        "[acknowledgement, proposition-of-donation, foot-in-the-door]",
+        "[task-related-inquiry, thank]"
+      ],
+      "score": 3.3707158118763285,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    },
+    {
+      "chain": [
+        "[proposition-of-donation, credibility-appeal]",
+        "[personal-related-inquiry]",
+        "[emotion-appeal, personal-story]",
+        "[credibility-appeal, logical-appeal, proposition-of-donation, donation-information]",
+        "[donation-information, emotion-appeal]",
+        "[donation-information, credibility-appeal]",
+        "[credibility-appeal, donation-information]",
+        "[donation-information]",
+        "[thank, emotion-appeal]"
+      ],
+      "score": 3.2293432495250114,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    }
+  ]
+}

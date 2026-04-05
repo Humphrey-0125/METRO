@@ -1,0 +1,66 @@
+{
+  "cluster": 112,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[comment-partner, personal-story]",
+        "[personal-story, comment-partner]",
+        "[personal-related-inquiry]",
+        "[comment-partner]",
+        "[comment-partner, personal-story]",
+        "[credibility-appeal, donation-information]",
+        "[praise-user, proposition-of-donation]",
+        "[logical-appeal]"
+      ],
+      "score": 0.3370881986519754,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": 0.014348907000000006
+      }
+    },
+    {
+      "chain": [
+        "[personal-story, comment-partner]",
+        "[personal-related-inquiry]",
+        "[comment-partner]",
+        "[comment-partner, personal-story]",
+        "[credibility-appeal, donation-information]",
+        "[praise-user, proposition-of-donation]",
+        "[logical-appeal]"
+      ],
+      "score": 0.25825260619598084,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": 0.007971615
+      }
+    },
+    {
+      "chain": [
+        "[comment-partner, personal-story]",
+        "[credibility-appeal, donation-information]",
+        "[praise-user, proposition-of-donation]",
+        "[logical-appeal]"
+      ],
+      "score": 0.21281406135621095,
+      "end_node": {
+        "count": 2,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": -0.027337500000000008
+      }
+    }
+  ]
+}

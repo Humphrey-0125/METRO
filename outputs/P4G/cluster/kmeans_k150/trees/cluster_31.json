@@ -1,0 +1,3787 @@
+{
+  "cluster": 31,
+  "n_items_raw": 138,
+  "config": {
+    "reward_mode": "attitude_score",
+    "lambda_len": 0.2,
+    "alpha": 1.0,
+    "gamma": 0.9,
+    "min_count": 1,
+    "dedup_dialog_per_cluster": false
+  },
+  "tree": {
+    "name": "ROOT",
+    "count": 138,
+    "value_sum": 23.824848484848502,
+    "success_D": 72,
+    "children": [
+      {
+        "name": "[acknowledgement, ask-donate-more]",
+        "count": 1,
+        "value_sum": 0.792,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[emotion-appeal, ask-donate-more]",
+            "count": 1,
+            "value_sum": 0.7128000000000001,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[thank]",
+                "count": 1,
+                "value_sum": 0.6415200000000001,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[emotion-appeal, thank]",
+                    "count": 1,
+                    "value_sum": 0.577368,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[thank, credibility-appeal]",
+                        "count": 1,
+                        "value_sum": 0.5196312000000001,
+                        "success_D": 1,
+                        "children": [],
+                        "avg_value": 0.5196312000000001,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.577368,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6415200000000001,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7128000000000001,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.792,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[acknowledgement, donation-information]",
+        "count": 3,
+        "value_sum": 1.404,
+        "success_D": 2,
+        "children": [
+          {
+            "name": "[donation-information]",
+            "count": 1,
+            "value_sum": 0.6804,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[positive-to-inquiry, closing]",
+                "count": 1,
+                "value_sum": 0.61236,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.61236,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6804,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[you-are-welcome, credibility-appeal]",
+            "count": 1,
+            "value_sum": -0.06480000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.06480000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": 0.46799999999999997,
+        "success_rate": 0.6666666666666666
+      },
+      {
+        "name": "[acknowledgement, emotion-appeal]",
+        "count": 1,
+        "value_sum": -0.07200000000000002,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[self-modeling]",
+            "count": 1,
+            "value_sum": -0.06480000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.06480000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.07200000000000002,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[acknowledgement, foot-in-the-door]",
+        "count": 1,
+        "value_sum": -0.05400000000000003,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[comment-partner]",
+            "count": 1,
+            "value_sum": -0.048600000000000025,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[closing, donation-information]",
+                "count": 1,
+                "value_sum": -0.04374000000000002,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.04374000000000002,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.048600000000000025,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.05400000000000003,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[acknowledgement, logical-appeal, praise-user]",
+        "count": 1,
+        "value_sum": 0.7363636363636363,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[closing, off-task]",
+            "count": 1,
+            "value_sum": 0.6627272727272727,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6627272727272727,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7363636363636363,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[acknowledgement, logical-appeal]",
+        "count": 1,
+        "value_sum": -1.0440000000000003,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[logical-appeal]",
+            "count": 1,
+            "value_sum": -0.9396000000000002,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[logical-appeal, thank]",
+                "count": 1,
+                "value_sum": -0.8456400000000002,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.8456400000000002,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.9396000000000002,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.0440000000000003,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[acknowledgement, neutral-to-inquiry, ask-donate-more]",
+        "count": 1,
+        "value_sum": -1.0472727272727274,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[credibility-appeal, emotion-appeal, proposition-of-donation]",
+            "count": 1,
+            "value_sum": -0.9425454545454546,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[thank]",
+                "count": 1,
+                "value_sum": -0.8482909090909092,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.8482909090909092,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.9425454545454546,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.0472727272727274,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[acknowledgement, personal-story, logical-appeal]",
+        "count": 1,
+        "value_sum": -0.07200000000000002,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[logical-appeal, closing]",
+            "count": 1,
+            "value_sum": -0.06480000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.06480000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.07200000000000002,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[acknowledgement, personal-story]",
+        "count": 1,
+        "value_sum": -0.07200000000000002,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[emotion-appeal, personal-story]",
+            "count": 1,
+            "value_sum": -0.06480000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.06480000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.07200000000000002,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[acknowledgement, praise-user]",
+        "count": 1,
+        "value_sum": -0.05400000000000003,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[logical-appeal]",
+            "count": 1,
+            "value_sum": -0.048600000000000025,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[other]",
+                "count": 1,
+                "value_sum": -0.04374000000000002,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.04374000000000002,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.048600000000000025,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.05400000000000003,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[acknowledgement, thank]",
+        "count": 1,
+        "value_sum": 0.7200000000000001,
+        "success_D": 1,
+        "children": [],
+        "avg_value": 0.7200000000000001,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[acknowledgement]",
+        "count": 3,
+        "value_sum": -2.25,
+        "success_D": 0,
+        "children": [],
+        "avg_value": -0.75,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[ask-donate-more, logical-appeal]",
+        "count": 1,
+        "value_sum": -0.05400000000000003,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[emotion-appeal, task-related-inquiry]",
+            "count": 1,
+            "value_sum": -0.048600000000000025,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[personal-related-inquiry, closing, praise-user, ask-donate-more]",
+                "count": 1,
+                "value_sum": -0.04374000000000002,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.04374000000000002,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.048600000000000025,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.05400000000000003,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[ask-donate-more, praise-user, emotion-appeal]",
+        "count": 1,
+        "value_sum": 0.7854545454545454,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[logical-appeal, personal-related-inquiry]",
+            "count": 1,
+            "value_sum": 0.7069090909090909,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[emotion-appeal, proposition-of-donation]",
+                "count": 1,
+                "value_sum": 0.6362181818181819,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[praise-user, thank, emotion-appeal]",
+                    "count": 1,
+                    "value_sum": 0.5725963636363636,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[thank]",
+                        "count": 1,
+                        "value_sum": 0.5153367272727273,
+                        "success_D": 1,
+                        "children": [],
+                        "avg_value": 0.5153367272727273,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.5725963636363636,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6362181818181819,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7069090909090909,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7854545454545454,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[ask-donate-more, proposition-of-donation, logical-appeal]",
+        "count": 1,
+        "value_sum": 0.81,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[acknowledgement, ask-donate-more]",
+            "count": 1,
+            "value_sum": 0.7290000000000001,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[emotion-appeal, ask-donate-more]",
+                "count": 1,
+                "value_sum": 0.6561000000000001,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[thank]",
+                    "count": 1,
+                    "value_sum": 0.5904900000000001,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[emotion-appeal, thank]",
+                        "count": 1,
+                        "value_sum": 0.531441,
+                        "success_D": 1,
+                        "children": [
+                          {
+                            "name": "[thank, credibility-appeal]",
+                            "count": 1,
+                            "value_sum": 0.4782969000000001,
+                            "success_D": 1,
+                            "children": [],
+                            "avg_value": 0.4782969000000001,
+                            "success_rate": 1.0
+                          }
+                        ],
+                        "avg_value": 0.531441,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.5904900000000001,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6561000000000001,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7290000000000001,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.81,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[ask-donate-more, self-modeling]",
+        "count": 1,
+        "value_sum": 0.0,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[praise-user, emotion-appeal]",
+            "count": 1,
+            "value_sum": 0.0,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[praise-user, emotion-appeal]",
+                "count": 1,
+                "value_sum": 0.0,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[praise-user, closing]",
+                    "count": 1,
+                    "value_sum": 0.0,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[source-related-inquiry]",
+                        "count": 1,
+                        "value_sum": 0.0,
+                        "success_D": 0,
+                        "children": [
+                          {
+                            "name": "[acknowledgement]",
+                            "count": 1,
+                            "value_sum": 0.0,
+                            "success_D": 0,
+                            "children": [],
+                            "avg_value": 0.0,
+                            "success_rate": 0.0
+                          }
+                        ],
+                        "avg_value": 0.0,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": 0.0,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": 0.0,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": 0.0,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": 0.0,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[ask-donate-more]",
+        "count": 1,
+        "value_sum": 0.792,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[logical-appeal, ask-donate-more]",
+            "count": 1,
+            "value_sum": 0.7128000000000001,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[logical-appeal]",
+                "count": 1,
+                "value_sum": 0.6415200000000001,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[proposition-of-donation, emotion-appeal, ask-donate-more]",
+                    "count": 1,
+                    "value_sum": 0.577368,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[proposition-of-donation, donation-information]",
+                        "count": 1,
+                        "value_sum": 0.5196312000000001,
+                        "success_D": 1,
+                        "children": [],
+                        "avg_value": 0.5196312000000001,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.577368,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6415200000000001,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7128000000000001,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.792,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[ask-donation-amount, closing]",
+        "count": 1,
+        "value_sum": 0.81,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[acknowledgement, closing]",
+            "count": 1,
+            "value_sum": 0.7290000000000001,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[personal-story, credibility-appeal]",
+                "count": 1,
+                "value_sum": 0.6561000000000001,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[credibility-appeal, personal-story, self-modeling]",
+                    "count": 1,
+                    "value_sum": 0.5904900000000001,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[credibility-appeal, donation-information]",
+                        "count": 1,
+                        "value_sum": 0.531441,
+                        "success_D": 1,
+                        "children": [
+                          {
+                            "name": "[donation-information, credibility-appeal]",
+                            "count": 1,
+                            "value_sum": 0.4782969000000001,
+                            "success_D": 1,
+                            "children": [],
+                            "avg_value": 0.4782969000000001,
+                            "success_rate": 1.0
+                          }
+                        ],
+                        "avg_value": 0.531441,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.5904900000000001,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6561000000000001,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7290000000000001,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.81,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[ask-donation-amount, credibility-appeal, personal-story]",
+        "count": 1,
+        "value_sum": 0.7363636363636363,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[praise-user, donation-information]",
+            "count": 1,
+            "value_sum": 0.6627272727272727,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6627272727272727,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7363636363636363,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[ask-donation-amount, donation-information]",
+        "count": 1,
+        "value_sum": 0.769090909090909,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[praise-user, emotion-appeal, confirm-donation]",
+            "count": 1,
+            "value_sum": 0.6921818181818182,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[donation-information, thank]",
+                "count": 1,
+                "value_sum": 0.6229636363636364,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[thank, closing]",
+                    "count": 1,
+                    "value_sum": 0.5606672727272727,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.5606672727272727,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6229636363636364,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6921818181818182,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.769090909090909,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[ask-not-donate-reason, personal-story]",
+        "count": 1,
+        "value_sum": -0.9981818181818183,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[praise-user, personal-story, ask-donate-more]",
+            "count": 1,
+            "value_sum": -0.8983636363636365,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[ask-not-donate-reason]",
+                "count": 1,
+                "value_sum": -0.8085272727272729,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[thank, closing]",
+                    "count": 1,
+                    "value_sum": -0.7276745454545455,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[closing]",
+                        "count": 1,
+                        "value_sum": -0.654907090909091,
+                        "success_D": 0,
+                        "children": [
+                          {
+                            "name": "[acknowledgement]",
+                            "count": 1,
+                            "value_sum": -0.5894163818181819,
+                            "success_D": 0,
+                            "children": [],
+                            "avg_value": -0.5894163818181819,
+                            "success_rate": 0.0
+                          }
+                        ],
+                        "avg_value": -0.654907090909091,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.7276745454545455,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.8085272727272729,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.8983636363636365,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.9981818181818183,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[ask-not-donate-reason]",
+        "count": 1,
+        "value_sum": -1.030909090909091,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[thank, closing]",
+            "count": 1,
+            "value_sum": -0.9278181818181819,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[closing]",
+                "count": 1,
+                "value_sum": -0.8350363636363638,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[acknowledgement]",
+                    "count": 1,
+                    "value_sum": -0.7515327272727274,
+                    "success_D": 0,
+                    "children": [],
+                    "avg_value": -0.7515327272727274,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.8350363636363638,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.9278181818181819,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.030909090909091,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[closing, donation-information]",
+        "count": 1,
+        "value_sum": -0.09000000000000001,
+        "success_D": 0,
+        "children": [],
+        "avg_value": -0.09000000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[closing, off-task]",
+        "count": 1,
+        "value_sum": 0.7200000000000001,
+        "success_D": 1,
+        "children": [],
+        "avg_value": 0.7200000000000001,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[closing]",
+        "count": 2,
+        "value_sum": -2.1436363636363636,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[acknowledgement]",
+            "count": 1,
+            "value_sum": -0.9572727272727274,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.9572727272727274,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.0718181818181818,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[comment-partner]",
+        "count": 1,
+        "value_sum": -0.07200000000000002,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[closing, donation-information]",
+            "count": 1,
+            "value_sum": -0.06480000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.06480000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.07200000000000002,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[credibility-appeal, donation-information]",
+        "count": 2,
+        "value_sum": 1.566,
+        "success_D": 2,
+        "children": [
+          {
+            "name": "[ask-donation-amount, donation-information]",
+            "count": 1,
+            "value_sum": 0.6966,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[praise-user, credibility-appeal]",
+                "count": 1,
+                "value_sum": 0.62694,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[thank, emotion-appeal, credibility-appeal]",
+                    "count": 1,
+                    "value_sum": 0.564246,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.564246,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.62694,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6966,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[credibility-appeal]",
+            "count": 1,
+            "value_sum": 0.7128000000000001,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[donation-information]",
+                "count": 1,
+                "value_sum": 0.6415200000000001,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[donation-information]",
+                    "count": 1,
+                    "value_sum": 0.577368,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[thank]",
+                        "count": 1,
+                        "value_sum": 0.5196312000000001,
+                        "success_D": 1,
+                        "children": [],
+                        "avg_value": 0.5196312000000001,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.577368,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6415200000000001,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7128000000000001,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.783,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[credibility-appeal, emotion-appeal, proposition-of-donation]",
+        "count": 1,
+        "value_sum": -1.0636363636363637,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[thank]",
+            "count": 1,
+            "value_sum": -0.9572727272727274,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.9572727272727274,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.0636363636363637,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[credibility-appeal, emotion-appeal]",
+        "count": 2,
+        "value_sum": 0.6978461538461538,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[personal-story, self-modeling]",
+            "count": 1,
+            "value_sum": -0.032399999999999984,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[acknowledgement, emotion-appeal]",
+                "count": 1,
+                "value_sum": -0.029159999999999988,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[self-modeling]",
+                    "count": 1,
+                    "value_sum": -0.026243999999999986,
+                    "success_D": 0,
+                    "children": [],
+                    "avg_value": -0.026243999999999986,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.029159999999999988,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.032399999999999984,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[thank, closing]",
+            "count": 1,
+            "value_sum": 0.6604615384615385,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6604615384615385,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.3489230769230769,
+        "success_rate": 0.5
+      },
+      {
+        "name": "[credibility-appeal, logical-appeal]",
+        "count": 1,
+        "value_sum": -1.08,
+        "success_D": 0,
+        "children": [],
+        "avg_value": -1.08,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[credibility-appeal, personal-story]",
+        "count": 1,
+        "value_sum": 0.7615384615384615,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[proposition-of-donation, credibility-appeal, logical-appeal]",
+            "count": 1,
+            "value_sum": 0.6853846153846154,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[credibility-appeal, emotion-appeal]",
+                "count": 1,
+                "value_sum": 0.6168461538461539,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[thank, closing]",
+                    "count": 1,
+                    "value_sum": 0.5551615384615385,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.5551615384615385,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6168461538461539,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6853846153846154,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7615384615384615,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[credibility-appeal]",
+        "count": 3,
+        "value_sum": 1.0208181818181816,
+        "success_D": 2,
+        "children": [
+          {
+            "name": "[confirm-donation, self-modeling, ask-donate-more]",
+            "count": 1,
+            "value_sum": -0.49950000000000006,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[ask-donation-amount, donation-information]",
+                "count": 1,
+                "value_sum": -0.44955000000000006,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[donation-information, proposition-of-donation]",
+                    "count": 1,
+                    "value_sum": -0.40459500000000004,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[emotion-appeal, closing, thank]",
+                        "count": 1,
+                        "value_sum": -0.36413550000000006,
+                        "success_D": 0,
+                        "children": [
+                          {
+                            "name": "[emotion-appeal, proposition-of-donation]",
+                            "count": 1,
+                            "value_sum": -0.32772195000000004,
+                            "success_D": 0,
+                            "children": [],
+                            "avg_value": -0.32772195000000004,
+                            "success_rate": 0.0
+                          }
+                        ],
+                        "avg_value": -0.36413550000000006,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.40459500000000004,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.44955000000000006,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.49950000000000006,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[donation-information]",
+            "count": 1,
+            "value_sum": 0.6966,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[donation-information]",
+                "count": 1,
+                "value_sum": 0.62694,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[thank]",
+                    "count": 1,
+                    "value_sum": 0.564246,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.564246,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.62694,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6966,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[emotion-appeal, credibility-appeal]",
+            "count": 1,
+            "value_sum": 0.7216363636363636,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[credibility-appeal]",
+                "count": 1,
+                "value_sum": 0.6494727272727273,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[credibility-appeal, other]",
+                    "count": 1,
+                    "value_sum": 0.5845254545454546,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[you-are-welcome, proposition-of-donation]",
+                        "count": 1,
+                        "value_sum": 0.5260729090909091,
+                        "success_D": 1,
+                        "children": [
+                          {
+                            "name": "[ask-donation-amount]",
+                            "count": 1,
+                            "value_sum": 0.4734656181818182,
+                            "success_D": 1,
+                            "children": [],
+                            "avg_value": 0.4734656181818182,
+                            "success_rate": 1.0
+                          }
+                        ],
+                        "avg_value": 0.5260729090909091,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.5845254545454546,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6494727272727273,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7216363636363636,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.3402727272727272,
+        "success_rate": 0.6666666666666666
+      },
+      {
+        "name": "[donation-information, ask-donate-more]",
+        "count": 1,
+        "value_sum": -0.03599999999999998,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[emotion-appeal, personal-related-inquiry]",
+            "count": 1,
+            "value_sum": -0.032399999999999984,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[personal-story, emotion-appeal, credibility-appeal]",
+                "count": 1,
+                "value_sum": -0.029159999999999988,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[acknowledgement, emotion-appeal, thank, closing]",
+                    "count": 1,
+                    "value_sum": -0.026243999999999986,
+                    "success_D": 0,
+                    "children": [],
+                    "avg_value": -0.026243999999999986,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.029159999999999988,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.032399999999999984,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.03599999999999998,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[donation-information, credibility-appeal]",
+        "count": 1,
+        "value_sum": 0.7527272727272727,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[ask-donation-amount, donation-information, self-modeling]",
+            "count": 1,
+            "value_sum": 0.6774545454545454,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[praise-user, thank, credibility-appeal]",
+                "count": 1,
+                "value_sum": 0.609709090909091,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.609709090909091,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6774545454545454,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7527272727272727,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[donation-information, emotion-appeal]",
+        "count": 3,
+        "value_sum": -0.819818181818182,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[emotion-appeal, credibility-appeal, praise-user, donation-information]",
+            "count": 1,
+            "value_sum": -0.5022,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[praise-user, personal-related-inquiry]",
+                "count": 1,
+                "value_sum": -0.45198000000000005,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[personal-story, personal-related-inquiry]",
+                    "count": 1,
+                    "value_sum": -0.40678200000000003,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[personal-story, personal-related-inquiry]",
+                        "count": 1,
+                        "value_sum": -0.36610380000000003,
+                        "success_D": 0,
+                        "children": [],
+                        "avg_value": -0.36610380000000003,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.40678200000000003,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.45198000000000005,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.5022,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[emotion-appeal, logical-appeal]",
+            "count": 1,
+            "value_sum": -0.9278181818181819,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[emotion-appeal, logical-appeal]",
+                "count": 1,
+                "value_sum": -0.8350363636363638,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[emotion-appeal]",
+                    "count": 1,
+                    "value_sum": -0.7515327272727274,
+                    "success_D": 0,
+                    "children": [],
+                    "avg_value": -0.7515327272727274,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.8350363636363638,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.9278181818181819,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[emotion-appeal, personal-story, credibility-appeal]",
+            "count": 1,
+            "value_sum": 0.6921818181818182,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[ask-donation-amount, credibility-appeal, personal-story]",
+                "count": 1,
+                "value_sum": 0.6229636363636364,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[praise-user, donation-information]",
+                    "count": 1,
+                    "value_sum": 0.5606672727272727,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.5606672727272727,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6229636363636364,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6921818181818182,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": -0.27327272727272733,
+        "success_rate": 0.3333333333333333
+      },
+      {
+        "name": "[donation-information, proposition-of-donation, foot-in-the-door]",
+        "count": 1,
+        "value_sum": 0.738,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[praise-user, ask-donation-amount]",
+            "count": 1,
+            "value_sum": 0.6642,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6642,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.738,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[donation-information, thank]",
+        "count": 1,
+        "value_sum": 0.7363636363636363,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[thank, closing]",
+            "count": 1,
+            "value_sum": 0.6627272727272727,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6627272727272727,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7363636363636363,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[donation-information]",
+        "count": 5,
+        "value_sum": 3.6900000000000004,
+        "success_D": 5,
+        "children": [
+          {
+            "name": "[donation-information]",
+            "count": 1,
+            "value_sum": 0.6804,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[thank]",
+                "count": 1,
+                "value_sum": 0.61236,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.61236,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6804,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[positive-to-inquiry, closing]",
+            "count": 1,
+            "value_sum": 0.6642,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6642,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[praise-user, donation-information, thank]",
+            "count": 1,
+            "value_sum": 0.6642,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6642,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[thank]",
+            "count": 1,
+            "value_sum": 0.6642,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6642,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7380000000000001,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[emotion-appeal, ask-donate-more]",
+        "count": 1,
+        "value_sum": 0.01799999999999999,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[ask-donate-more, self-modeling]",
+            "count": 1,
+            "value_sum": 0.016199999999999992,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[praise-user, emotion-appeal]",
+                "count": 1,
+                "value_sum": 0.014579999999999994,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[praise-user, emotion-appeal]",
+                    "count": 1,
+                    "value_sum": 0.013121999999999993,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[praise-user, closing]",
+                        "count": 1,
+                        "value_sum": 0.011809799999999995,
+                        "success_D": 0,
+                        "children": [
+                          {
+                            "name": "[source-related-inquiry]",
+                            "count": 1,
+                            "value_sum": 0.010628819999999995,
+                            "success_D": 0,
+                            "children": [
+                              {
+                                "name": "[acknowledgement]",
+                                "count": 1,
+                                "value_sum": 0.009565937999999996,
+                                "success_D": 0,
+                                "children": [],
+                                "avg_value": 0.009565937999999996,
+                                "success_rate": 0.0
+                              }
+                            ],
+                            "avg_value": 0.010628819999999995,
+                            "success_rate": 0.0
+                          }
+                        ],
+                        "avg_value": 0.011809799999999995,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": 0.013121999999999993,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": 0.014579999999999994,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": 0.016199999999999992,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": 0.01799999999999999,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[emotion-appeal, closing, thank]",
+        "count": 1,
+        "value_sum": -0.615,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[emotion-appeal, proposition-of-donation]",
+            "count": 1,
+            "value_sum": -0.5535000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.5535000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.615,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[emotion-appeal, comment-partner]",
+        "count": 1,
+        "value_sum": 0.7854545454545454,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[proposition-of-donation, credibility-appeal]",
+            "count": 1,
+            "value_sum": 0.7069090909090909,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[donation-information, credibility-appeal]",
+                "count": 1,
+                "value_sum": 0.6362181818181819,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[ask-donation-amount, donation-information, self-modeling]",
+                    "count": 1,
+                    "value_sum": 0.5725963636363636,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[praise-user, thank, credibility-appeal]",
+                        "count": 1,
+                        "value_sum": 0.5153367272727273,
+                        "success_D": 1,
+                        "children": [],
+                        "avg_value": 0.5153367272727273,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.5725963636363636,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6362181818181819,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7069090909090909,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7854545454545454,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[emotion-appeal, donation-information]",
+        "count": 1,
+        "value_sum": 0.846,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[logical-appeal, foot-in-the-door]",
+            "count": 1,
+            "value_sum": 0.7614,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[self-modeling, credibility-appeal, foot-in-the-door]",
+                "count": 1,
+                "value_sum": 0.6852600000000001,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[credibility-appeal, donation-information]",
+                    "count": 1,
+                    "value_sum": 0.616734,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[credibility-appeal]",
+                        "count": 1,
+                        "value_sum": 0.5550606,
+                        "success_D": 1,
+                        "children": [
+                          {
+                            "name": "[donation-information]",
+                            "count": 1,
+                            "value_sum": 0.49955454000000005,
+                            "success_D": 1,
+                            "children": [
+                              {
+                                "name": "[donation-information]",
+                                "count": 1,
+                                "value_sum": 0.44959908600000004,
+                                "success_D": 1,
+                                "children": [
+                                  {
+                                    "name": "[thank]",
+                                    "count": 1,
+                                    "value_sum": 0.40463917740000005,
+                                    "success_D": 1,
+                                    "children": [],
+                                    "avg_value": 0.40463917740000005,
+                                    "success_rate": 1.0
+                                  }
+                                ],
+                                "avg_value": 0.44959908600000004,
+                                "success_rate": 1.0
+                              }
+                            ],
+                            "avg_value": 0.49955454000000005,
+                            "success_rate": 1.0
+                          }
+                        ],
+                        "avg_value": 0.5550606,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.616734,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6852600000000001,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7614,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.846,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[emotion-appeal, logical-appeal]",
+        "count": 5,
+        "value_sum": -5.152909090909091,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[emotion-appeal, logical-appeal]",
+            "count": 2,
+            "value_sum": -1.8261818181818184,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[emotion-appeal]",
+                "count": 1,
+                "value_sum": -0.8482909090909092,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.8482909090909092,
+                "success_rate": 0.0
+              },
+              {
+                "name": "[logical-appeal, emotion-appeal]",
+                "count": 1,
+                "value_sum": -0.7952727272727274,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[donation-information, emotion-appeal]",
+                    "count": 1,
+                    "value_sum": -0.7157454545454545,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[emotion-appeal, logical-appeal]",
+                        "count": 1,
+                        "value_sum": -0.6441709090909091,
+                        "success_D": 0,
+                        "children": [
+                          {
+                            "name": "[emotion-appeal, logical-appeal]",
+                            "count": 1,
+                            "value_sum": -0.5797538181818181,
+                            "success_D": 0,
+                            "children": [
+                              {
+                                "name": "[emotion-appeal]",
+                                "count": 1,
+                                "value_sum": -0.5217784363636364,
+                                "success_D": 0,
+                                "children": [],
+                                "avg_value": -0.5217784363636364,
+                                "success_rate": 0.0
+                              }
+                            ],
+                            "avg_value": -0.5797538181818181,
+                            "success_rate": 0.0
+                          }
+                        ],
+                        "avg_value": -0.6441709090909091,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.7157454545454545,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.7952727272727274,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.9130909090909092,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[emotion-appeal]",
+            "count": 1,
+            "value_sum": -0.9572727272727274,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.9572727272727274,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[logical-appeal, emotion-appeal]",
+            "count": 1,
+            "value_sum": -0.8983636363636365,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[donation-information, emotion-appeal]",
+                "count": 1,
+                "value_sum": -0.8085272727272729,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[emotion-appeal, logical-appeal]",
+                    "count": 1,
+                    "value_sum": -0.7276745454545455,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[emotion-appeal, logical-appeal]",
+                        "count": 1,
+                        "value_sum": -0.654907090909091,
+                        "success_D": 0,
+                        "children": [
+                          {
+                            "name": "[emotion-appeal]",
+                            "count": 1,
+                            "value_sum": -0.5894163818181819,
+                            "success_D": 0,
+                            "children": [],
+                            "avg_value": -0.5894163818181819,
+                            "success_rate": 0.0
+                          }
+                        ],
+                        "avg_value": -0.654907090909091,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.7276745454545455,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.8085272727272729,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.8983636363636365,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[self-modeling, foot-in-the-door]",
+            "count": 1,
+            "value_sum": -0.9558,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.9558,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.0305818181818183,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[emotion-appeal, negative-to-inquiry]",
+        "count": 1,
+        "value_sum": -1.035,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[emotion-appeal]",
+            "count": 1,
+            "value_sum": -0.9315,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[foot-in-the-door, logical-appeal]",
+                "count": 1,
+                "value_sum": -0.83835,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[closing]",
+                    "count": 1,
+                    "value_sum": -0.7545149999999999,
+                    "success_D": 0,
+                    "children": [],
+                    "avg_value": -0.7545149999999999,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.83835,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.9315,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.035,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[emotion-appeal, personal-related-inquiry]",
+        "count": 1,
+        "value_sum": -0.05400000000000003,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[personal-story, emotion-appeal, credibility-appeal]",
+            "count": 1,
+            "value_sum": -0.048600000000000025,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[acknowledgement, emotion-appeal, thank, closing]",
+                "count": 1,
+                "value_sum": -0.04374000000000002,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.04374000000000002,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.048600000000000025,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.05400000000000003,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[emotion-appeal, personal-story, credibility-appeal]",
+        "count": 1,
+        "value_sum": 0.7527272727272727,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[ask-donation-amount, credibility-appeal, personal-story]",
+            "count": 1,
+            "value_sum": 0.6774545454545454,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[praise-user, donation-information]",
+                "count": 1,
+                "value_sum": 0.609709090909091,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.609709090909091,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6774545454545454,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7527272727272727,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[emotion-appeal, personal-story]",
+        "count": 1,
+        "value_sum": -0.09000000000000001,
+        "success_D": 0,
+        "children": [],
+        "avg_value": -0.09000000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[emotion-appeal, proposition-of-donation]",
+        "count": 2,
+        "value_sum": 0.12272727272727268,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[praise-user, thank, emotion-appeal]",
+            "count": 1,
+            "value_sum": 0.6774545454545454,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[thank]",
+                "count": 1,
+                "value_sum": 0.609709090909091,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.609709090909091,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6774545454545454,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.06136363636363634,
+        "success_rate": 0.5
+      },
+      {
+        "name": "[emotion-appeal, self-modeling]",
+        "count": 1,
+        "value_sum": 0.738,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[acknowledgement, closing, confirm-donation]",
+            "count": 1,
+            "value_sum": 0.6642,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6642,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.738,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[emotion-appeal, task-related-inquiry]",
+        "count": 1,
+        "value_sum": -0.07200000000000002,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[personal-related-inquiry, closing, praise-user, ask-donate-more]",
+            "count": 1,
+            "value_sum": -0.06480000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.06480000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.07200000000000002,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[emotion-appeal]",
+        "count": 4,
+        "value_sum": -0.5986153846153847,
+        "success_D": 2,
+        "children": [
+          {
+            "name": "[emotion-appeal, self-modeling]",
+            "count": 1,
+            "value_sum": 0.6804,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[acknowledgement, closing, confirm-donation]",
+                "count": 1,
+                "value_sum": 0.61236,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.61236,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6804,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[emotion-appeal]",
+            "count": 1,
+            "value_sum": 0.6978461538461539,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[proposition-of-donation, logical-appeal]",
+                "count": 1,
+                "value_sum": 0.6280615384615386,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[praise-user, ask-donation-amount]",
+                    "count": 1,
+                    "value_sum": 0.5652553846153847,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[donation-information]",
+                        "count": 1,
+                        "value_sum": 0.5087298461538462,
+                        "success_D": 1,
+                        "children": [],
+                        "avg_value": 0.5087298461538462,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.5652553846153847,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6280615384615386,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6978461538461539,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[foot-in-the-door, logical-appeal]",
+            "count": 1,
+            "value_sum": -0.9450000000000002,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[closing]",
+                "count": 1,
+                "value_sum": -0.8505000000000001,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.8505000000000001,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.9450000000000002,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.14965384615384617,
+        "success_rate": 0.5
+      },
+      {
+        "name": "[foot-in-the-door, logical-appeal]",
+        "count": 1,
+        "value_sum": -1.065,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[closing]",
+            "count": 1,
+            "value_sum": -0.9585000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.9585000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.065,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[logical-appeal, ask-donate-more]",
+        "count": 3,
+        "value_sum": 2.3040000000000003,
+        "success_D": 3,
+        "children": [
+          {
+            "name": "[logical-appeal]",
+            "count": 1,
+            "value_sum": 0.6966,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[proposition-of-donation, emotion-appeal, ask-donate-more]",
+                "count": 1,
+                "value_sum": 0.62694,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[proposition-of-donation, donation-information]",
+                    "count": 1,
+                    "value_sum": 0.564246,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.564246,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.62694,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6966,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[positive-to-inquiry, emotion-appeal, credibility-appeal, ask-donate-more]",
+            "count": 1,
+            "value_sum": 0.6966,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[thank, confirm-donation]",
+                "count": 1,
+                "value_sum": 0.62694,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[you-are-welcome, emotion-appeal, thank]",
+                    "count": 1,
+                    "value_sum": 0.564246,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.564246,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.62694,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6966,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[praise-user, ask-donation-amount, donation-information]",
+            "count": 1,
+            "value_sum": 0.6804,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[thank, donation-information]",
+                "count": 1,
+                "value_sum": 0.61236,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.61236,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6804,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7680000000000001,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[logical-appeal, ask-donation-amount, donation-information]",
+        "count": 1,
+        "value_sum": -1.062,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[ask-donate-more, emotion-appeal]",
+            "count": 1,
+            "value_sum": -0.9558,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.9558,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.062,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[logical-appeal, closing]",
+        "count": 1,
+        "value_sum": -0.09000000000000001,
+        "success_D": 0,
+        "children": [],
+        "avg_value": -0.09000000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[logical-appeal, emotion-appeal, donation-information]",
+        "count": 1,
+        "value_sum": 0.792,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[self-modeling, logical-appeal]",
+            "count": 1,
+            "value_sum": 0.7128000000000001,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[credibility-appeal, emotion-appeal, ask-donate-more]",
+                "count": 1,
+                "value_sum": 0.6415200000000001,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[logical-appeal, emotion-appeal]",
+                    "count": 1,
+                    "value_sum": 0.577368,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[thank]",
+                        "count": 1,
+                        "value_sum": 0.5196312000000001,
+                        "success_D": 1,
+                        "children": [],
+                        "avg_value": 0.5196312000000001,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.577368,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6415200000000001,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7128000000000001,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.792,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[logical-appeal, emotion-appeal, proposition-of-donation]",
+        "count": 1,
+        "value_sum": -1.02,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[emotion-appeal, negative-to-inquiry]",
+            "count": 1,
+            "value_sum": -0.918,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[emotion-appeal]",
+                "count": 1,
+                "value_sum": -0.8262,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[foot-in-the-door, logical-appeal]",
+                    "count": 1,
+                    "value_sum": -0.74358,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[closing]",
+                        "count": 1,
+                        "value_sum": -0.6692220000000001,
+                        "success_D": 0,
+                        "children": [],
+                        "avg_value": -0.6692220000000001,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.74358,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.8262,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.918,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.02,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[logical-appeal, emotion-appeal]",
+        "count": 2,
+        "value_sum": -0.2405454545454544,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[ask-donation-amount]",
+            "count": 1,
+            "value_sum": 0.6966,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[ask-donation-amount, donation-information]",
+                "count": 1,
+                "value_sum": 0.62694,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[thank, donation-information]",
+                    "count": 1,
+                    "value_sum": 0.564246,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.564246,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.62694,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6966,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[donation-information, emotion-appeal]",
+            "count": 1,
+            "value_sum": -0.9130909090909091,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[emotion-appeal, logical-appeal]",
+                "count": 1,
+                "value_sum": -0.8217818181818183,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[emotion-appeal, logical-appeal]",
+                    "count": 1,
+                    "value_sum": -0.7396036363636364,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[emotion-appeal]",
+                        "count": 1,
+                        "value_sum": -0.6656432727272728,
+                        "success_D": 0,
+                        "children": [],
+                        "avg_value": -0.6656432727272728,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.7396036363636364,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.8217818181818183,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.9130909090909091,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.1202727272727272,
+        "success_rate": 0.5
+      },
+      {
+        "name": "[logical-appeal, foot-in-the-door]",
+        "count": 1,
+        "value_sum": 0.828,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[self-modeling, credibility-appeal, foot-in-the-door]",
+            "count": 1,
+            "value_sum": 0.7452,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[credibility-appeal, donation-information]",
+                "count": 1,
+                "value_sum": 0.67068,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[credibility-appeal]",
+                    "count": 1,
+                    "value_sum": 0.6036119999999999,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[donation-information]",
+                        "count": 1,
+                        "value_sum": 0.5432508,
+                        "success_D": 1,
+                        "children": [
+                          {
+                            "name": "[donation-information]",
+                            "count": 1,
+                            "value_sum": 0.48892572,
+                            "success_D": 1,
+                            "children": [
+                              {
+                                "name": "[thank]",
+                                "count": 1,
+                                "value_sum": 0.44003314800000004,
+                                "success_D": 1,
+                                "children": [],
+                                "avg_value": 0.44003314800000004,
+                                "success_rate": 1.0
+                              }
+                            ],
+                            "avg_value": 0.48892572,
+                            "success_rate": 1.0
+                          }
+                        ],
+                        "avg_value": 0.5432508,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.6036119999999999,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.67068,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7452,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.828,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[logical-appeal, personal-related-inquiry]",
+        "count": 2,
+        "value_sum": 0.751090909090909,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[emotion-appeal, proposition-of-donation]",
+            "count": 1,
+            "value_sum": 0.6921818181818182,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[praise-user, thank, emotion-appeal]",
+                "count": 1,
+                "value_sum": 0.6229636363636364,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[thank]",
+                    "count": 1,
+                    "value_sum": 0.5606672727272727,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.5606672727272727,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6229636363636364,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6921818181818182,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[thank, logical-appeal]",
+            "count": 1,
+            "value_sum": -0.016199999999999992,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[acknowledgement, praise-user]",
+                "count": 1,
+                "value_sum": -0.014579999999999994,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[logical-appeal]",
+                    "count": 1,
+                    "value_sum": -0.013121999999999993,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[other]",
+                        "count": 1,
+                        "value_sum": -0.011809799999999995,
+                        "success_D": 0,
+                        "children": [],
+                        "avg_value": -0.011809799999999995,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.013121999999999993,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.014579999999999994,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.016199999999999992,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": 0.3755454545454545,
+        "success_rate": 0.5
+      },
+      {
+        "name": "[logical-appeal]",
+        "count": 3,
+        "value_sum": 1.556181818181818,
+        "success_D": 2,
+        "children": [
+          {
+            "name": "[ask-donate-more]",
+            "count": 1,
+            "value_sum": 0.7290000000000001,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[logical-appeal, ask-donate-more]",
+                "count": 1,
+                "value_sum": 0.6561000000000001,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[logical-appeal]",
+                    "count": 1,
+                    "value_sum": 0.5904900000000001,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[proposition-of-donation, emotion-appeal, ask-donate-more]",
+                        "count": 1,
+                        "value_sum": 0.531441,
+                        "success_D": 1,
+                        "children": [
+                          {
+                            "name": "[proposition-of-donation, donation-information]",
+                            "count": 1,
+                            "value_sum": 0.4782969000000001,
+                            "success_D": 1,
+                            "children": [],
+                            "avg_value": 0.4782969000000001,
+                            "success_rate": 1.0
+                          }
+                        ],
+                        "avg_value": 0.531441,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.5904900000000001,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6561000000000001,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7290000000000001,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[other]",
+            "count": 1,
+            "value_sum": -0.06480000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.06480000000000001,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[self-modeling]",
+            "count": 1,
+            "value_sum": 0.7363636363636364,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[foot-in-the-door]",
+                "count": 1,
+                "value_sum": 0.6627272727272728,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[confirm-donation]",
+                    "count": 1,
+                    "value_sum": 0.5964545454545455,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[self-modeling]",
+                        "count": 1,
+                        "value_sum": 0.5368090909090909,
+                        "success_D": 1,
+                        "children": [
+                          {
+                            "name": "[other]",
+                            "count": 1,
+                            "value_sum": 0.48312818181818185,
+                            "success_D": 1,
+                            "children": [
+                              {
+                                "name": "[other]",
+                                "count": 1,
+                                "value_sum": 0.4348153636363637,
+                                "success_D": 1,
+                                "children": [],
+                                "avg_value": 0.4348153636363637,
+                                "success_rate": 1.0
+                              }
+                            ],
+                            "avg_value": 0.48312818181818185,
+                            "success_rate": 1.0
+                          }
+                        ],
+                        "avg_value": 0.5368090909090909,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.5964545454545455,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6627272727272728,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7363636363636364,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.5187272727272727,
+        "success_rate": 0.6666666666666666
+      },
+      {
+        "name": "[other, closing]",
+        "count": 1,
+        "value_sum": -0.09000000000000001,
+        "success_D": 0,
+        "children": [],
+        "avg_value": -0.09000000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[personal-related-inquiry, closing, praise-user, ask-donate-more]",
+        "count": 1,
+        "value_sum": -0.09000000000000001,
+        "success_D": 0,
+        "children": [],
+        "avg_value": -0.09000000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[personal-story, credibility-appeal, logical-appeal, ask-donation-amount, self-modeling]",
+        "count": 1,
+        "value_sum": 0.7527272727272727,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[donation-information, emotion-appeal, thank, closing]",
+            "count": 1,
+            "value_sum": 0.6774545454545454,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[personal-story, ask-donation-amount]",
+                "count": 1,
+                "value_sum": 0.609709090909091,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.609709090909091,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6774545454545454,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7527272727272727,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[personal-story, emotion-appeal, credibility-appeal]",
+        "count": 1,
+        "value_sum": -0.07200000000000002,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[acknowledgement, emotion-appeal, thank, closing]",
+            "count": 1,
+            "value_sum": -0.06480000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.06480000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.07200000000000002,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[personal-story, emotion-appeal]",
+        "count": 1,
+        "value_sum": 0.792,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[logical-appeal, emotion-appeal]",
+            "count": 1,
+            "value_sum": 0.7128000000000001,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[ask-donation-amount]",
+                "count": 1,
+                "value_sum": 0.6415200000000001,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[ask-donation-amount, donation-information]",
+                    "count": 1,
+                    "value_sum": 0.577368,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[thank, donation-information]",
+                        "count": 1,
+                        "value_sum": 0.5196312000000001,
+                        "success_D": 1,
+                        "children": [],
+                        "avg_value": 0.5196312000000001,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.577368,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6415200000000001,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7128000000000001,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.792,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[personal-story, logical-appeal, proposition-of-donation]",
+        "count": 1,
+        "value_sum": 0.756,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[donation-information]",
+            "count": 1,
+            "value_sum": 0.6804,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[praise-user, donation-information, thank]",
+                "count": 1,
+                "value_sum": 0.61236,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.61236,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6804,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.756,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[personal-story, proposition-of-donation]",
+        "count": 1,
+        "value_sum": 0.774,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[personal-story, logical-appeal, proposition-of-donation]",
+            "count": 1,
+            "value_sum": 0.6966,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[donation-information]",
+                "count": 1,
+                "value_sum": 0.62694,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[praise-user, donation-information, thank]",
+                    "count": 1,
+                    "value_sum": 0.564246,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.564246,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.62694,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6966,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.774,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[personal-story, self-modeling]",
+        "count": 2,
+        "value_sum": -0.09000000000000001,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[acknowledgement, emotion-appeal]",
+            "count": 1,
+            "value_sum": -0.048600000000000025,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[self-modeling]",
+                "count": 1,
+                "value_sum": -0.04374000000000002,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.04374000000000002,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.048600000000000025,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[ask-donate-more, logical-appeal]",
+            "count": 1,
+            "value_sum": -0.032399999999999984,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[emotion-appeal, task-related-inquiry]",
+                "count": 1,
+                "value_sum": -0.029159999999999988,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[personal-related-inquiry, closing, praise-user, ask-donate-more]",
+                    "count": 1,
+                    "value_sum": -0.026243999999999986,
+                    "success_D": 0,
+                    "children": [],
+                    "avg_value": -0.026243999999999986,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.029159999999999988,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.032399999999999984,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.045000000000000005,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[positive-to-inquiry, confirm-donation]",
+        "count": 1,
+        "value_sum": 0.756,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[praise-user, thank, ask-donation-amount]",
+            "count": 1,
+            "value_sum": 0.6804,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[thank, donation-information]",
+                "count": 1,
+                "value_sum": 0.61236,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.61236,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6804,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.756,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[positive-to-inquiry, emotion-appeal, credibility-appeal, ask-donate-more]",
+        "count": 1,
+        "value_sum": 0.756,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[thank, confirm-donation]",
+            "count": 1,
+            "value_sum": 0.6804,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[you-are-welcome, emotion-appeal, thank]",
+                "count": 1,
+                "value_sum": 0.61236,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.61236,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6804,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.756,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[praise-user, ask-donation-amount, donation-information]",
+        "count": 1,
+        "value_sum": 0.738,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[thank, donation-information]",
+            "count": 1,
+            "value_sum": 0.6642,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6642,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.738,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[praise-user, ask-donation-amount]",
+        "count": 1,
+        "value_sum": 0.7338461538461538,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[donation-information]",
+            "count": 1,
+            "value_sum": 0.6604615384615385,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6604615384615385,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7338461538461538,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[praise-user, closing]",
+        "count": 1,
+        "value_sum": -0.05400000000000003,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[source-related-inquiry]",
+            "count": 1,
+            "value_sum": -0.048600000000000025,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[acknowledgement]",
+                "count": 1,
+                "value_sum": -0.04374000000000002,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.04374000000000002,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.048600000000000025,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.05400000000000003,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[praise-user, donation-information]",
+        "count": 1,
+        "value_sum": 0.7200000000000001,
+        "success_D": 1,
+        "children": [],
+        "avg_value": 0.7200000000000001,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[praise-user, emotion-appeal, confirm-donation]",
+        "count": 1,
+        "value_sum": 0.7527272727272727,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[donation-information, thank]",
+            "count": 1,
+            "value_sum": 0.6774545454545454,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[thank, closing]",
+                "count": 1,
+                "value_sum": 0.609709090909091,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.609709090909091,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6774545454545454,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7527272727272727,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[praise-user, emotion-appeal]",
+        "count": 3,
+        "value_sum": -0.05399999999999998,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[praise-user, closing]",
+            "count": 1,
+            "value_sum": -0.032399999999999984,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[source-related-inquiry]",
+                "count": 1,
+                "value_sum": -0.029159999999999988,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[acknowledgement]",
+                    "count": 1,
+                    "value_sum": -0.026243999999999986,
+                    "success_D": 0,
+                    "children": [],
+                    "avg_value": -0.026243999999999986,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.029159999999999988,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.032399999999999984,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[praise-user, emotion-appeal]",
+            "count": 1,
+            "value_sum": -0.016199999999999992,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[praise-user, closing]",
+                "count": 1,
+                "value_sum": -0.014579999999999994,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[source-related-inquiry]",
+                    "count": 1,
+                    "value_sum": -0.013121999999999993,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[acknowledgement]",
+                        "count": 1,
+                        "value_sum": -0.011809799999999995,
+                        "success_D": 0,
+                        "children": [],
+                        "avg_value": -0.011809799999999995,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.013121999999999993,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.014579999999999994,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.016199999999999992,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[thank, credibility-appeal, praise-user]",
+            "count": 1,
+            "value_sum": 0.0,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[donation-information, ask-donate-more]",
+                "count": 1,
+                "value_sum": 0.0,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[emotion-appeal, personal-related-inquiry]",
+                    "count": 1,
+                    "value_sum": 0.0,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[personal-story, emotion-appeal, credibility-appeal]",
+                        "count": 1,
+                        "value_sum": 0.0,
+                        "success_D": 0,
+                        "children": [
+                          {
+                            "name": "[acknowledgement, emotion-appeal, thank, closing]",
+                            "count": 1,
+                            "value_sum": 0.0,
+                            "success_D": 0,
+                            "children": [],
+                            "avg_value": 0.0,
+                            "success_rate": 0.0
+                          }
+                        ],
+                        "avg_value": 0.0,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": 0.0,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": 0.0,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": 0.0,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.01799999999999999,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[praise-user, personal-story, ask-donate-more]",
+        "count": 1,
+        "value_sum": -1.0145454545454544,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[ask-not-donate-reason]",
+            "count": 1,
+            "value_sum": -0.9130909090909091,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[thank, closing]",
+                "count": 1,
+                "value_sum": -0.8217818181818183,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[closing]",
+                    "count": 1,
+                    "value_sum": -0.7396036363636364,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[acknowledgement]",
+                        "count": 1,
+                        "value_sum": -0.6656432727272728,
+                        "success_D": 0,
+                        "children": [],
+                        "avg_value": -0.6656432727272728,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.7396036363636364,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.8217818181818183,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.9130909090909091,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -1.0145454545454544,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[praise-user, thank, ask-donation-amount]",
+        "count": 1,
+        "value_sum": 0.738,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[thank, donation-information]",
+            "count": 1,
+            "value_sum": 0.6642,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6642,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.738,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[praise-user, thank, donation-information]",
+        "count": 1,
+        "value_sum": 0.8018181818181818,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[ask-donate-more, praise-user, emotion-appeal]",
+            "count": 1,
+            "value_sum": 0.7216363636363636,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[logical-appeal, personal-related-inquiry]",
+                "count": 1,
+                "value_sum": 0.6494727272727273,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[emotion-appeal, proposition-of-donation]",
+                    "count": 1,
+                    "value_sum": 0.5845254545454546,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[praise-user, thank, emotion-appeal]",
+                        "count": 1,
+                        "value_sum": 0.5260729090909091,
+                        "success_D": 1,
+                        "children": [
+                          {
+                            "name": "[thank]",
+                            "count": 1,
+                            "value_sum": 0.4734656181818182,
+                            "success_D": 1,
+                            "children": [],
+                            "avg_value": 0.4734656181818182,
+                            "success_rate": 1.0
+                          }
+                        ],
+                        "avg_value": 0.5260729090909091,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.5845254545454546,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6494727272727273,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7216363636363636,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.8018181818181818,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[praise-user, thank, emotion-appeal]",
+        "count": 1,
+        "value_sum": 0.7363636363636363,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[thank]",
+            "count": 1,
+            "value_sum": 0.6627272727272727,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6627272727272727,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7363636363636363,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[praise-user]",
+        "count": 1,
+        "value_sum": -0.09000000000000001,
+        "success_D": 0,
+        "children": [],
+        "avg_value": -0.09000000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[proposition-of-donation, credibility-appeal, logical-appeal]",
+        "count": 1,
+        "value_sum": 0.7476923076923077,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[credibility-appeal, emotion-appeal]",
+            "count": 1,
+            "value_sum": 0.672923076923077,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[thank, closing]",
+                "count": 1,
+                "value_sum": 0.6056307692307693,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.6056307692307693,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.672923076923077,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7476923076923077,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[proposition-of-donation, credibility-appeal]",
+        "count": 1,
+        "value_sum": 0.769090909090909,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[donation-information, credibility-appeal]",
+            "count": 1,
+            "value_sum": 0.6921818181818182,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[ask-donation-amount, donation-information, self-modeling]",
+                "count": 1,
+                "value_sum": 0.6229636363636364,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[praise-user, thank, credibility-appeal]",
+                    "count": 1,
+                    "value_sum": 0.5606672727272727,
+                    "success_D": 1,
+                    "children": [],
+                    "avg_value": 0.5606672727272727,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6229636363636364,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6921818181818182,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.769090909090909,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[proposition-of-donation, donation-information, emotion-appeal]",
+        "count": 1,
+        "value_sum": 0.738,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[ask-donate-more, emotion-appeal]",
+            "count": 1,
+            "value_sum": 0.6642,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6642,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.738,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[proposition-of-donation, donation-information]",
+        "count": 1,
+        "value_sum": 0.7200000000000001,
+        "success_D": 1,
+        "children": [],
+        "avg_value": 0.7200000000000001,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[proposition-of-donation, emotion-appeal, ask-donate-more]",
+        "count": 1,
+        "value_sum": 0.738,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[proposition-of-donation, donation-information]",
+            "count": 1,
+            "value_sum": 0.6642,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6642,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.738,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[proposition-of-donation, logical-appeal]",
+        "count": 1,
+        "value_sum": 0.7476923076923077,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[praise-user, ask-donation-amount]",
+            "count": 1,
+            "value_sum": 0.672923076923077,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[donation-information]",
+                "count": 1,
+                "value_sum": 0.6056307692307693,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.6056307692307693,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.672923076923077,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.7476923076923077,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[self-modeling, credibility-appeal, foot-in-the-door]",
+        "count": 1,
+        "value_sum": 0.81,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[credibility-appeal, donation-information]",
+            "count": 1,
+            "value_sum": 0.7290000000000001,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[credibility-appeal]",
+                "count": 1,
+                "value_sum": 0.6561000000000001,
+                "success_D": 1,
+                "children": [
+                  {
+                    "name": "[donation-information]",
+                    "count": 1,
+                    "value_sum": 0.5904900000000001,
+                    "success_D": 1,
+                    "children": [
+                      {
+                        "name": "[donation-information]",
+                        "count": 1,
+                        "value_sum": 0.531441,
+                        "success_D": 1,
+                        "children": [
+                          {
+                            "name": "[thank]",
+                            "count": 1,
+                            "value_sum": 0.4782969000000001,
+                            "success_D": 1,
+                            "children": [],
+                            "avg_value": 0.4782969000000001,
+                            "success_rate": 1.0
+                          }
+                        ],
+                        "avg_value": 0.531441,
+                        "success_rate": 1.0
+                      }
+                    ],
+                    "avg_value": 0.5904900000000001,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.6561000000000001,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.7290000000000001,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.81,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[self-modeling, foot-in-the-door]",
+        "count": 1,
+        "value_sum": -1.08,
+        "success_D": 0,
+        "children": [],
+        "avg_value": -1.08,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[self-modeling]",
+        "count": 1,
+        "value_sum": -0.09000000000000001,
+        "success_D": 0,
+        "children": [],
+        "avg_value": -0.09000000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[thank, ask-donate-more]",
+        "count": 1,
+        "value_sum": 0.738,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[acknowledgement, thank]",
+            "count": 1,
+            "value_sum": 0.6642,
+            "success_D": 1,
+            "children": [],
+            "avg_value": 0.6642,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.738,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[thank, closing]",
+        "count": 3,
+        "value_sum": 0.3927272727272728,
+        "success_D": 2,
+        "children": [
+          {
+            "name": "[closing]",
+            "count": 1,
+            "value_sum": -0.9425454545454546,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[acknowledgement]",
+                "count": 1,
+                "value_sum": -0.8482909090909092,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.8482909090909092,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.9425454545454546,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": 0.13090909090909095,
+        "success_rate": 0.6666666666666666
+      },
+      {
+        "name": "[thank, confirm-donation]",
+        "count": 1,
+        "value_sum": 0.756,
+        "success_D": 1,
+        "children": [
+          {
+            "name": "[thank, ask-donate-more]",
+            "count": 1,
+            "value_sum": 0.6804,
+            "success_D": 1,
+            "children": [
+              {
+                "name": "[acknowledgement, thank]",
+                "count": 1,
+                "value_sum": 0.61236,
+                "success_D": 1,
+                "children": [],
+                "avg_value": 0.61236,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.6804,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.756,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[thank, credibility-appeal, praise-user]",
+        "count": 1,
+        "value_sum": -0.01799999999999999,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[donation-information, ask-donate-more]",
+            "count": 1,
+            "value_sum": -0.016199999999999992,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[emotion-appeal, personal-related-inquiry]",
+                "count": 1,
+                "value_sum": -0.014579999999999994,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[personal-story, emotion-appeal, credibility-appeal]",
+                    "count": 1,
+                    "value_sum": -0.013121999999999993,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[acknowledgement, emotion-appeal, thank, closing]",
+                        "count": 1,
+                        "value_sum": -0.011809799999999995,
+                        "success_D": 0,
+                        "children": [],
+                        "avg_value": -0.011809799999999995,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.013121999999999993,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.014579999999999994,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.016199999999999992,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.01799999999999999,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[thank, donation-information]",
+        "count": 1,
+        "value_sum": 0.7200000000000001,
+        "success_D": 1,
+        "children": [],
+        "avg_value": 0.7200000000000001,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[thank, logical-appeal]",
+        "count": 1,
+        "value_sum": -0.03599999999999998,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[acknowledgement, praise-user]",
+            "count": 1,
+            "value_sum": -0.032399999999999984,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[logical-appeal]",
+                "count": 1,
+                "value_sum": -0.029159999999999988,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[other]",
+                    "count": 1,
+                    "value_sum": -0.026243999999999986,
+                    "success_D": 0,
+                    "children": [],
+                    "avg_value": -0.026243999999999986,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.029159999999999988,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.032399999999999984,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.03599999999999998,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[thank, self-modeling]",
+        "count": 1,
+        "value_sum": -0.558,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[closing]",
+            "count": 1,
+            "value_sum": -0.5022,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[closing]",
+                "count": 1,
+                "value_sum": -0.45198000000000005,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[personal-related-inquiry]",
+                    "count": 1,
+                    "value_sum": -0.40678200000000003,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[personal-story]",
+                        "count": 1,
+                        "value_sum": -0.36610380000000003,
+                        "success_D": 0,
+                        "children": [],
+                        "avg_value": -0.36610380000000003,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.40678200000000003,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.45198000000000005,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.5022,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.558,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[thank]",
+        "count": 5,
+        "value_sum": 0.9900000000000001,
+        "success_D": 3,
+        "children": [],
+        "avg_value": 0.198,
+        "success_rate": 0.6
+      },
+      {
+        "name": "[you-are-welcome, emotion-appeal, thank]",
+        "count": 1,
+        "value_sum": 0.7200000000000001,
+        "success_D": 1,
+        "children": [],
+        "avg_value": 0.7200000000000001,
+        "success_rate": 1.0
+      }
+    ],
+    "avg_value": 0.17264382960035146,
+    "success_rate": 0.5217391304347826
+  }
+}

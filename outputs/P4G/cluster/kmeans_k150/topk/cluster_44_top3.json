@@ -1,0 +1,71 @@
+{
+  "cluster": 44,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[credibility-appeal]",
+        "[credibility-appeal, donation-information]",
+        "[logical-appeal, emotion-appeal]",
+        "[logical-appeal, emotion-appeal]",
+        "[ask-donate-more, comment-partner]",
+        "[personal-story, foot-in-the-door, logical-appeal]",
+        "[personal-story, credibility-appeal]",
+        "[self-modeling, ask-donate-more]",
+        "[thank]"
+      ],
+      "score": 3.2293432495250114,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal, donation-information]",
+        "[logical-appeal, emotion-appeal]",
+        "[logical-appeal, emotion-appeal]",
+        "[ask-donate-more, comment-partner]",
+        "[personal-story, foot-in-the-door, logical-appeal]",
+        "[personal-story, credibility-appeal]",
+        "[self-modeling, ask-donate-more]",
+        "[thank]"
+      ],
+      "score": 3.0457566015162563,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.40463917740000005
+      }
+    },
+    {
+      "chain": [
+        "[logical-appeal, emotion-appeal]",
+        "[logical-appeal, emotion-appeal]",
+        "[ask-donate-more, comment-partner]",
+        "[personal-story, foot-in-the-door, logical-appeal]",
+        "[personal-story, credibility-appeal]",
+        "[self-modeling, ask-donate-more]",
+        "[thank]"
+      ],
+      "score": 2.7066468039343663,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.44003314800000004
+      }
+    }
+  ]
+}

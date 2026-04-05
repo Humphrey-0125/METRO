@@ -1,0 +1,74 @@
+{
+  "cluster": 59,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[positive-to-inquiry, thank]",
+        "[donation-information]",
+        "[acknowledgement, emotion-appeal, personal-story]",
+        "[personal-story, emotion-appeal, credibility-appeal]",
+        "[positive-to-inquiry, credibility-appeal]",
+        "[credibility-appeal, logical-appeal]",
+        "[credibility-appeal, emotion-appeal]",
+        "[credibility-appeal, logical-appeal]",
+        "[proposition-of-donation]"
+      ],
+      "score": 3.50272037258028,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3745064727000001
+      }
+    },
+    {
+      "chain": [
+        "[positive-to-inquiry, thank]",
+        "[donation-information, credibility-appeal]",
+        "[credibility-appeal, emotion-appeal]",
+        "[credibility-appeal, emotion-appeal]",
+        "[proposition-of-donation, foot-in-the-door]",
+        "[logical-appeal, emotion-appeal, proposition-of-donation]",
+        "[thank, positive-to-inquiry]",
+        "[donation-information]",
+        "[positive-to-inquiry, donation-information]"
+      ],
+      "score": 3.4999244843384623,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3733324712181819
+      }
+    },
+    {
+      "chain": [
+        "[positive-to-inquiry, thank]",
+        "[credibility-appeal, source-related-inquiry]",
+        "[credibility-appeal, donation-information]",
+        "[self-modeling, personal-related-inquiry]",
+        "[emotion-appeal, personal-story]",
+        "[credibility-appeal]",
+        "[ask-donation-amount]",
+        "[positive-to-inquiry]",
+        "[acknowledgement]"
+      ],
+      "score": 3.4965694184482805,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    }
+  ]
+}

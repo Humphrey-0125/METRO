@@ -1,0 +1,440 @@
+{
+  "cluster": 26,
+  "n_items_raw": 40,
+  "config": {
+    "reward_mode": "sl",
+    "lambda_len": 0.2,
+    "alpha": 1.0,
+    "gamma": 0.9,
+    "min_count": 1,
+    "dedup_dialog_per_cluster": false
+  },
+  "tree": {
+    "name": "ROOT",
+    "count": 40,
+    "value_sum": 18.567022977022976,
+    "success": 23,
+    "children": [
+      {
+        "name": "[affirm_confirmation]",
+        "count": 1,
+        "value_sum": 0.3675,
+        "success": 1,
+        "children": [],
+        "avg_value": 0.3675,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[agree_with_proposal]",
+        "count": 3,
+        "value_sum": 1.1545054945054944,
+        "success": 3,
+        "children": [],
+        "avg_value": 0.38483516483516483,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[ask_question]",
+        "count": 8,
+        "value_sum": 1.6209860139860137,
+        "success": 4,
+        "children": [
+          {
+            "name": "[ask_question]",
+            "count": 2,
+            "value_sum": -0.08100000000000002,
+            "success": 0,
+            "children": [
+              {
+                "name": "[ask_question]",
+                "count": 1,
+                "value_sum": -0.02916000000000001,
+                "success": 0,
+                "children": [
+                  {
+                    "name": "[propose_counter_price]",
+                    "count": 1,
+                    "value_sum": -0.026244000000000007,
+                    "success": 0,
+                    "children": [],
+                    "avg_value": -0.026244000000000007,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.02916000000000001,
+                "success_rate": 0.0
+              },
+              {
+                "name": "[propose_counter_price]",
+                "count": 1,
+                "value_sum": -0.04374,
+                "success": 0,
+                "children": [],
+                "avg_value": -0.04374,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.04050000000000001,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[disagree_with_proposal]",
+            "count": 1,
+            "value_sum": 0.3915,
+            "success": 1,
+            "children": [
+              {
+                "name": "[propose_counter_price]",
+                "count": 1,
+                "value_sum": 0.35235000000000005,
+                "success": 1,
+                "children": [
+                  {
+                    "name": "[affirm_confirmation]",
+                    "count": 1,
+                    "value_sum": 0.31711500000000004,
+                    "success": 1,
+                    "children": [],
+                    "avg_value": 0.31711500000000004,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.35235000000000005,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.3915,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[propose_counter_price]",
+            "count": 5,
+            "value_sum": 1.1483874125874127,
+            "success": 3,
+            "children": [
+              {
+                "name": "[counter]",
+                "count": 1,
+                "value_sum": 0.20655,
+                "success": 1,
+                "children": [
+                  {
+                    "name": "[agree_with_proposal]",
+                    "count": 1,
+                    "value_sum": 0.185895,
+                    "success": 1,
+                    "children": [],
+                    "avg_value": 0.185895,
+                    "success_rate": 1.0
+                  }
+                ],
+                "avg_value": 0.20655,
+                "success_rate": 1.0
+              },
+              {
+                "name": "[propose_counter_price]",
+                "count": 3,
+                "value_sum": 0.8853186713286714,
+                "success": 2,
+                "children": [
+                  {
+                    "name": "[agree_with_proposal]",
+                    "count": 1,
+                    "value_sum": 0.6466790769230768,
+                    "success": 1,
+                    "children": [],
+                    "avg_value": 0.6466790769230768,
+                    "success_rate": 1.0
+                  },
+                  {
+                    "name": "[disagree_with_proposal]",
+                    "count": 1,
+                    "value_sum": -0.03578727272727272,
+                    "success": 0,
+                    "children": [],
+                    "avg_value": -0.03578727272727272,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": 0.2951062237762238,
+                "success_rate": 0.6666666666666666
+              }
+            ],
+            "avg_value": 0.22967748251748255,
+            "success_rate": 0.6
+          }
+        ],
+        "avg_value": 0.20262325174825171,
+        "success_rate": 0.5
+      },
+      {
+        "name": "[counter]",
+        "count": 1,
+        "value_sum": 0.22499999999999998,
+        "success": 1,
+        "children": [
+          {
+            "name": "[agree_with_proposal]",
+            "count": 1,
+            "value_sum": 0.20249999999999999,
+            "success": 1,
+            "children": [],
+            "avg_value": 0.20249999999999999,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.22499999999999998,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[disagree_with_proposal]",
+        "count": 2,
+        "value_sum": 0.31431818181818183,
+        "success": 1,
+        "children": [
+          {
+            "name": "[propose_counter_price]",
+            "count": 1,
+            "value_sum": 0.37125,
+            "success": 1,
+            "children": [
+              {
+                "name": "[affirm_confirmation]",
+                "count": 1,
+                "value_sum": 0.334125,
+                "success": 1,
+                "children": [],
+                "avg_value": 0.334125,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.37125,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 0.15715909090909091,
+        "success_rate": 0.5
+      },
+      {
+        "name": "[greet]",
+        "count": 3,
+        "value_sum": 4.022142857142858,
+        "success": 3,
+        "children": [
+          {
+            "name": "[propose_counter_price]",
+            "count": 2,
+            "value_sum": 2.917928571428572,
+            "success": 2,
+            "children": [
+              {
+                "name": "[agree_with_proposal]",
+                "count": 1,
+                "value_sum": 0.13191428571428573,
+                "success": 1,
+                "children": [],
+                "avg_value": 0.13191428571428573,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 1.458964285714286,
+            "success_rate": 1.0
+          }
+        ],
+        "avg_value": 1.340714285714286,
+        "success_rate": 1.0
+      },
+      {
+        "name": "[propose_counter_price]",
+        "count": 16,
+        "value_sum": 5.293952547452547,
+        "success": 8,
+        "children": [
+          {
+            "name": "[affirm_confirmation]",
+            "count": 1,
+            "value_sum": 0.35100000000000003,
+            "success": 1,
+            "children": [],
+            "avg_value": 0.35100000000000003,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[agree_with_proposal]",
+            "count": 2,
+            "value_sum": 0.8893978021978022,
+            "success": 2,
+            "children": [],
+            "avg_value": 0.4446989010989011,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[counter]",
+            "count": 1,
+            "value_sum": 0.216,
+            "success": 1,
+            "children": [
+              {
+                "name": "[agree_with_proposal]",
+                "count": 1,
+                "value_sum": 0.19440000000000002,
+                "success": 1,
+                "children": [],
+                "avg_value": 0.19440000000000002,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 0.216,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[disagree_with_proposal]",
+            "count": 1,
+            "value_sum": -0.07363636363636364,
+            "success": 0,
+            "children": [],
+            "avg_value": -0.07363636363636364,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[propose_counter_price]",
+            "count": 5,
+            "value_sum": 0.8065101398601398,
+            "success": 2,
+            "children": [
+              {
+                "name": "[agree_with_proposal]",
+                "count": 1,
+                "value_sum": 0.7039523076923077,
+                "success": 1,
+                "children": [],
+                "avg_value": 0.7039523076923077,
+                "success_rate": 1.0
+              },
+              {
+                "name": "[disagree_with_proposal]",
+                "count": 1,
+                "value_sum": -0.05301818181818183,
+                "success": 0,
+                "children": [],
+                "avg_value": -0.05301818181818183,
+                "success_rate": 0.0
+              },
+              {
+                "name": "[propose_counter_price]",
+                "count": 1,
+                "value_sum": -0.048600000000000004,
+                "success": 0,
+                "children": [],
+                "avg_value": -0.048600000000000004,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": 0.16130202797202794,
+            "success_rate": 0.4
+          }
+        ],
+        "avg_value": 0.3308720342157842,
+        "success_rate": 0.5
+      },
+      {
+        "name": "[propose_first_price]",
+        "count": 6,
+        "value_sum": 3.711915584415585,
+        "success": 2,
+        "children": [
+          {
+            "name": "[ask_question]",
+            "count": 1,
+            "value_sum": -0.02945454545454546,
+            "success": 0,
+            "children": [
+              {
+                "name": "[propose_counter_price]",
+                "count": 1,
+                "value_sum": -0.026509090909090916,
+                "success": 0,
+                "children": [
+                  {
+                    "name": "[propose_counter_price]",
+                    "count": 1,
+                    "value_sum": -0.023858181818181824,
+                    "success": 0,
+                    "children": [
+                      {
+                        "name": "[disagree_with_proposal]",
+                        "count": 1,
+                        "value_sum": -0.021472363636363644,
+                        "success": 0,
+                        "children": [],
+                        "avg_value": -0.021472363636363644,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.023858181818181824,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.026509090909090916,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.02945454545454546,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[greet]",
+            "count": 2,
+            "value_sum": 3.5408571428571434,
+            "success": 2,
+            "children": [
+              {
+                "name": "[propose_counter_price]",
+                "count": 1,
+                "value_sum": 2.530671428571429,
+                "success": 1,
+                "children": [],
+                "avg_value": 2.530671428571429,
+                "success_rate": 1.0
+              }
+            ],
+            "avg_value": 1.7704285714285717,
+            "success_rate": 1.0
+          },
+          {
+            "name": "[propose_counter_price]",
+            "count": 2,
+            "value_sum": -0.13017857142857145,
+            "success": 0,
+            "children": [],
+            "avg_value": -0.06508928571428572,
+            "success_rate": 0.0
+          },
+          {
+            "name": "[propose_first_price]",
+            "count": 1,
+            "value_sum": -0.04050000000000001,
+            "success": 0,
+            "children": [
+              {
+                "name": "[propose_counter_price]",
+                "count": 1,
+                "value_sum": -0.03645,
+                "success": 0,
+                "children": [],
+                "avg_value": -0.03645,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.04050000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": 0.6186525974025975,
+        "success_rate": 0.3333333333333333
+      }
+    ],
+    "avg_value": 0.4641755744255744,
+    "success_rate": 0.575
+  }
+}

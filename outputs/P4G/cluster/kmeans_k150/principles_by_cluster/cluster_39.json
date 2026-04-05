@@ -1,0 +1,507 @@
+[
+  {
+    "id": "20180904-151909_144_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows curiosity about the topic, avoid giving neutral or unrelated replies that do not advance the conversation toward the donation goal."
+  },
+  {
+    "id": "20180904-090242_588_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with casual personal information, avoid focusing solely on small talk without gradually steering the conversation toward the donation purpose."
+  },
+  {
+    "id": "20180904-153333_396_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with a question seeking clarification about the donation, avoid assuming their willingness and instead provide clear, specific information about the cause."
+  },
+  {
+    "id": "20180904-065729_541_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shares personal information or life circumstances, you should ask related questions to build rapport and encourage openness for future persuasion."
+  },
+  {
+    "id": "20180904-080304_646_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds positively to small talk without showing donation interest, avoid focusing solely on casual topics that do not connect to the charitable cause."
+  },
+  {
+    "id": "20180831-224726_732_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with casual, unrelated conversation, avoid continuing off-topic small talk that does not connect to the donation purpose or increase willingness to contribute."
+  },
+  {
+    "id": "20180831-211050_995_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with neutral, factual statements unrelated to the cause, avoid asking personal questions that do not connect to the charitable appeal."
+  },
+  {
+    "id": "20180831-180309_707_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows awareness and a positive attitude toward a charity, you should acknowledge this recognition to build rapport and create a foundation for donation requests."
+  },
+  {
+    "id": "20180828-190442_503_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses unfamiliarity with the charity and compares it to another, avoid assuming prior knowledge or making vague references without clear explanations."
+  },
+  {
+    "id": "20180828-191043_249_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee indicates difficulty with a task, avoid making generic check-in questions that do not address their specific concerns or relate to the donation appeal."
+  },
+  {
+    "id": "20180828-144936_260_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with neutral or unrelated topics, avoid giving casual or non-informative replies that do not steer the conversation toward the charitable cause."
+  },
+  {
+    "id": "20180828-190212_442_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness and personal interest related to the cause, you should engage them with informative questions that invite them to learn more and express their concerns."
+  },
+  {
+    "id": "20180828-155340_989_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows tentative interest, you should clearly introduce the purpose of the conversation to encourage engagement and prompt them to ask for more information."
+  },
+  {
+    "id": "20180828-190447_206_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses financial constraints as a reason for not donating, avoid focusing on recent donation history that may highlight their inability to give."
+  },
+  {
+    "id": "20180828-190347_623_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows no prior knowledge of a charity, you should introduce the charity with an engaging question to spark curiosity and open the door for further explanation."
+  },
+  {
+    "id": "20180828-212320_295_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee responds positively and shows willingness to engage, you should build rapport by asking for their name to establish a personal connection and encourage further conversation about the charity."
+  },
+  {
+    "id": "20180828-192202_602_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows curiosity about the charity, avoid giving only generic information without specifying the cause or mission to maintain engagement and build trust."
+  },
+  {
+    "id": "20180828-190157_397_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows only mild recognition of a charity, avoid asking vague questions that do not deepen their interest or move them closer to donation."
+  },
+  {
+    "id": "20180825-073030_73_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shares personal involvement with a charity, avoid shifting the topic to unrelated small talk that does not build on their expressed interest."
+  },
+  {
+    "id": "20180825-075835_273_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shifts the conversation toward a charitable topic, avoid responding with unrelated small talk that does not acknowledge or build on their expressed interest."
+  },
+  {
+    "id": "20180903-165804_344_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee is unfamiliar with the charity, avoid assuming prior knowledge or skipping introductory information about the organization."
+  },
+  {
+    "id": "20180903-172009_84_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses disinterest or detachment from casual topics, avoid making unrelated small talk that does not connect to the charitable cause or donation appeal."
+  },
+  {
+    "id": "20180903-141447_736_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shares a history of donating to other charities without expressing interest in your specific cause, avoid generic questions that do not connect their past giving to your charity's mission."
+  },
+  {
+    "id": "20180903-184453_829_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows recognition or familiarity with a charity, avoid assuming their full support or immediately pushing for a donation without further engagement."
+  },
+  {
+    "id": "20180903-221028_490_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee is already familiar with the issue, avoid repeating general information that does not add new insight or advance the conversation towards a donation."
+  },
+  {
+    "id": "20180903-181230_303_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with curiosity about the project, avoid being vague or overly general about the cause without providing clear, compelling details."
+  },
+  {
+    "id": "20180903-165655_280_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows initial openness but limited knowledge, you should introduce the cause clearly and provide credible information to engage their curiosity and encourage further inquiry."
+  },
+  {
+    "id": "20180903-194345_741_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with neutral or polite acknowledgments, avoid merely exchanging pleasantries without introducing meaningful information or a persuasive appeal related to the cause."
+  },
+  {
+    "id": "20180903-093512_147_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows confusion or suspicion, avoid giving generic or unrelated responses that fail to build rapport or introduce the charitable cause effectively."
+  },
+  {
+    "id": "20180903-103052_41_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with neutral, personal information unrelated to the donation topic, avoid focusing solely on casual conversation starters that do not connect to the charitable cause."
+  },
+  {
+    "id": "20180903-134707_882_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows interest by asking about your own donation, avoid only providing information without engaging personally to build trust and encourage reciprocity."
+  },
+  {
+    "id": "20180903-042430_763_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee acknowledges past charitable actions without expressing current donation intent, avoid assuming immediate willingness to donate and instead explore their motivations and interests further."
+  },
+  {
+    "id": "20180903-170041_976_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shares personal challenges or discomfort, avoid making unrelated positive statements that do not connect to the charitable cause or donation appeal."
+  },
+  {
+    "id": "20180903-111515_288_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows neutral openness without enthusiasm, avoid making generic or non-engaging statements that do not advance the conversation toward donation."
+  },
+  {
+    "id": "20180903-155911_448_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with personal and positive experiences, avoid focusing solely on small talk that does not gradually lead toward discussing the charitable cause or donation."
+  },
+  {
+    "id": "20180903-074043_932_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shares a personal connection to a specific charity, avoid immediately shifting focus to unrelated causes without first acknowledging their experience."
+  },
+  {
+    "id": "20180903-005045_964_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee is willing to listen but not yet committed, avoid making generic or vague requests that do not clearly connect to the charity's impact or benefits."
+  },
+  {
+    "id": "20180903-053722_705_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses curiosity about the conversation's purpose, avoid giving only polite but vague responses that do not clarify the charitable cause or donation intent."
+  },
+  {
+    "id": "20180826-061846_932_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows familiarity with a charity, you should acknowledge their knowledge to build rapport and encourage deeper engagement with the cause."
+  },
+  {
+    "id": "20180826-190151_488_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows recognition or interest in a charity, you should engage them with open-ended questions to encourage further conversation and build rapport."
+  },
+  {
+    "id": "20180826-033211_245_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness or positivity, you should highlight the charitable cause clearly and ask a direct question to encourage agreement and engagement."
+  },
+  {
+    "id": "20180831-065311_853_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows familiarity and positive feelings toward a charity, you should acknowledge this to build rapport and create a foundation for encouraging donations."
+  },
+  {
+    "id": "20180831-205301_781_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with casual conversation and personal plans, avoid continuing small talk without gradually introducing the charitable cause or donation appeal."
+  },
+  {
+    "id": "20180831-072612_12_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee reveals hesitation or uncertainty about donating, you should ask direct questions about their donation habits to encourage openness and engagement."
+  },
+  {
+    "id": "20180831-231032_102_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows unfamiliarity with the charity, avoid making direct donation requests without first providing clear and engaging information about the cause."
+  },
+  {
+    "id": "20180831-122246_544_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses personal feelings unrelated to the charitable cause, avoid making vague or off-topic statements that do not steer the conversation toward the donation goal."
+  },
+  {
+    "id": "20180826-043247_456_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows mild familiarity but no clear commitment, avoid assuming interest without providing engaging, informative details to build genuine connection and trust."
+  },
+  {
+    "id": "20180826-065245_39_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee already expresses positive feelings about the cause, avoid asking questions that do not directly connect their attitude to the action of donating."
+  },
+  {
+    "id": "20180826-070323_186_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee indicates infrequent recent donations, avoid asking questions that do not encourage reflection on their motivations or feelings about giving."
+  },
+  {
+    "id": "20180723-070336_48_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows openness to discussing social issues but has not yet expressed willingness to donate, avoid immediately pushing for a donation commitment."
+  },
+  {
+    "id": "20180723-113700_19_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows some prior knowledge and positive attitude toward a charity, you should engage them by asking about their familiarity to build rapport and encourage further positive dialogue."
+  },
+  {
+    "id": "20180807-193534_716_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses empathy and a desire to help those suffering, you should acknowledge their feelings and connect your message to their values to foster openness toward donating."
+  },
+  {
+    "id": "20180807-114503_772_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness to conversation, you should politely and clearly introduce the topic of donation to engage their interest and willingness to discuss further."
+  },
+  {
+    "id": "20180807-200337_482_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with casual, unrelated personal information, avoid replying with neutral or purely polite statements that do not steer the conversation toward the charitable cause."
+  },
+  {
+    "id": "20180719-211846_176_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses emotional concern about a serious issue, you should introduce a credible charity as a concrete way to help address the problem."
+  },
+  {
+    "id": "20180902-150252_344_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee recalls a positive past experience with the charity, you should build on that goodwill to encourage further engagement or donations."
+  },
+  {
+    "id": "20180902-220100_244_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness or interest in learning, you should engage them by asking about their familiarity to create a connection and encourage further dialogue."
+  },
+  {
+    "id": "20180902-222301_80_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses limited but positive knowledge about a charity, you should ask open-ended questions to encourage them to share their views and create opportunities to provide more information."
+  },
+  {
+    "id": "20180902-215438_58_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with neutral, routine information that does not reveal personal values or interests, avoid spending excessive time on small talk unrelated to the donation appeal."
+  },
+  {
+    "id": "20180824-121933_745_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee indicates no current involvement with charities, avoid assuming interest or pushing for immediate commitment without first exploring their values or motivations."
+  },
+  {
+    "id": "20180824-121958_772_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shares casual information unrelated to the donation, avoid focusing solely on small talk that does not guide the conversation toward the charitable goal."
+  },
+  {
+    "id": "20180829-085544_678_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness or curiosity about a charity, you should introduce the cause to engage their interest and encourage further dialogue."
+  },
+  {
+    "id": "20180829-073415_966_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with polite but neutral engagement, avoid generic or unrelated small talk that does not connect to the donation goal or build motivation."
+  },
+  {
+    "id": "20180829-092612_565_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee responds positively and shows willingness to listen, you should use a polite and casual approach to engage them and smoothly introduce the charity."
+  },
+  {
+    "id": "20180829-161850_275_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee responds positively and shows interest, you should engage them by providing more information about the charity to deepen their commitment and encourage donation."
+  },
+  {
+    "id": "20180829-045325_336_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee reveals some willingness or current habit of donating, you should acknowledge their effort and encourage them by emphasizing that even small contributions make a meaningful impact."
+  },
+  {
+    "id": "20180829-065704_482_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses curiosity or requests information about the organization, avoid immediately asking for a donation without first providing relevant details."
+  },
+  {
+    "id": "20180829-143714_241_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee reveals a personal connection to a sensitive topic, you should acknowledge and relate to that connection to build rapport and open pathways for meaningful engagement."
+  },
+  {
+    "id": "20180808-035715_390_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows interest in the charitable cause, avoid diverting the conversation to unrelated personal topics that do not advance the donation discussion."
+  },
+  {
+    "id": "20180808-020257_457_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses interest or existing involvement in charitable donations, you should acknowledge their contributions and build on that openness to introduce your cause."
+  },
+  {
+    "id": "20180808-022730_384_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows emotional concern and curiosity about charitable options, you should share relatable, impactful stories to increase engagement and openness to donation discussions."
+  },
+  {
+    "id": "20180808-034352_717_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds positively but without donation-related cues, avoid focusing solely on neutral social questions that do not advance the charitable donation goal."
+  },
+  {
+    "id": "20180830-173642_791_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness or prior consideration of donating, you should prompt them to reflect on their thoughts to engage them further in the donation conversation."
+  },
+  {
+    "id": "20180830-154653_979_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness or curiosity, you should invite them to learn how even small contributions can make a meaningful difference to increase engagement."
+  },
+  {
+    "id": "20180830-154613_158_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee is politely responsive but not yet committed, you should clearly and politely introduce the charitable cause to encourage engagement and prompt requests for more information."
+  },
+  {
+    "id": "20180830-185013_499_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows familiarity with a charity but no increased engagement, avoid generic or purely informative statements that do not connect emotionally or personally."
+  },
+  {
+    "id": "20180830-192317_46_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with general small talk and does not show engagement with the donation topic, avoid continuing unrelated casual conversation without introducing relevant appeals or information."
+  },
+  {
+    "id": "20180830-185954_395_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows interest in your personal experiences, you should share meaningful and relatable stories about your involvement with the charity to engage and build rapport."
+  },
+  {
+    "id": "20180830-201035_956_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with casual, off-topic remarks, avoid continuing unrelated small talk that does not steer the conversation toward the charitable cause."
+  },
+  {
+    "id": "20180830-155510_301_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with casual, reciprocal questions, avoid only exchanging pleasantries without steering the conversation toward the donation goal or introducing relevant persuasive content."
+  },
+  {
+    "id": "20180830-174602_584_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with neutral small talk unrelated to the donation topic, avoid continuing with generic questions that do not guide the conversation toward the charitable cause."
+  },
+  {
+    "id": "20180830-154545_725_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with neutral or routine information about their day, avoid only making polite inquiries that do not steer the conversation toward the donation goal."
+  },
+  {
+    "id": "20180901-112814_354_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness to engage, you should politely ask for permission to continue the conversation, fostering cooperation and willingness to participate."
+  },
+  {
+    "id": "20180901-191816_441_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows openness but no clear inclination to donate, avoid vague or indirect requests that do not clearly connect to the donation goal."
+  },
+  {
+    "id": "20180901-170812_961_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows some familiarity but lacks detailed knowledge about a charity, you should provide clear and informative explanations to build interest and trust."
+  },
+  {
+    "id": "20180901-112824_44_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee indicates they have not considered donating to charity, avoid asking questions that do not engage their interest or prompt reflection on the benefits of giving."
+  },
+  {
+    "id": "20180901-071043_291_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses curiosity about your experience, avoid responding with unrelated small talk that does not connect to the charitable cause or donation purpose."
+  },
+  {
+    "id": "20180901-091456_160_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with relatable but off-topic remarks, avoid making comments that do not steer the conversation toward the charitable donation goal."
+  },
+  {
+    "id": "20180901-121302_185_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shares personal challenges or life details, you should respond with empathy and share relatable experiences to build rapport and encourage openness."
+  },
+  {
+    "id": "20180901-083851_418_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows unfamiliarity with a charity, you should introduce the organization and invite them to ask about its mission to foster engagement and interest."
+  },
+  {
+    "id": "20180901-161656_635_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows only vague recognition of a charity, avoid assuming strong interest or immediately pushing for a donation without building more rapport and understanding."
+  },
+  {
+    "id": "20180827-062717_115_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows interest by asking about a specific charity, avoid giving generic or unrelated responses that do not engage with their expressed curiosity."
+  },
+  {
+    "id": "20180827-045437_313_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses a positive attitude towards the cause, you should directly connect your donation request to that cause to increase engagement and willingness to contribute."
+  },
+  {
+    "id": "20180904-045349_715_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with casual, non-committal remarks, avoid engaging only in small talk that does not steer the conversation toward the donation request."
+  },
+  {
+    "id": "20180825-075630_493_live:1",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee introduces a donation topic, avoid shifting focus to unrelated small talk that does not acknowledge or build on their expressed interest."
+  },
+  {
+    "id": "20180825-083430_379_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness to engagement, you should invite them to learn more and consider donating to encourage commitment toward the charitable cause."
+  },
+  {
+    "id": "20180825-043229_970_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows curiosity or interest in your cause, you should share more information about the charity to deepen engagement and encourage willingness to donate."
+  },
+  {
+    "id": "20180723-072435_196_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee responds positively and shows willingness to engage, you should introduce the charitable topic clearly and invite their participation to build openness and rapport."
+  },
+  {
+    "id": "20180723-052203_936_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness or curiosity, you should introduce the charity clearly and invite engagement by asking if they have heard of it to encourage interest."
+  },
+  {
+    "id": "20180723-082451_335_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee is receptive but seeking more information, you should directly introduce the cause and invite engagement to encourage interest and dialogue."
+  },
+  {
+    "id": "20180719-202443_897_live:1",
+    "principle_type": "do",
+    "principle_text": "When the persuadee is open and responsive, you should politely introduce the topic and ask for permission to continue to foster engagement and willingness to listen."
+  }
+]

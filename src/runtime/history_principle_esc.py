@@ -1,42 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
-ESC Principle-guided emotional-support simulation (history-based retrieval).
-
-核心逻辑（ESC版）：
-- 用对话 history embedding 检索最相似簇 / MCT 策略路径（retrieve_strategy_chain_by_history）；
-- 在该簇内，基于最近一条 seeker utterance（get_last_utterance("seeker")）检索 top-k principles；
-  * 检索 key = principle_text 的 WHEN 子句（逗号前）；
-- 将 depth（策略链提示）+ breadth（principle->guidance / immediate）传给 Simulator 生成回复；
-- 用 Seeker persona 生成 Seeker 的下一句（可替换为你的 seeker 生成器）；
-- 用 ESC judge (A/B/C/D) 判断是否结束；
-- 增量保存与断点续传：按 dialogue_id 去重。
-
-数据假设：
-- ESC dev/test 数据（用于跑模拟）格式（你自己对齐即可）：
-[
-  {
-    "index": 0,
-    "emotion_type": "...",
-    "problem_type": "...",
-    "situation": "...",
-    "seeker_persona_used": "...",   # 可选
-  },
-  ...
-]
-
-输出 result（每条对话一次）：
-{
-  "dialogue_id": ...,
-  "num_turns": ...,
-  "final_attitude_prediction": "A|B|C|D",
-  "dialog": [...],
-  "meta": {...},
-  "ablation_mode": ...
-}
-"""
-
 import os
 import json
 from typing import List, Dict, Any, Optional

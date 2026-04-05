@@ -1,0 +1,74 @@
+{
+  "cluster": 4,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[comment-partner]",
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[personal-story, proposition-of-donation]",
+        "[proposition-of-donation]",
+        "[donation-information]"
+      ],
+      "score": 3.448171259836037,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3745064727000001
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[acknowledgement, emotion-appeal]",
+        "[personal-story, self-modeling]",
+        "[acknowledgement, donation-information, source-related-inquiry]",
+        "[credibility-appeal, donation-information, emotion-appeal]",
+        "[donation-information, credibility-appeal]",
+        "[praise-user, proposition-of-donation, emotion-appeal]",
+        "[praise-user, donation-information, closing]"
+      ],
+      "score": 3.4431003057040366,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[source-related-inquiry]",
+        "[self-modeling]",
+        "[personal-related-inquiry]",
+        "[self-modeling]",
+        "[personal-related-inquiry, proposition-of-donation]",
+        "[ask-donation-amount]",
+        "[ask-donate-more]"
+      ],
+      "score": 3.4431003057040366,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    }
+  ]
+}

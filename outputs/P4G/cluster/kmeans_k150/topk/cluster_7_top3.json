@@ -1,0 +1,72 @@
+{
+  "cluster": 7,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[personal-story, credibility-appeal, personal-related-inquiry]",
+        "[comment-partner, personal-related-inquiry]",
+        "[praise-user, proposition-of-donation]",
+        "[personal-story, self-modeling, logical-appeal, emotion-appeal]",
+        "[foot-in-the-door, emotion-appeal]",
+        "[self-modeling, proposition-of-donation]",
+        "[confirm-donation]",
+        "[confirm-donation, ask-donation-amount]",
+        "[confirm-donation, emotion-appeal]"
+      ],
+      "score": 3.1789367069055836,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.35421301851428577
+      }
+    },
+    {
+      "chain": [
+        "[personal-story, comment-partner, praise-user]",
+        "[emotion-appeal, comment-partner]",
+        "[emotion-appeal]",
+        "[personal-story]",
+        "[personal-related-inquiry, proposition-of-donation]",
+        "[credibility-appeal, donation-information, emotion-appeal, proposition-of-donation]",
+        "[acknowledgement, logical-appeal, ask-donate-more]",
+        "[thank, closing]"
+      ],
+      "score": 2.8802072062333033,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3991605038181819
+      }
+    },
+    {
+      "chain": [
+        "[comment-partner, personal-related-inquiry]",
+        "[praise-user, proposition-of-donation]",
+        "[personal-story, self-modeling, logical-appeal, emotion-appeal]",
+        "[foot-in-the-door, emotion-appeal]",
+        "[self-modeling, proposition-of-donation]",
+        "[confirm-donation]",
+        "[confirm-donation, ask-donation-amount]",
+        "[confirm-donation, emotion-appeal]"
+      ],
+      "score": 2.852248323815122,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3874204890000001
+      }
+    }
+  ]
+}

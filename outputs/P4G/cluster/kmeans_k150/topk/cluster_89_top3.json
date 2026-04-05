@@ -1,0 +1,56 @@
+{
+  "cluster": 89,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[comment-partner, personal-related-inquiry]",
+        "[comment-partner]"
+      ],
+      "score": -0.16324528194400553,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": -0.5508000000000001
+      }
+    },
+    {
+      "chain": [
+        "[comment-partner]",
+        "[comment-partner, personal-related-inquiry]",
+        "[comment-partner]"
+      ],
+      "score": -0.20130266751060005,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": -0.48114000000000007
+      }
+    },
+    {
+      "chain": [
+        "[acknowledgement]",
+        "[comment-partner]",
+        "[comment-partner, personal-related-inquiry]",
+        "[comment-partner]"
+      ],
+      "score": -0.257543363888011,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": -0.419904
+      }
+    }
+  ]
+}

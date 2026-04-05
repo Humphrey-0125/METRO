@@ -1,0 +1,72 @@
+{
+  "cluster": 69,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[emotion-appeal, credibility-appeal]",
+        "[acknowledgement, proposition-of-donation]",
+        "[credibility-appeal, donation-information, proposition-of-donation]",
+        "[positive-to-inquiry, proposition-of-donation, ask-donation-amount]",
+        "[positive-to-inquiry, donation-information]",
+        "[acknowledgement, thank]",
+        "[closing, thank]",
+        "[neutral-to-inquiry, donation-information]",
+        "[thank, closing]"
+      ],
+      "score": 3.045801868257393,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    },
+    {
+      "chain": [
+        "[acknowledgement, proposition-of-donation]",
+        "[credibility-appeal, donation-information, proposition-of-donation]",
+        "[positive-to-inquiry, proposition-of-donation, ask-donation-amount]",
+        "[positive-to-inquiry, donation-information]",
+        "[acknowledgement, thank]",
+        "[closing, thank]",
+        "[neutral-to-inquiry, donation-information]",
+        "[thank, closing]"
+      ],
+      "score": 2.8932546846951217,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.40463917740000005
+      }
+    },
+    {
+      "chain": [
+        "[other, emotion-appeal]",
+        "[credibility-appeal]",
+        "[logical-appeal]",
+        "[donation-information]",
+        "[neutral-to-inquiry, credibility-appeal]",
+        "[logical-appeal, proposition-of-donation]",
+        "[ask-donation-amount]",
+        "[acknowledgement, thank, donation-information]"
+      ],
+      "score": 2.8932546846951217,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.40463917740000005
+      }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "cluster": 9,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[credibility-appeal, donation-information]",
+        "[personal-related-inquiry, personal-story]",
+        "[personal-story, ask-donate-more]",
+        "[emotion-appeal, credibility-appeal]",
+        "[emotion-appeal, proposition-of-donation]",
+        "[praise-user, credibility-appeal, emotion-appeal]",
+        "[personal-story, emotion-appeal]",
+        "[proposition-of-donation, ask-donation-amount, donation-information]",
+        "[praise-user, self-modeling, thank]"
+      ],
+      "score": 3.358115811876328,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    },
+    {
+      "chain": [
+        "[neutral-to-inquiry, task-related-inquiry]",
+        "[self-modeling, proposition-of-donation]",
+        "[personal-story]",
+        "[donation-information]",
+        "[personal-story, self-modeling, proposition-of-donation]",
+        "[logical-appeal, personal-story]",
+        "[acknowledgement, credibility-appeal]",
+        "[closing, comment-partner]"
+      ],
+      "score": 2.8932546846951217,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.40463917740000005
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal, donation-information, emotion-appeal, proposition-of-donation]",
+        "[credibility-appeal]",
+        "[credibility-appeal, emotion-appeal]",
+        "[personal-story, emotion-appeal, ask-donation-amount]",
+        "[foot-in-the-door, praise-user]",
+        "[donation-information]",
+        "[personal-story, thank, closing]"
+      ],
+      "score": 2.552344887113232,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.44003314800000004
+      }
+    }
+  ]
+}

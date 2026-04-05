@@ -1,0 +1,74 @@
+{
+  "cluster": 98,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[donation-information]",
+        "[donation-information, emotion-appeal]",
+        "[donation-information]",
+        "[credibility-appeal, logical-appeal]",
+        "[credibility-appeal, emotion-appeal]",
+        "[credibility-appeal, proposition-of-donation]",
+        "[positive-to-inquiry, logical-appeal, ask-donation-amount]",
+        "[acknowledgement]",
+        "[thank, emotion-appeal]"
+      ],
+      "score": 3.4674098992596414,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal, donation-information]",
+        "[emotion-appeal, credibility-appeal]",
+        "[credibility-appeal, donation-information]",
+        "[praise-user, credibility-appeal, donation-information]",
+        "[donation-information]",
+        "[proposition-of-donation, foot-in-the-door, emotion-appeal]",
+        "[positive-to-inquiry, proposition-of-donation]",
+        "[acknowledgement, emotion-appeal]",
+        "[thank]"
+      ],
+      "score": 3.4035113003150634,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal, donation-information]",
+        "[personal-story, logical-appeal, proposition-of-donation]",
+        "[logical-appeal, donation-information, proposition-of-donation, ask-donation-amount]",
+        "[credibility-appeal, donation-information, task-related-inquiry]",
+        "[emotion-appeal, donation-information]",
+        "[emotion-appeal, donation-information, proposition-of-donation]",
+        "[donation-information, ask-donation-amount]",
+        "[thank, praise-user]",
+        "[closing, thank]"
+      ],
+      "score": 3.4035113003150634,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    }
+  ]
+}

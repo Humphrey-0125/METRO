@@ -1,0 +1,68 @@
+{
+  "cluster": 2,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[personal-story]",
+        "[personal-story]",
+        "[other, proposition-of-donation]",
+        "[donation-information]",
+        "[other, thank, donation-information, self-modeling]",
+        "[personal-story, ask-donation-amount, donation-information]",
+        "[proposition-of-donation]"
+      ],
+      "score": 2.6965660885161844,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4348153636363637
+      }
+    },
+    {
+      "chain": [
+        "[source-related-inquiry]",
+        "[emotion-appeal, credibility-appeal, donation-information]",
+        "[praise-user, proposition-of-donation, self-modeling]",
+        "[praise-user, confirm-donation]",
+        "[closing]",
+        "[off-task]",
+        "[closing]"
+      ],
+      "score": 2.5421005353314134,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4348153636363637
+      }
+    },
+    {
+      "chain": [
+        "[personal-story, emotion-appeal]",
+        "[personal-story, emotion-appeal, donation-information]",
+        "[credibility-appeal, donation-information, proposition-of-donation]",
+        "[donation-information, logical-appeal, emotion-appeal]",
+        "[praise-user, logical-appeal, ask-donation-amount]",
+        "[ask-donate-more, emotion-appeal, logical-appeal]",
+        "[thank, praise-user, emotion-appeal, closing]"
+      ],
+      "score": 2.5335635755132317,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4304672100000001
+      }
+    }
+  ]
+}

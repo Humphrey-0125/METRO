@@ -36,16 +36,16 @@ def _truncate(text: str, limit: int = 1200) -> str:
 # -----------------------------------------------------------------------------
 # Config (all keys from environment variables)
 # -----------------------------------------------------------------------------
-OPENAI_COMPATIBLE_URL = _get_env("OPENAI_COMPATIBLE_URL", "https://yinli.one/v1/chat/completions")
-OPENAI_COMPATIBLE_MODEL = _get_env("OPENAI_COMPATIBLE_MODEL", "gpt-4o-mini")
 
+COMPATIBLE_URL = _get_env("COMPATIBLE_URL", "https://api.bltcy.ai/v1/chat/completions")
+COMPATIBLE_MODEL = _get_env("COMPATIBLE_MODEL", "gpt-4o-mini")
+COMPATIBLE_KEY = _get_env("COMPATIBLE_KEY")
+OPENAI_URL = _get_env("OPENAI_URL", "https://api.openai.com/v1/chat/completions")
+OPENAI_MODEL = _get_env("OPENAI_MODEL", "gpt-4o-mini")
+OPENAI_KEY = _get_env("OPENAI_KEY")
 SILICONFLOW_URL = _get_env("SILICONFLOW_CHAT_URL", "https://api.siliconflow.cn/v1/chat/completions")
 SILICONFLOW_MODEL = _get_env("SILICONFLOW_CHAT_MODEL", "Qwen/Qwen3-32B")
-
-PLATO_URL = _get_env("PLATO_URL", "https://api.bltcy.ai/v1/chat/completions")
-PLATO_MODEL = _get_env("PLATO_MODEL", "gpt-4o-mini")
-
-OPENAI_MODEL = _get_env("OPENAI_MODEL", "gpt-4o-mini")
+SILICONFLOW_KEY = _get_env("SILICONFLOW_KEY")
 
 
 # -----------------------------------------------------------------------------
@@ -58,7 +58,7 @@ def call_siliconflow_api(
     max_tokens: int = 300,
     timeout: float = 60.0,
 ) -> str:
-    api_key = _require_env("SILICONFLOW_API_KEY")
+    api_key = _require_env(SILICONFLOW_KEY)
 
     payload = {
         "model": model,
@@ -105,13 +105,13 @@ def call_siliconflow_api(
 # -----------------------------------------------------------------------------
 # Plato-compatible
 # -----------------------------------------------------------------------------
-def call_plato_api(
+def call_compatible_api(
     messages: List[Dict[str, str]],
-    model: str = PLATO_MODEL,
+    model: str = COMPATIBLE_MODEL,
     temperature: float = 0.5,
     max_tokens: int = 200,
 ) -> str:
-    api_key = _require_env("PLATO_API_KEY")
+    api_key = _require_env(COMPATIBLE_KEY)
 
     payload = {
         "model": model,
@@ -127,14 +127,14 @@ def call_plato_api(
     }
 
     try:
-        response = requests.post(PLATO_URL, json=payload, headers=headers)
+        response = requests.post(COMPATIBLE_URL, json=payload, headers=headers)
         response.raise_for_status()
 
         result = response.json()
         usage = result.get("usage") if isinstance(result, dict) else None
         if isinstance(usage, dict):
             print(
-                "[Plato usage] "
+                "[Compatible usage] "
                 f"prompt={usage.get('prompt_tokens')} "
                 f"completion={usage.get('completion_tokens')} "
                 f"total={usage.get('total_tokens')}"
@@ -144,8 +144,8 @@ def call_plato_api(
     except requests.exceptions.RequestException as e:
         status_code = getattr(e.response, "status_code", None)
         body_text = getattr(e.response, "text", "") if e.response is not None else ""
-        print("Plato API call failed:")
-        print(f"  url: {PLATO_URL}")
+        print("Compatible API call failed:")
+        print(f"  url: {COMPATIBLE_URL}")
         print(f"  status: {status_code}")
         print(f"  model: {model}")
         print(f"  payload: {_truncate(payload)}")
@@ -185,7 +185,7 @@ def call_openai_api(
     temperature: float = 0.2,
     max_tokens: int = 200,
 ) -> str:
-    api_key = _require_env("OPENAI_API_KEY")
+    api_key = _require_env(OPENAI_KEY)
     client = _build_openai_client(api_key=api_key)
 
     try:

@@ -1,0 +1,74 @@
+{
+  "cluster": 134,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[comment-partner]",
+        "[personal-related-inquiry]",
+        "[proposition-of-donation]",
+        "[donation-information, credibility-appeal]",
+        "[neutral-to-inquiry]",
+        "[ask-donation-amount, donation-information]",
+        "[donation-information, emotion-appeal, praise-user]",
+        "[credibility-appeal, personal-story, emotion-appeal]",
+        "[ask-donation-amount, self-modeling]"
+      ],
+      "score": 3.5643225040443793,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3680494645500001
+      }
+    },
+    {
+      "chain": [
+        "[comment-partner]",
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[proposition-of-donation]",
+        "[proposition-of-donation]",
+        "[proposition-of-donation]",
+        "[ask-donate-more]",
+        "[personal-story]"
+      ],
+      "score": 3.5608650353180162,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[comment-partner]",
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[personal-story, proposition-of-donation]",
+        "[proposition-of-donation]",
+        "[donation-information]",
+        "[praise-user]"
+      ],
+      "score": 3.3914573042294602,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3680494645500001
+      }
+    }
+  ]
+}

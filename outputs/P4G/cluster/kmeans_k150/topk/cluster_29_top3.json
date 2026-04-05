@@ -1,0 +1,70 @@
+{
+  "cluster": 29,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[comment-partner, praise-user]",
+        "[praise-user, proposition-of-donation]",
+        "[personal-story, credibility-appeal]",
+        "[donation-information, credibility-appeal]",
+        "[donation-information]",
+        "[proposition-of-donation, donation-information, credibility-appeal]",
+        "[proposition-of-donation, ask-donation-amount]",
+        "[thank, closing]"
+      ],
+      "score": 2.8802072062333033,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3991605038181819
+      }
+    },
+    {
+      "chain": [
+        "[emotion-appeal, personal-story]",
+        "[proposition-of-donation, credibility-appeal]",
+        "[donation-information, credibility-appeal]",
+        "[credibility-appeal]",
+        "[proposition-of-donation, ask-donation-amount]",
+        "[ask-donation-amount]",
+        "[ask-donation-amount, neutral-to-inquiry]",
+        "[confirm-donation, thank, closing]"
+      ],
+      "score": 2.8802072062333033,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3991605038181819
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry, ask-donate-more, credibility-appeal, self-modeling]",
+        "[praise-user, thank, self-modeling, logical-appeal, personal-related-inquiry, emotion-appeal]",
+        "[personal-story, personal-related-inquiry]",
+        "[personal-story]",
+        "[ask-donate-more]",
+        "[personal-story, self-modeling, praise-user]",
+        "[thank, comment-partner, emotion-appeal]"
+      ],
+      "score": 2.5421005353314134,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4348153636363637
+      }
+    }
+  ]
+}

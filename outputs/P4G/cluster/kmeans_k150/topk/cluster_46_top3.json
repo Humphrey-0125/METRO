@@ -1,0 +1,74 @@
+{
+  "cluster": 46,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[proposition-of-donation]",
+        "[donation-information, credibility-appeal]",
+        "[neutral-to-inquiry]",
+        "[ask-donation-amount, donation-information]",
+        "[donation-information, emotion-appeal, praise-user]",
+        "[credibility-appeal, personal-story, emotion-appeal]",
+        "[ask-donation-amount, self-modeling]",
+        "[ask-donation-amount, donation-information]"
+      ],
+      "score": 3.6060457911843966,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3615924564000001
+      }
+    },
+    {
+      "chain": [
+        "[comment-partner]",
+        "[credibility-appeal, proposition-of-donation]",
+        "[credibility-appeal, donation-information]",
+        "[thank, donation-information, emotion-appeal]",
+        "[personal-story, self-modeling]",
+        "[credibility-appeal, emotion-appeal, donation-information]",
+        "[credibility-appeal, emotion-appeal]",
+        "[thank, ask-donate-more, donation-information]",
+        "[acknowledgement, donation-information]"
+      ],
+      "score": 3.4806764276148257,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[praise-user, personal-related-inquiry]",
+        "[praise-user, credibility-appeal]",
+        "[personal-story, emotion-appeal]",
+        "[personal-story, emotion-appeal, donation-information]",
+        "[credibility-appeal, donation-information, proposition-of-donation]",
+        "[donation-information, logical-appeal, emotion-appeal]",
+        "[praise-user, logical-appeal, ask-donation-amount]",
+        "[ask-donate-more, emotion-appeal, logical-appeal]"
+      ],
+      "score": 3.464781259693262,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3680494645500001
+      }
+    }
+  ]
+}

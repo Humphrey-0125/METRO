@@ -1,0 +1,74 @@
+{
+  "cluster": 43,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[source-related-inquiry]",
+        "[donation-information]",
+        "[proposition-of-donation]",
+        "[donation-information, logical-appeal]",
+        "[donation-information]",
+        "[logical-appeal, donation-information]",
+        "[donation-information]",
+        "[emotion-appeal, credibility-appeal]",
+        "[proposition-of-donation, foot-in-the-door]"
+      ],
+      "score": 3.7154517009539454,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3733324712181819
+      }
+    },
+    {
+      "chain": [
+        "[source-related-inquiry]",
+        "[donation-information]",
+        "[donation-information]",
+        "[donation-information]",
+        "[credibility-appeal, proposition-of-donation]",
+        "[donation-information, proposition-of-donation]",
+        "[donation-information]",
+        "[ask-donation-amount]",
+        "[positive-to-inquiry, closing]"
+      ],
+      "score": 3.7126857259728547,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    },
+    {
+      "chain": [
+        "[source-related-inquiry]",
+        "[donation-information, credibility-appeal]",
+        "[logical-appeal]",
+        "[credibility-appeal, donation-information, emotion-appeal]",
+        "[credibility-appeal, donation-information]",
+        "[credibility-appeal, donation-information]",
+        "[emotion-appeal, credibility-appeal]",
+        "[donation-information, proposition-of-donation]",
+        "[acknowledgement, praise-user]"
+      ],
+      "score": 3.5624402178291743,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3745064727000001
+      }
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "cluster": 28,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[thank]",
+        "[praise-user]",
+        "[credibility-appeal]",
+        "[personal-story, credibility-appeal]",
+        "[donation-information, confirm-donation]",
+        "[thank]"
+      ],
+      "score": 2.5268585534445394,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4782969000000001
+      }
+    },
+    {
+      "chain": [
+        "[donation-information]",
+        "[emotion-appeal, ask-donate-more]",
+        "[emotion-appeal, ask-donate-more]",
+        "[ask-donation-amount]",
+        "[positive-to-inquiry]"
+      ],
+      "score": 2.1355717525781595,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.5196312000000001
+      }
+    },
+    {
+      "chain": [
+        "[donation-information]",
+        "[donation-information, emotion-appeal]",
+        "[negative-to-inquiry]",
+        "[donation-information, thank, closing]",
+        "[thank, emotion-appeal]"
+      ],
+      "score": 2.1315199853054327,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.5153367272727273
+      }
+    }
+  ]
+}

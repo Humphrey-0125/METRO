@@ -1,0 +1,74 @@
+{
+  "cluster": 138,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[logical-appeal]",
+        "[logical-appeal]",
+        "[positive-to-inquiry]",
+        "[ask-donation-amount, donation-information, proposition-of-donation]",
+        "[credibility-appeal, donation-information]",
+        "[ask-donation-amount, donation-information]",
+        "[ask-donate-more]",
+        "[emotion-appeal]",
+        "[emotion-appeal]"
+      ],
+      "score": 3.3967610877152894,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37635133217142863
+      }
+    },
+    {
+      "chain": [
+        "[logical-appeal]",
+        "[positive-to-inquiry]",
+        "[ask-donation-amount, donation-information, proposition-of-donation]",
+        "[credibility-appeal, donation-information]",
+        "[ask-donation-amount, donation-information]",
+        "[ask-donate-more]",
+        "[emotion-appeal]",
+        "[emotion-appeal]",
+        "[self-modeling, ask-donate-more]"
+      ],
+      "score": 3.3835804717181466,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37081675375714296
+      }
+    },
+    {
+      "chain": [
+        "[donation-information]",
+        "[donation-information, credibility-appeal]",
+        "[comment-partner, credibility-appeal, emotion-appeal]",
+        "[praise-user, emotion-appeal]",
+        "[emotion-appeal, credibility-appeal, donation-information]",
+        "[logical-appeal, emotion-appeal]",
+        "[logical-appeal, donation-information]",
+        "[acknowledgement, logical-appeal]",
+        "[praise-user, ask-donation-amount]"
+      ],
+      "score": 3.2333528608697395,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3733324712181819
+      }
+    }
+  ]
+}

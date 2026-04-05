@@ -1,0 +1,74 @@
+{
+  "cluster": 100,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[credibility-appeal]",
+        "[credibility-appeal, emotion-appeal, logical-appeal]",
+        "[logical-appeal, emotion-appeal]",
+        "[praise-user, logical-appeal, donation-information]",
+        "[thank, logical-appeal]",
+        "[self-modeling, credibility-appeal]",
+        "[positive-to-inquiry]",
+        "[positive-to-inquiry]",
+        "[other, thank]"
+      ],
+      "score": 3.381845166346147,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    },
+    {
+      "chain": [
+        "[source-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[personal-story]",
+        "[confirm-donation, donation-information]",
+        "[logical-appeal, personal-story]",
+        "[logical-appeal]",
+        "[comment-partner]",
+        "[emotion-appeal]",
+        "[emotion-appeal, personal-story]"
+      ],
+      "score": 3.2297440734953615,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3680494645500001
+      }
+    },
+    {
+      "chain": [
+        "[emotion-appeal, credibility-appeal]",
+        "[donation-information, credibility-appeal]",
+        "[donation-information, emotion-appeal, proposition-of-donation]",
+        "[donation-information, proposition-of-donation, foot-in-the-door]",
+        "[donation-information, emotion-appeal]",
+        "[emotion-appeal, foot-in-the-door]",
+        "[credibility-appeal, ask-donation-amount, donation-information]",
+        "[praise-user, thank]",
+        "[personal-story, emotion-appeal, thank, closing]"
+      ],
+      "score": 3.2293432495250114,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    }
+  ]
+}

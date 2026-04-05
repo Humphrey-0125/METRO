@@ -1,0 +1,82 @@
+[
+  {
+    "id": "20180903-164113_982_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses financial struggles related to education expenses, avoid emphasizing financial burdens that may increase their sense of hardship or reluctance to donate."
+  },
+  {
+    "id": "20180903-084303_89_live:8",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shares personal feelings unrelated to the charity, avoid prolonging personal topics without connecting them back to the donation or cause."
+  },
+  {
+    "id": "20180903-084303_89_live:9",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shares personal feelings about their children, avoid responding only with empathy without steering the conversation back to the donation goal or reinforcing commitment."
+  },
+  {
+    "id": "20180903-133702_487_live:2",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with light-hearted or humorous remarks unrelated to the charitable cause, avoid making personal anecdotes that do not connect directly to the charity's mission."
+  },
+  {
+    "id": "20180903-133702_487_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows only neutral awareness of a charity without expressing interest or emotion, avoid assuming engagement and instead seek to deepen their connection or understanding."
+  },
+  {
+    "id": "20180903-133702_487_live:4",
+    "principle_type": "avoid",
+    "principle_text": "Avoid relying solely on the model; handle API failures and missing principles gracefully in your system."
+  },
+  {
+    "id": "20180903-133702_487_live:5",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses a specific interest or concern, avoid focusing on related but different issues that do not directly address their stated priorities."
+  },
+  {
+    "id": "20180903-133702_487_live:6",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses interest in specific local issues, you should provide detailed information about relevant programs that address those concerns to increase engagement and willingness to support."
+  },
+  {
+    "id": "20180903-133523_829_live:2",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shares personal experiences unrelated to the charitable cause, avoid responding with neutral or purely factual comments that do not connect back to the donation goal."
+  },
+  {
+    "id": "20180903-133523_829_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shifts the conversation to personal anecdotes unrelated to the charitable cause, avoid responding with unrelated future concerns that do not connect back to the donation goal."
+  },
+  {
+    "id": "20180903-133523_829_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shifts the conversation to personal life details unrelated to the charity, avoid introducing unrelated personal desires or constraints that do not connect to the donation appeal."
+  },
+  {
+    "id": "20180903-133523_829_live:5",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee focuses on personal financial concerns unrelated to the charity's mission, avoid shifting the conversation to unrelated personal hardships that do not connect to the cause."
+  },
+  {
+    "id": "20180903-133523_829_live:6",
+    "principle_type": "avoid",
+    "principle_text": "Avoid relying solely on the model; handle API failures and missing principles gracefully in your system."
+  },
+  {
+    "id": "20180903-133523_829_live:7",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee has firmly stated a preference for specific charities and is not open to changing their mind, avoid pressing them to reconsider or challenge their established choices."
+  },
+  {
+    "id": "20180903-133523_829_live:8",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee is committed to their preferred charity due to its high efficiency, avoid dismissing their choice or failing to acknowledge their values and reasons."
+  },
+  {
+    "id": "20180903-133523_829_live:9",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee emphasizes the importance of researching charities before donating, avoid making generic positive statements that do not directly address their concerns or persuade them toward your cause."
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "cluster": 61,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[personal-story, proposition-of-donation, credibility-appeal]",
+        "[emotion-appeal, proposition-of-donation, personal-story, credibility-appeal]",
+        "[ask-donate-more, logical-appeal]",
+        "[praise-user, positive-to-inquiry]",
+        "[comment-partner]",
+        "[positive-to-inquiry]",
+        "[personal-story, credibility-appeal, self-modeling, ask-donate-more]",
+        "[ask-donate-more]"
+      ],
+      "score": 0.30521775464215994,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": 0.01174001481818182
+      }
+    },
+    {
+      "chain": [
+        "[emotion-appeal, proposition-of-donation, personal-story, credibility-appeal]",
+        "[ask-donate-more, logical-appeal]",
+        "[praise-user, positive-to-inquiry]",
+        "[comment-partner]",
+        "[positive-to-inquiry]",
+        "[personal-story, credibility-appeal, self-modeling, ask-donate-more]",
+        "[ask-donate-more]"
+      ],
+      "score": 0.25113847301416264,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": 0.0043481536363636384
+      }
+    },
+    {
+      "chain": [
+        "[personal-story, emotion-appeal]",
+        "[acknowledgement, personal-related-inquiry]",
+        "[personal-story, logical-appeal, proposition-of-donation]",
+        "[ask-donate-more, self-modeling]",
+        "[emotion-appeal, donation-information]",
+        "[emotion-appeal, credibility-appeal, proposition-of-donation, ask-donate-more]",
+        "[confirm-donation, foot-in-the-door]"
+      ],
+      "score": 0.25113847301416264,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": 0.0043481536363636384
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "cluster": 143,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[credibility-appeal]",
+        "[self-modeling]",
+        "[personal-story, emotion-appeal]",
+        "[credibility-appeal, emotion-appeal, logical-appeal]",
+        "[credibility-appeal, logical-appeal, proposition-of-donation]",
+        "[donation-information]",
+        "[acknowledgement, proposition-of-donation]",
+        "[you-are-welcome]"
+      ],
+      "score": 3.3301315853583873,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3945949425000001
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal]",
+        "[credibility-appeal]",
+        "[credibility-appeal]",
+        "[acknowledgement, other]",
+        "[donation-information, proposition-of-donation]",
+        "[other, proposition-of-donation]",
+        "[praise-user]"
+      ],
+      "score": 3.1563870027230863,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4348153636363637
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal]",
+        "[acknowledgement, logical-appeal]",
+        "[neutral-to-inquiry, foot-in-the-door]",
+        "[acknowledgement, credibility-appeal]",
+        "[donation-information]",
+        "[acknowledgement, donation-information, ask-donation-amount]",
+        "[acknowledgement, other, thank]"
+      ],
+      "score": 3.0042614495383155,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4348153636363637
+      }
+    }
+  ]
+}

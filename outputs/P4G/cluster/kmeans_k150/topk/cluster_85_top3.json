@@ -1,0 +1,74 @@
+{
+  "cluster": 85,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[thank, comment-partner, credibility-appeal, proposition-of-donation]",
+        "[credibility-appeal, emotion-appeal, personal-story]",
+        "[positive-to-inquiry, emotion-appeal, donation-information]",
+        "[positive-to-inquiry, donation-information, logical-appeal]",
+        "[acknowledgement, emotion-appeal, logical-appeal]",
+        "[praise-user]",
+        "[comment-partner, credibility-appeal]",
+        "[logical-appeal, donation-information]",
+        "[donation-information, credibility-appeal]"
+      ],
+      "score": 3.2333528608697395,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3733324712181819
+      }
+    },
+    {
+      "chain": [
+        "[acknowledgement, positive-to-inquiry, source-related-inquiry]",
+        "[positive-to-inquiry, credibility-appeal]",
+        "[credibility-appeal, self-modeling, proposition-of-donation]",
+        "[thank, personal-related-inquiry]",
+        "[other, credibility-appeal]",
+        "[credibility-appeal]",
+        "[credibility-appeal]",
+        "[acknowledgement, self-modeling, other]",
+        "[thank, praise-user, closing]"
+      ],
+      "score": 3.2293432495250114,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    },
+    {
+      "chain": [
+        "[comment-partner, personal-related-inquiry]",
+        "[proposition-of-donation, credibility-appeal, emotion-appeal]",
+        "[credibility-appeal, donation-information]",
+        "[credibility-appeal]",
+        "[self-modeling, emotion-appeal, credibility-appeal]",
+        "[ask-donation-amount, emotion-appeal]",
+        "[praise-user, positive-to-inquiry]",
+        "[self-modeling, emotion-appeal]",
+        "[ask-donation-amount, donation-information]"
+      ],
+      "score": 3.2293432495250114,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    }
+  ]
+}

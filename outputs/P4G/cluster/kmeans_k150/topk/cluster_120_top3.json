@@ -1,0 +1,73 @@
+{
+  "cluster": 120,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[off-task]",
+        "[personal-story]",
+        "[personal-related-inquiry]",
+        "[comment-partner]",
+        "[personal-story, self-modeling, task-related-inquiry]",
+        "[credibility-appeal, donation-information, proposition-of-donation]",
+        "[credibility-appeal, logical-appeal, emotion-appeal, self-modeling, proposition-of-donation]",
+        "[credibility-appeal, source-related-inquiry]",
+        "[credibility-appeal, donation-information]"
+      ],
+      "score": 3.2333528608697395,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3733324712181819
+      }
+    },
+    {
+      "chain": [
+        "[personal-story]",
+        "[personal-related-inquiry]",
+        "[comment-partner]",
+        "[personal-story, self-modeling, task-related-inquiry]",
+        "[credibility-appeal, donation-information, proposition-of-donation]",
+        "[credibility-appeal, logical-appeal, emotion-appeal, self-modeling, proposition-of-donation]",
+        "[credibility-appeal, source-related-inquiry]",
+        "[credibility-appeal, donation-information]",
+        "[closing]"
+      ],
+      "score": 3.213304804146103,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[comment-partner]",
+        "[personal-story, self-modeling, task-related-inquiry]",
+        "[credibility-appeal, donation-information, proposition-of-donation]",
+        "[credibility-appeal, logical-appeal, emotion-appeal, self-modeling, proposition-of-donation]",
+        "[credibility-appeal, source-related-inquiry]",
+        "[credibility-appeal, donation-information]",
+        "[closing]"
+      ],
+      "score": 2.8802072062333033,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3991605038181819
+      }
+    }
+  ]
+}

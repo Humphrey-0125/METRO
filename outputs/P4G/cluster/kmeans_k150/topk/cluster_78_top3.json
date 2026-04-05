@@ -1,0 +1,71 @@
+{
+  "cluster": 78,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[credibility-appeal]",
+        "[credibility-appeal]",
+        "[credibility-appeal]",
+        "[credibility-appeal]",
+        "[positive-to-inquiry, neutral-to-inquiry]",
+        "[logical-appeal, donation-information]",
+        "[positive-to-inquiry]",
+        "[donation-information]",
+        "[logical-appeal]"
+      ],
+      "score": 4.261148349916006,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal]",
+        "[credibility-appeal]",
+        "[credibility-appeal]",
+        "[positive-to-inquiry, neutral-to-inquiry]",
+        "[logical-appeal, donation-information]",
+        "[positive-to-inquiry]",
+        "[donation-information]",
+        "[logical-appeal]"
+      ],
+      "score": 3.9348157850861156,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.40463917740000005
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal]",
+        "[credibility-appeal]",
+        "[positive-to-inquiry, neutral-to-inquiry]",
+        "[logical-appeal, donation-information]",
+        "[positive-to-inquiry]",
+        "[donation-information]",
+        "[logical-appeal]"
+      ],
+      "score": 3.4431860706830912,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.44003314800000004
+      }
+    }
+  ]
+}

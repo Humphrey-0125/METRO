@@ -1,0 +1,74 @@
+{
+  "cluster": 145,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[proposition-of-donation, ask-donation-amount, emotion-appeal]",
+        "[donation-information, credibility-appeal]",
+        "[credibility-appeal, donation-information, emotion-appeal]",
+        "[emotion-appeal, personal-story]",
+        "[personal-story, credibility-appeal]",
+        "[credibility-appeal]",
+        "[credibility-appeal, ask-donation-amount, donation-information]",
+        "[ask-donate-more, emotion-appeal]",
+        "[ask-donate-more]"
+      ],
+      "score": 3.2333528608697395,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3733324712181819
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal, donation-information]",
+        "[proposition-of-donation, credibility-appeal]",
+        "[acknowledgement, credibility-appeal, proposition-of-donation]",
+        "[personal-story, emotion-appeal]",
+        "[self-modeling, proposition-of-donation, donation-information, foot-in-the-door]",
+        "[acknowledgement, thank]",
+        "[negative-to-inquiry]",
+        "[confirm-donation, closing]",
+        "[confirm-donation, thank]"
+      ],
+      "score": 3.199939432997012,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3615924564000001
+      }
+    },
+    {
+      "chain": [
+        "[donation-information, credibility-appeal]",
+        "[credibility-appeal, donation-information, emotion-appeal]",
+        "[emotion-appeal, personal-story]",
+        "[personal-story, credibility-appeal]",
+        "[credibility-appeal]",
+        "[credibility-appeal, ask-donation-amount, donation-information]",
+        "[ask-donate-more, emotion-appeal]",
+        "[ask-donate-more]",
+        "[acknowledgement]"
+      ],
+      "score": 3.034672513787575,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    }
+  ]
+}

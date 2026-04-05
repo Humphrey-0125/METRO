@@ -1,0 +1,617 @@
+[
+  {
+    "id": "20180904-053728_415_live:3",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses interest and trust in the charity, you should ask direct questions about the donation amount to encourage commitment and clarify their willingness to give."
+  },
+  {
+    "id": "20180904-053728_415_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee already understands the donation process, avoid repeating logistical details that do not enhance their motivation or commitment to donate."
+  },
+  {
+    "id": "20180904-152255_763_live:7",
+    "principle_type": "do",
+    "principle_text": "When a persuadee commits to donating, you should express sincere gratitude to reinforce their positive decision and strengthen their emotional connection to the cause."
+  },
+  {
+    "id": "20180904-152255_763_live:8",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses positive attitudes toward other charitable causes, you should highlight how your charity complements their existing giving to encourage broader support."
+  },
+  {
+    "id": "20180904-152255_763_live:9",
+    "principle_type": "avoid",
+    "principle_text": "When a persuadee makes a small donation and responds politely without further engagement, avoid ending the conversation without encouraging deeper commitment or additional support."
+  },
+  {
+    "id": "20180904-093015_67_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows hesitation about increasing their donation, avoid immediately requesting a higher amount without addressing their concerns or building further commitment."
+  },
+  {
+    "id": "20180831-063536_532_live:3",
+    "principle_type": "do",
+    "principle_text": "When a potential donor expresses willingness to help, you should ask a direct, specific question about the donation amount to encourage a concrete commitment."
+  },
+  {
+    "id": "20180831-063536_532_live:4",
+    "principle_type": "do",
+    "principle_text": "When a persuadee commits to donating, you should express sincere gratitude to reinforce their positive decision and strengthen their commitment to the charitable cause."
+  },
+  {
+    "id": "20180831-191926_666_live:7",
+    "principle_type": "do",
+    "principle_text": "When a potential donor expresses a willingness to help in a small way, you should provide detailed, meaningful information about how their donation makes a tangible impact to reinforce their positive intention."
+  },
+  {
+    "id": "20180831-191926_666_live:9",
+    "principle_type": "avoid",
+    "principle_text": "When a persuadee expresses financial constraints and declines further involvement, avoid pressing for additional commitments that may cause discomfort or resistance."
+  },
+  {
+    "id": "20180828-192229_245_live:2",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about fund allocation, avoid providing vague or incomplete information that does not directly address their specific questions."
+  },
+  {
+    "id": "20180828-192229_245_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about fund allocation and overhead costs, avoid shifting focus away from these concerns without providing clear, detailed information about financial transparency."
+  },
+  {
+    "id": "20180828-155133_109_live:4",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses financial constraints, you should acknowledge their situation and suggest a small, manageable donation amount to encourage their willingness to contribute."
+  },
+  {
+    "id": "20180828-192601_768_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses a desire to specify how their donation is used, avoid giving only general information without addressing their specific control concerns."
+  },
+  {
+    "id": "20180828-192601_768_live:4",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses interest in specifying how their donation is used, you should emphasize the meaningful impact of the donation to maintain engagement and positive framing."
+  },
+  {
+    "id": "20180828-150913_399_live:3",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows curiosity about the charity's work, you should evoke emotional and specific examples of suffering to deepen their engagement and motivate their willingness to donate."
+  },
+  {
+    "id": "20180828-150913_399_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses agreement but does not commit to further action, avoid making passive empathetic statements that do not reinforce the impact or encourage additional donations."
+  },
+  {
+    "id": "20180828-213210_462_live:6",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows willingness to donate but may have limited funds, you should model a consistent, manageable donation commitment to encourage their participation."
+  },
+  {
+    "id": "20180828-155340_989_live:5",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows willingness to donate, you should ask a direct question about the donation amount to prompt a specific commitment."
+  },
+  {
+    "id": "20180828-150231_344_live:5",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with interest but shifts the topic away from donating, avoid simply sharing your own donation amount without linking it to encouraging their contribution."
+  },
+  {
+    "id": "20180828-213210_53_live:3",
+    "principle_type": "do",
+    "principle_text": "When a potential donor proposes a small donation amount, you should affirm their choice and gently prompt them to compare it to everyday expenses to encourage reconsideration and increase engagement."
+  },
+  {
+    "id": "20180828-192522_122_live:6",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses interest in donation progress, avoid admitting lack of information that may increase their skepticism about the legitimacy of the fundraising effort."
+  },
+  {
+    "id": "20180825-053544_897_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses surprise at the low donation amount, avoid comparing donations to personal spending in a way that may seem trivializing or pushy."
+  },
+  {
+    "id": "20180825-090446_585_live:5",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds positively but without clear commitment, avoid asking for future donations prematurely without securing explicit agreement."
+  },
+  {
+    "id": "20180825-090446_585_live:6",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee agrees to be contacted but shows neutral enthusiasm, avoid moving too quickly to logistical questions without reinforcing their commitment or motivation to donate."
+  },
+  {
+    "id": "20180825-090446_585_live:8",
+    "principle_type": "do",
+    "principle_text": "When a persuadee shows willingness to commit to a donation, you should confirm their commitment clearly to reinforce their decision and encourage follow-through."
+  },
+  {
+    "id": "20180825-090446_585_live:9",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee agrees to proceed with the donation but shows no increased enthusiasm, avoid assuming their commitment is fully secured without confirming payment details clearly."
+  },
+  {
+    "id": "20180903-044446_477_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about donation transparency, avoid ignoring or overlooking their questions about how funds are used."
+  },
+  {
+    "id": "20180903-044446_477_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concern about how much of their donation reaches the cause, avoid vague or unsubstantiated claims about fund allocation to prevent skepticism."
+  },
+  {
+    "id": "20180903-073450_337_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses a preference for giving directly to charities, avoid pressuring them to donate immediately or questioning their willingness to give today."
+  },
+  {
+    "id": "20180903-131454_357_live:4",
+    "principle_type": "do",
+    "principle_text": "When a potential donor expresses concern about donation amounts, you should reassure them about the charity's credibility and efficient use of funds to build trust and encourage engagement."
+  },
+  {
+    "id": "20180903-131454_357_live:6",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses financial constraints, avoid challenging or dismissing their stated limitations as it can create resistance and reduce willingness to donate."
+  },
+  {
+    "id": "20180903-131454_357_live:7",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses financial constraints, avoid dismissive or sarcastic remarks that may alienate them and reduce their willingness to engage or donate."
+  },
+  {
+    "id": "20180903-104032_620_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee asks detailed questions about the charity's services, avoid only describing donation options without highlighting the charity's impact and benefits."
+  },
+  {
+    "id": "20180903-105517_696_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses a clear preference for another charity, avoid validating competing organizations without reinforcing your recommended charity's unique value."
+  },
+  {
+    "id": "20180903-111551_100_live:3",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows interest or positive reaction to the charity, you should highlight the organization's long-standing history to build trust and increase willingness to donate."
+  },
+  {
+    "id": "20180903-111551_100_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When a persuadee shows willingness to donate but gives a minimal amount, avoid simply stating the maximum donation limit without encouraging a higher contribution."
+  },
+  {
+    "id": "20180903-111551_100_live:5",
+    "principle_type": "do",
+    "principle_text": "When a persuadee expresses willingness to help, you should acknowledge their contribution and emphasize the positive impact it will have to reinforce their motivation."
+  },
+  {
+    "id": "20180903-103709_629_live:6",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows curiosity about the charity's partnerships, avoid giving generic or unrelated information that does not address their specific interests or enhance their confidence in the charity."
+  },
+  {
+    "id": "20180903-103709_629_live:7",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses interest in specific details like partnerships with well-known companies, avoid providing only general information that does not address their specific concerns."
+  },
+  {
+    "id": "20180903-000031_632_live:6",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee is ready to donate and eager to proceed, avoid asking unnecessary questions that may slow down the donation process or disrupt their momentum."
+  },
+  {
+    "id": "20180826-193546_146_live:9",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee agrees to a one-time donation, avoid immediately asking about future donations as it may prompt rejection and reduce willingness for ongoing support."
+  },
+  {
+    "id": "20180826-174120_426_live:2",
+    "principle_type": "do",
+    "principle_text": "When a potential donor questions how funds are allocated, you should transparently explain the use of remaining funds to build trust and demonstrate responsible stewardship."
+  },
+  {
+    "id": "20180826-174120_426_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses awareness of multiple similar charities, avoid making generic statements that lack specific, compelling details about your charity's unique impact."
+  },
+  {
+    "id": "20180826-061500_476_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about alternative causes or charities, avoid dismissing their suggestions without acknowledgment or addressing their specific concerns."
+  },
+  {
+    "id": "20180831-073753_874_live:2",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee is still gathering information about the charity, avoid giving only general descriptions without addressing specific concerns or donation impact details."
+  },
+  {
+    "id": "20180826-060146_791_live:2",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee perceives a donation request as merely asking to spend money, avoid vague or indirect language that fails to address their concerns about financial expenditure."
+  },
+  {
+    "id": "20180826-060146_791_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee remains skeptical about donating and questions your intentions, avoid ambiguous statements that do not address their concerns or clarify the benefits of donating."
+  },
+  {
+    "id": "20180826-054232_684_live:3",
+    "principle_type": "do",
+    "principle_text": "When a potential donor expresses willingness to give a small amount, you should build trust by assuring the security and legitimacy of the donation to encourage a higher contribution."
+  },
+  {
+    "id": "20180826-013036_595_live:3",
+    "principle_type": "do",
+    "principle_text": "When the persuadee acknowledges a preference but shows openness, you should emphasize the urgent need and appeal to their compassion to encourage even a small contribution."
+  },
+  {
+    "id": "20180723-040634_575_live:9",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows willingness to donate but hesitates on the amount, you should reassure them about the donation process and how their contribution will be handled securely."
+  },
+  {
+    "id": "20180723-060959_447_live:5",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows general agreement without expressing increased commitment, avoid only stating positive impact numbers without linking them to a direct call to action or personal involvement."
+  },
+  {
+    "id": "20180723-060959_447_live:6",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee already shows enthusiasm and agreement with the donation process, avoid repeating logistical details that do not advance commitment or deepen engagement."
+  },
+  {
+    "id": "20180723-060959_447_live:7",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows willingness but hesitates about donation size, you should highlight how small contributions can have significant impact by comparing them to everyday expenses."
+  },
+  {
+    "id": "20180723-060959_447_live:8",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds positively but without commitment, avoid relying solely on enthusiasm without prompting a clear action or decision."
+  },
+  {
+    "id": "20180723-034109_263_live:4",
+    "principle_type": "do",
+    "principle_text": "When the persuadee is uncertain about how their donation will be processed, you should clearly explain the payment deduction method to facilitate commitment and increase donation likelihood."
+  },
+  {
+    "id": "20180723-034109_263_live:9",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows interest and engagement, you should ask about their usual donation habits to encourage reflection and reinforce their commitment to charitable giving."
+  },
+  {
+    "id": "20180723-034109_263_live:10",
+    "principle_type": "do",
+    "principle_text": "When a persuadee shows willingness to donate, you should confirm their commitment explicitly to reinforce their decision and increase their satisfaction with the donation process."
+  },
+  {
+    "id": "20180723-085449_363_live:9",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows general willingness but has not specified an amount, you should ask a direct question about the donation amount to encourage a clear commitment."
+  },
+  {
+    "id": "20180723-085449_363_live:10",
+    "principle_type": "do",
+    "principle_text": "When a persuadee commits to a donation, you should express gratitude and confirm the commitment to reinforce their positive decision and encourage follow-through."
+  },
+  {
+    "id": "20180807-114750_102_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about the legitimacy of the charity, avoid focusing solely on donation logistics without addressing trust and credibility directly."
+  },
+  {
+    "id": "20180807-103432_350_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee indicates they already contribute to charity, avoid pressuring them by referencing others' donations as a reason to give more."
+  },
+  {
+    "id": "20180807-094907_712_live:6",
+    "principle_type": "do",
+    "principle_text": "When a persuadee hesitates to donate a full amount, you should emphasize how even small contributions make a meaningful impact and reassure them about the donation process."
+  },
+  {
+    "id": "20180807-094907_712_live:8",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows openness or positive interest, you should provide additional specific information about the charity's impact to reinforce their positive attitude and encourage commitment."
+  },
+  {
+    "id": "20180807-094907_712_live:9",
+    "principle_type": "do",
+    "principle_text": "When a persuadee makes a donation, you should express pride and appreciation to positively reinforce their action and encourage a lasting positive attitude toward giving."
+  },
+  {
+    "id": "20180807-200337_482_live:11",
+    "principle_type": "avoid",
+    "principle_text": "When a persuadee expresses hesitation or declines a donation to think it over, avoid pressuring or confrontational questions that may increase resistance and reduce willingness to engage further."
+  },
+  {
+    "id": "20180719-210146_172_live:9",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee has already agreed to donate and shows readiness to end the conversation, avoid prolonging the interaction without introducing new motivating information or engagement opportunities."
+  },
+  {
+    "id": "20180824-122747_679_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows interest but seeks clarity, avoid using confusing or grammatically incorrect explanations that may reduce their confidence and increase hesitation."
+  },
+  {
+    "id": "20180824-122747_679_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about the charity's ethics and fund allocation, avoid ignoring or dismissing these concerns without providing clear, transparent information."
+  },
+  {
+    "id": "20180824-131145_239_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about the charity's use of funds, avoid giving overly general assurances without addressing specific details that build trust and clarify impact."
+  },
+  {
+    "id": "20180824-123012_292_live:5",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses discomfort or resistance to donation amounts, avoid using guilt-inducing statements or tragic statistics that may provoke negative emotional reactions."
+  },
+  {
+    "id": "20180824-124214_397_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shifts focus to the impact of small donations without reaffirming their commitment, avoid only giving compliments without reinforcing or confirming their donation intention."
+  },
+  {
+    "id": "20180824-124214_397_live:5",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses confidence in their decision without explicit commitment, avoid simply acknowledging without prompting further engagement or confirmation of donation intent."
+  },
+  {
+    "id": "20180823-021414_711_live:2",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows willingness to donate based on clear information, avoid introducing confusing or awkward phrases that may undermine trust or enthusiasm."
+  },
+  {
+    "id": "20180823-021414_711_live:3",
+    "principle_type": "do",
+    "principle_text": "When a persuadee expresses commitment to a cause, you should provide positive reinforcement to encourage further enthusiasm and promote advocacy to others."
+  },
+  {
+    "id": "20180823-021414_711_live:4",
+    "principle_type": "do",
+    "principle_text": "When a persuadee shows commitment to donating but faces personal limitations, you should encourage them to influence others to donate, thereby expanding the impact beyond their own contribution."
+  },
+  {
+    "id": "20180829-073415_966_live:5",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows interest but expresses financial constraints, you should offer small, accessible donation options and ask about their potential contribution to encourage engagement."
+  },
+  {
+    "id": "20180829-073415_966_live:7",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses concerns about donation amounts, you should directly ask if they would like to donate and invite them to specify an amount to encourage commitment."
+  },
+  {
+    "id": "20180829-102237_489_live:2",
+    "principle_type": "do",
+    "principle_text": "When a potential donor asks about the geographic scope of a charity's work, you should clearly highlight the organization's broad and inclusive reach, including familiar or local regions to build trust and relevance."
+  },
+  {
+    "id": "20180829-081919_384_live:3",
+    "principle_type": "do",
+    "principle_text": "When a persuadee shows willingness to donate, you should specify a clear donation limit to encourage them to commit to a concrete amount."
+  },
+  {
+    "id": "20180829-081919_384_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When a persuadee commits to a small donation, avoid implying their contribution is insufficient or pressuring them, as this can cause discomfort and resistance."
+  },
+  {
+    "id": "20180829-031039_439_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee asks logistical questions without expressing commitment, avoid focusing solely on factual clarifications without linking them to motivating donation."
+  },
+  {
+    "id": "20180829-031039_439_live:4",
+    "principle_type": "do",
+    "principle_text": "When the persuadee seeks clarity on payment methods, you should clearly explain the process to reduce uncertainty and encourage willingness to donate."
+  },
+  {
+    "id": "20180829-055930_101_live:3",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses concerns about trust, you should address those concerns clearly and follow with a specific, low-barrier donation request to encourage commitment."
+  },
+  {
+    "id": "20180829-055930_101_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses tentative agreement with a lighthearted comment, avoid only giving generic positive affirmations without reinforcing commitment or clarifying next steps."
+  },
+  {
+    "id": "20180829-055930_101_live:5",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds playfully or skeptically to donation encouragement, avoid making suggestions that do not clearly advance commitment or address underlying concerns."
+  },
+  {
+    "id": "20180829-055930_101_live:6",
+    "principle_type": "do",
+    "principle_text": "When a persuadee shows generosity or willingness to donate, you should positively reinforce their decision and express gratitude to encourage increased generosity."
+  },
+  {
+    "id": "20180829-061510_908_live:2",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses interest contingent on your own commitment, you should clearly state your intention to donate to encourage reciprocal willingness and further engagement."
+  },
+  {
+    "id": "20180808-073746_228_live:4",
+    "principle_type": "do",
+    "principle_text": "When the persuadee asks for specific details about how donations are used, you should provide clear, concrete examples of programs and aid workers to build trust and encourage commitment."
+  },
+  {
+    "id": "20180808-075748_956_live:3",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows interest and readiness to contribute, you should directly ask for a specific donation amount to encourage commitment and facilitate the donation process."
+  },
+  {
+    "id": "20180808-064212_144_live:4",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses skepticism about donation impact, you should demonstrate your personal commitment by sharing your own donation habits to build trust and encourage engagement."
+  },
+  {
+    "id": "20180830-194021_927_live:9",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses financial constraints and signals closure, avoid ending the conversation abruptly without attempting to reinforce commitment or explore alternative support options."
+  },
+  {
+    "id": "20180830-213440_640_live:2",
+    "principle_type": "do",
+    "principle_text": "When a persuadee expresses concern about overhead costs, you should provide clear, specific statistics that demonstrate the majority of funds directly support the cause to build trust and credibility."
+  },
+  {
+    "id": "20180830-173320_897_live:8",
+    "principle_type": "do",
+    "principle_text": "When the persuadee asks a specific question about donation methods, you should provide clear, detailed, and actionable information to maintain engagement and encourage further interest."
+  },
+  {
+    "id": "20180830-173320_897_live:9",
+    "principle_type": "avoid",
+    "principle_text": "When a persuadee expresses a preference for a specific donation method, avoid pushing alternative methods that may not align with their current comfort or intention."
+  },
+  {
+    "id": "20180830-162916_957_live:2",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses skepticism about the charity's legitimacy, avoid relying solely on emotional appeals without providing concrete evidence of the charity's impact and transparency."
+  },
+  {
+    "id": "20180830-162916_957_live:3",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses skepticism about a charity's legitimacy, you should mention credible endorsements or recognizable figures associated with the charity to build trust and reduce doubt."
+  },
+  {
+    "id": "20180901-045936_842_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows skepticism about the persuader's commitment, avoid only expressing gratitude without addressing their concerns or demonstrating your own commitment."
+  },
+  {
+    "id": "20180901-045936_842_live:4",
+    "principle_type": "do",
+    "principle_text": "When a persuadee shows willingness to donate but needs motivation to continue engagement, you should make a clear, conditional commitment that encourages ongoing interaction and reinforces their intent to give."
+  },
+  {
+    "id": "20180901-201717_518_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee seeks specific details about how donations are used, avoid giving vague or overly general responses that do not clarify the impact of their contribution."
+  },
+  {
+    "id": "20180901-201717_518_live:4",
+    "principle_type": "do",
+    "principle_text": "When the persuadee seeks specific information about how donations are used, you should provide a clear, concise explanation of the donation's purpose to build trust and encourage willingness to donate."
+  },
+  {
+    "id": "20180901-060959_922_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about an organization's legitimacy, avoid ignoring their need for credible evidence or documentation to build trust."
+  },
+  {
+    "id": "20180901-060959_922_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about the legitimacy and allocation of donations, avoid responding only with verification links without addressing their deeper trust and process concerns."
+  },
+  {
+    "id": "20180827-025236_792_live:3",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows willingness to help, you should clarify how their donation is sourced and emphasize the broad impact to reinforce their motivation and commitment."
+  },
+  {
+    "id": "20180825-052611_640_live:2",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses skepticism about donating to unknown charities, avoid admitting lack of information or transparency about the charity and the use of funds."
+  },
+  {
+    "id": "20180825-052611_640_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about the legitimacy and details of a charity, avoid dismissive or sarcastic remarks that undermine trust and increase frustration."
+  },
+  {
+    "id": "20180825-085709_930_live:3",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows willingness to donate but hesitates on amount, you should highlight specific, timely causes to increase their engagement and positive attitude toward giving."
+  },
+  {
+    "id": "20180825-075658_709_live:3",
+    "principle_type": "do",
+    "principle_text": "When the persuadee expresses concerns about how donations are used, you should provide clear reassurances about the charity’s transparency and trustworthiness to build confidence."
+  },
+  {
+    "id": "20180825-210735_192_live:6",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee shows positive engagement but has already committed, avoid merely maintaining politeness without advancing the commitment or increasing their donation willingness."
+  },
+  {
+    "id": "20180825-210735_192_live:7",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows interest and asks follow-up questions, you should provide clear, informative descriptions of the charity's mission to deepen engagement and encourage continued curiosity."
+  },
+  {
+    "id": "20180826-013831_953_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds with a follow-up question indicating interest but no clear commitment, avoid only confirming facts without linking them to the donation's impact or benefits."
+  },
+  {
+    "id": "20180826-013831_953_live:5",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows curiosity about the charity's scope, you should provide detailed, impressive information about its wide-reaching impact to increase engagement and positive attitude."
+  },
+  {
+    "id": "20180826-175705_624_live:7",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows curiosity about the charity's impact, you should provide specific, timely examples of the charity's current activities to increase engagement and interest."
+  },
+  {
+    "id": "20180826-175705_624_live:8",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses interest in involvement beyond donating, avoid shifting focus away from encouraging immediate or concrete donation commitments."
+  },
+  {
+    "id": "20180826-175706_443_live:7",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses concerns about financial transparency, avoid confrontational statements that do not address their specific worries or build trust."
+  },
+  {
+    "id": "20180826-220838_141_live:7",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee has agreed to a specific donation amount, avoid immediately pressing for a higher contribution as it may cause resistance and reduce willingness to give."
+  },
+  {
+    "id": "20180826-220838_141_live:8",
+    "principle_type": "do",
+    "principle_text": "When a potential donor seems hesitant or fixed on a small contribution, you should gently acknowledge their stance while appealing to a higher purpose that inspires greater generosity."
+  },
+  {
+    "id": "20180826-082717_200_live:4",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows interest in donating, you should clearly confirm the donation process and express appreciation to reassure and encourage their commitment."
+  },
+  {
+    "id": "20180723-073352_280_live:3",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses specific concerns about legitimacy and transparency, avoid giving vague reassurances that do not directly address their doubts."
+  },
+  {
+    "id": "20180723-105210_403_live:4",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee expresses financial hardship and distrust toward charities, avoid using emotional or guilt-inducing messages that may trigger defensiveness or skepticism."
+  },
+  {
+    "id": "20180808-042339_620_live:5",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows commitment to donate, you should directly ask for the specific donation amount to encourage a clear and substantial contribution."
+  },
+  {
+    "id": "20180808-033451_555_live:6",
+    "principle_type": "do",
+    "principle_text": "When the persuadee shows agreement with a relatable comparison, you should suggest a concrete, affordable donation amount to make giving feel accessible and manageable."
+  },
+  {
+    "id": "20180808-033451_555_live:7",
+    "principle_type": "avoid",
+    "principle_text": "When the persuadee responds positively to friendly compliments but does not move toward donation commitment, avoid using humor or flattery that does not directly encourage donation action."
+  }
+]

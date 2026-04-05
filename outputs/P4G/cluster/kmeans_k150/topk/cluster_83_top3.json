@@ -1,0 +1,74 @@
+{
+  "cluster": 83,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[source-related-inquiry]",
+        "[donation-information]",
+        "[donation-information, emotion-appeal]",
+        "[donation-information]",
+        "[donation-information, emotion-appeal]",
+        "[negative-to-inquiry, proposition-of-donation, emotion-appeal]",
+        "[positive-to-inquiry, ask-donation-amount, self-modeling]",
+        "[logical-appeal, emotion-appeal]"
+      ],
+      "score": 3.6347067443660963,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.37192366944000005
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[source-related-inquiry]",
+        "[donation-information]",
+        "[neutral-to-inquiry]",
+        "[logical-appeal, emotion-appeal]",
+        "[credibility-appeal, emotion-appeal]",
+        "[proposition-of-donation, emotion-appeal]",
+        "[positive-to-inquiry, emotion-appeal]",
+        "[donation-information]"
+      ],
+      "score": 3.6257635717144594,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry, source-related-inquiry]",
+        "[credibility-appeal, donation-information]",
+        "[comment-partner, donation-information]",
+        "[proposition-of-donation, ask-donate-more]",
+        "[credibility-appeal, emotion-appeal]",
+        "[proposition-of-donation]",
+        "[donation-information]",
+        "[self-modeling, ask-donate-more]",
+        "[confirm-donation, thank]"
+      ],
+      "score": 3.213304804146103,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3662884623272728
+      }
+    }
+  ]
+}

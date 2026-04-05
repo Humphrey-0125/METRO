@@ -1,0 +1,286 @@
+{
+  "cluster": 89,
+  "n_items_raw": 7,
+  "config": {
+    "reward_mode": "attitude_score",
+    "lambda_len": 0.2,
+    "alpha": 1.0,
+    "gamma": 0.9,
+    "min_count": 1,
+    "dedup_dialog_per_cluster": false
+  },
+  "tree": {
+    "name": "ROOT",
+    "count": 7,
+    "value_sum": -4.48,
+    "success_D": 0,
+    "children": [
+      {
+        "name": "[acknowledgement]",
+        "count": 1,
+        "value_sum": -0.5760000000000001,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[comment-partner]",
+            "count": 1,
+            "value_sum": -0.5184000000000001,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[comment-partner, personal-related-inquiry]",
+                "count": 1,
+                "value_sum": -0.4665600000000001,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[comment-partner]",
+                    "count": 1,
+                    "value_sum": -0.419904,
+                    "success_D": 0,
+                    "children": [],
+                    "avg_value": -0.419904,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.4665600000000001,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.5184000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.5760000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[comment-partner, personal-related-inquiry]",
+        "count": 1,
+        "value_sum": -0.6120000000000001,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[comment-partner]",
+            "count": 1,
+            "value_sum": -0.5508000000000001,
+            "success_D": 0,
+            "children": [],
+            "avg_value": -0.5508000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.6120000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[comment-partner]",
+        "count": 2,
+        "value_sum": -1.2240000000000002,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[comment-partner, personal-related-inquiry]",
+            "count": 1,
+            "value_sum": -0.5346000000000001,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[comment-partner]",
+                "count": 1,
+                "value_sum": -0.48114000000000007,
+                "success_D": 0,
+                "children": [],
+                "avg_value": -0.48114000000000007,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.5346000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.6120000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[personal-related-inquiry]",
+        "count": 1,
+        "value_sum": -0.5220000000000001,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[personal-story, emotion-appeal]",
+            "count": 1,
+            "value_sum": -0.4698000000000001,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[personal-story]",
+                "count": 1,
+                "value_sum": -0.4228200000000001,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[acknowledgement]",
+                    "count": 1,
+                    "value_sum": -0.38053800000000004,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[comment-partner]",
+                        "count": 1,
+                        "value_sum": -0.34248420000000007,
+                        "success_D": 0,
+                        "children": [
+                          {
+                            "name": "[comment-partner, personal-related-inquiry]",
+                            "count": 1,
+                            "value_sum": -0.30823578000000007,
+                            "success_D": 0,
+                            "children": [
+                              {
+                                "name": "[comment-partner]",
+                                "count": 1,
+                                "value_sum": -0.2774122020000001,
+                                "success_D": 0,
+                                "children": [],
+                                "avg_value": -0.2774122020000001,
+                                "success_rate": 0.0
+                              }
+                            ],
+                            "avg_value": -0.30823578000000007,
+                            "success_rate": 0.0
+                          }
+                        ],
+                        "avg_value": -0.34248420000000007,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.38053800000000004,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.4228200000000001,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.4698000000000001,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.5220000000000001,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[personal-story, emotion-appeal]",
+        "count": 1,
+        "value_sum": -0.54,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[personal-story]",
+            "count": 1,
+            "value_sum": -0.486,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[acknowledgement]",
+                "count": 1,
+                "value_sum": -0.43740000000000007,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[comment-partner]",
+                    "count": 1,
+                    "value_sum": -0.39366,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[comment-partner, personal-related-inquiry]",
+                        "count": 1,
+                        "value_sum": -0.35429400000000005,
+                        "success_D": 0,
+                        "children": [
+                          {
+                            "name": "[comment-partner]",
+                            "count": 1,
+                            "value_sum": -0.3188646,
+                            "success_D": 0,
+                            "children": [],
+                            "avg_value": -0.3188646,
+                            "success_rate": 0.0
+                          }
+                        ],
+                        "avg_value": -0.35429400000000005,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.39366,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.43740000000000007,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.486,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.54,
+        "success_rate": 0.0
+      },
+      {
+        "name": "[personal-story]",
+        "count": 1,
+        "value_sum": -0.558,
+        "success_D": 0,
+        "children": [
+          {
+            "name": "[acknowledgement]",
+            "count": 1,
+            "value_sum": -0.5022,
+            "success_D": 0,
+            "children": [
+              {
+                "name": "[comment-partner]",
+                "count": 1,
+                "value_sum": -0.45198000000000005,
+                "success_D": 0,
+                "children": [
+                  {
+                    "name": "[comment-partner, personal-related-inquiry]",
+                    "count": 1,
+                    "value_sum": -0.40678200000000003,
+                    "success_D": 0,
+                    "children": [
+                      {
+                        "name": "[comment-partner]",
+                        "count": 1,
+                        "value_sum": -0.36610380000000003,
+                        "success_D": 0,
+                        "children": [],
+                        "avg_value": -0.36610380000000003,
+                        "success_rate": 0.0
+                      }
+                    ],
+                    "avg_value": -0.40678200000000003,
+                    "success_rate": 0.0
+                  }
+                ],
+                "avg_value": -0.45198000000000005,
+                "success_rate": 0.0
+              }
+            ],
+            "avg_value": -0.5022,
+            "success_rate": 0.0
+          }
+        ],
+        "avg_value": -0.558,
+        "success_rate": 0.0
+      }
+    ],
+    "avg_value": -0.64,
+    "success_rate": 0.0
+  }
+}

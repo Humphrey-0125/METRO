@@ -1,0 +1,74 @@
+{
+  "cluster": 14,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[emotion-appeal, personal-related-inquiry]",
+        "[praise-user, emotion-appeal, logical-appeal]",
+        "[logical-appeal, proposition-of-donation, emotion-appeal]",
+        "[praise-user, thank, donation-information]",
+        "[ask-donate-more, praise-user, emotion-appeal]",
+        "[logical-appeal, personal-related-inquiry]",
+        "[emotion-appeal, proposition-of-donation]",
+        "[praise-user, thank, emotion-appeal]"
+      ],
+      "score": 3.499373435387413,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3733324712181819
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[emotion-appeal, personal-story]",
+        "[proposition-of-donation, credibility-appeal]",
+        "[donation-information, credibility-appeal]",
+        "[credibility-appeal]",
+        "[proposition-of-donation, ask-donation-amount]",
+        "[ask-donation-amount]",
+        "[ask-donation-amount, neutral-to-inquiry]",
+        "[confirm-donation, thank, closing]"
+      ],
+      "score": 3.499373435387413,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3733324712181819
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[personal-story]",
+        "[emotion-appeal, personal-story]",
+        "[emotion-appeal, logical-appeal]",
+        "[personal-related-inquiry, emotion-appeal]",
+        "[personal-story, emotion-appeal]",
+        "[logical-appeal, credibility-appeal]",
+        "[credibility-appeal, personal-story]",
+        "[proposition-of-donation, credibility-appeal, logical-appeal]"
+      ],
+      "score": 3.490340565683077,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3695395433538462
+      }
+    }
+  ]
+}

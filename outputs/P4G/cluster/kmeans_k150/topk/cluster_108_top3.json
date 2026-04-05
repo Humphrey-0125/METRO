@@ -1,0 +1,65 @@
+{
+  "cluster": 108,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[comment-partner, personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[comment-partner]",
+        "[credibility-appeal]",
+        "[positive-to-inquiry, donation-information]",
+        "[foot-in-the-door, emotion-appeal, self-modeling]"
+      ],
+      "score": 0.26138282479598085,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": 0.009565937999999996
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[personal-related-inquiry]",
+        "[comment-partner]",
+        "[credibility-appeal]",
+        "[positive-to-inquiry, donation-information]",
+        "[foot-in-the-door, emotion-appeal, self-modeling]"
+      ],
+      "score": 0.22641740957339182,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": 0.0
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[comment-partner]",
+        "[credibility-appeal]",
+        "[positive-to-inquiry, donation-information]",
+        "[foot-in-the-door, emotion-appeal, self-modeling]"
+      ],
+      "score": 0.18061769054539456,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": -0.011809799999999995
+      }
+    }
+  ]
+}

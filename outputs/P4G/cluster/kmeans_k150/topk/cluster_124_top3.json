@@ -1,0 +1,59 @@
+{
+  "cluster": 124,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[personal-story]",
+        "[emotion-appeal]"
+      ],
+      "score": 0.7628413010037804,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.6642
+      }
+    },
+    {
+      "chain": [
+        "[emotion-appeal]"
+      ],
+      "score": 0.38520065050189023,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.7200000000000001
+      }
+    },
+    {
+      "chain": [
+        "[personal-related-inquiry]",
+        "[proposition-of-donation]",
+        "[acknowledgement, task-related-inquiry]",
+        "[task-related-inquiry]",
+        "[donation-information]",
+        "[credibility-appeal, donation-information]",
+        "[personal-related-inquiry]",
+        "[donation-information, task-related-inquiry]",
+        "[donation-information]"
+      ],
+      "score": 0.326918688278789,
+      "end_node": {
+        "count": 1,
+        "success_D": 0,
+        "success_rate": 0.0,
+        "avg_value": 0.023245229340000003
+      }
+    }
+  ]
+}

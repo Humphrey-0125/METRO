@@ -1,0 +1,61 @@
+{
+  "cluster": 29,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[ask_question]",
+        "[ask_question]",
+        "[confirm_information]",
+        "[ask_question]",
+        "[propose_counter_price]",
+        "[counter]",
+        "[agree_with_proposal]"
+      ],
+      "score": 3.0095741145314148,
+      "end_node": {
+        "count": 1,
+        "success": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4646312742857144
+      }
+    },
+    {
+      "chain": [
+        "[propose_counter_price]",
+        "[propose_counter_price]",
+        "[propose_counter_price]",
+        "[agree_with_proposal]"
+      ],
+      "score": 2.8143799840967527,
+      "end_node": {
+        "count": 1,
+        "success": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.62694
+      }
+    },
+    {
+      "chain": [
+        "[propose_counter_price]",
+        "[propose_counter_price]",
+        "[agree_with_proposal]"
+      ],
+      "score": 2.7415336243297124,
+      "end_node": {
+        "count": 10,
+        "success": 10,
+        "success_rate": 1.0,
+        "avg_value": 0.37202666734262424
+      }
+    }
+  ]
+}

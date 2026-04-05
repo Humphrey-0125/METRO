@@ -1,0 +1,69 @@
+{
+  "cluster": 127,
+  "topk": 3,
+  "beam": 20,
+  "max_depth": 9,
+  "weights": {
+    "w_sr": 1.0,
+    "w_val": 0.2,
+    "w_cnt": 0.05,
+    "z": 1.96
+  },
+  "top_chains": [
+    {
+      "chain": [
+        "[proposition-of-donation, ask-donate-more]",
+        "[praise-user, thank, task-related-inquiry]",
+        "[acknowledgement, logical-appeal, emotion-appeal]",
+        "[thank, ask-donate-more, emotion-appeal]",
+        "[praise-user, thank, credibility-appeal, emotion-appeal]",
+        "[donation-information, emotion-appeal, ask-donate-more, logical-appeal]",
+        "[acknowledgement, donation-information]",
+        "[thank, closing]"
+      ],
+      "score": 2.8802072062333033,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.3991605038181819
+      }
+    },
+    {
+      "chain": [
+        "[credibility-appeal, donation-information]",
+        "[credibility-appeal]",
+        "[self-modeling, emotion-appeal, credibility-appeal]",
+        "[ask-donation-amount, emotion-appeal]",
+        "[praise-user, positive-to-inquiry]",
+        "[self-modeling, emotion-appeal]",
+        "[ask-donation-amount, donation-information]"
+      ],
+      "score": 2.7199981114874063,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.44003314800000004
+      }
+    },
+    {
+      "chain": [
+        "[acknowledgement, credibility-appeal]",
+        "[acknowledgement, ask-donation-amount, donation-information]",
+        "[praise-user, donation-information, other]",
+        "[credibility-appeal, emotion-appeal]",
+        "[off-task, acknowledgement]",
+        "[acknowledgement, logical-appeal, praise-user]",
+        "[closing, off-task]"
+      ],
+      "score": 2.6955842703343666,
+      "end_node": {
+        "count": 1,
+        "success_D": 1,
+        "success_rate": 1.0,
+        "avg_value": 0.4348153636363637
+      }
+    }
+  ]
+}

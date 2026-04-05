@@ -6,6 +6,7 @@ This repository contains the official implementation of the ACL 2026 paper:
 “METRO: Towards Strategy Induction from Expert Dialogue Transcripts for Non-collaborative Dialogues”
 
 📄 **Paper link:** (to be added)  
+🧪 **Baselines:** [non-cooperative-dialogue-baseline](https://github.com/Humphrey-0125/non-cooperative-dialogue-baseline)
 
 ---
 

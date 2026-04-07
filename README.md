@@ -22,6 +22,12 @@ The pipeline includes:
 - **Strategy Execution** – simulate dialogues with induced strategies
 - **Evaluation** – task-specific metrics
 
+<p align="center">
+  <img src="assets/metro_architecture.png" alt="METRO Strategy Forest Architecture" width="800"/>
+  <br>
+  <i><b>Figure 1:</b> The overall pipeline of METRO, illustrating the offline Strategy Forest induction from expert transcripts and the online retrieval-augmented inference process.</i>
+</p>
+
 **Supported datasets:**
 
 - P4G (Persuasion for Good)
@@ -29,28 +35,30 @@ The pipeline includes:
 - ESC (Emotional Support Conversation)
 
 
-<p align="center">
-  <img src="assets/metro_architecture.png" alt="METRO Strategy Forest Architecture" width="800"/>
-</p>
-
 ---
 
 ## ⚡ Quick Start
 
-1. **Install**
+1. **Clone the Repository**
+```bash
+git clone https://github.com/Humphrey-0125/METRO.git
+cd METRO
+```
+
+2. **Install**
    ```bash
    python -m venv .venv
    source .venv/bin/activate   # or .venv\Scripts\activate on Windows
    pip install -r requirements.txt
    ```
 
-2. **Set API Keys**
+3. **Set API Keys**
    ```bash
    export OPENAI_API_KEY=your_key
    export SILICONFLOW_API_KEY=your_key
    ```
 
-3. **Run METRO (Recommended)**
+4. **Run METRO (Recommended)**
    ```bash
    # P4G
    bash run_all.sh --dataset p4g --cluster-config kmeans_k150

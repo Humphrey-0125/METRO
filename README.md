@@ -28,6 +28,11 @@ The pipeline includes:
 - CB (Craigslist Bargain)
 - ESC (Emotional Support Conversation)
 
+
+<p align="center">
+  <img src="assets/metro_architecture.png" alt="METRO Strategy Forest Architecture" width="800"/>
+</p>
+
 ---
 
 ## ⚡ Quick Start

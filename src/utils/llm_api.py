@@ -39,13 +39,13 @@ def _truncate(text: str, limit: int = 1200) -> str:
 
 COMPATIBLE_URL = _get_env("COMPATIBLE_URL", "https://api.bltcy.ai/v1/chat/completions")
 COMPATIBLE_MODEL = _get_env("COMPATIBLE_MODEL", "gpt-4o-mini")
-COMPATIBLE_KEY = _get_env("COMPATIBLE_KEY")
+COMPATIBLE_KEY = _get_env("COMPATIBLE_KEY","")
 OPENAI_URL = _get_env("OPENAI_URL", "https://api.openai.com/v1/chat/completions")
 OPENAI_MODEL = _get_env("OPENAI_MODEL", "gpt-4o-mini")
-OPENAI_KEY = _get_env("OPENAI_KEY")
+OPENAI_KEY = _get_env("OPENAI_KEY","")
 SILICONFLOW_URL = _get_env("SILICONFLOW_CHAT_URL", "https://api.siliconflow.cn/v1/chat/completions")
 SILICONFLOW_MODEL = _get_env("SILICONFLOW_CHAT_MODEL", "Qwen/Qwen3-32B")
-SILICONFLOW_KEY = _get_env("SILICONFLOW_KEY")
+SILICONFLOW_KEY = _get_env("SILICONFLOW_KEY","")
 
 
 # -----------------------------------------------------------------------------
@@ -58,7 +58,7 @@ def call_siliconflow_api(
     max_tokens: int = 300,
     timeout: float = 60.0,
 ) -> str:
-    api_key = _require_env(SILICONFLOW_KEY)
+    api_key = _require_env("SILICONFLOW_KEY")
 
     payload = {
         "model": model,
@@ -111,15 +111,13 @@ def call_compatible_api(
     temperature: float = 0.5,
     max_tokens: int = 200,
 ) -> str:
-    api_key = _require_env(COMPATIBLE_KEY)
+    api_key = _require_env("COMPATIBLE_KEY")
 
     payload = {
         "model": model,
         "messages": messages,
         "temperature": temperature,
         "max_tokens": max_tokens,
-        "enable_thinking": False,
-        "stream": False,
     }
     headers = {
         "Authorization": f"Bearer {api_key}",
@@ -185,7 +183,7 @@ def call_openai_api(
     temperature: float = 0.2,
     max_tokens: int = 200,
 ) -> str:
-    api_key = _require_env(OPENAI_KEY)
+    api_key = _require_env("OPENAI_KEY")
     client = _build_openai_client(api_key=api_key)
 
     try:

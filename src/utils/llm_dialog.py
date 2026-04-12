@@ -6,37 +6,37 @@ import re
 def chat_completion(messages, model: str = None, temperature: float = 0.3,max_tokens: int = None) -> str:
     """通用对话生成函数。"""
     if model is None:
-        return call_openai_api(messages, temperature=temperature)
+        return call_compatible_api(messages, temperature=temperature)
     else:
-        return call_openai_api(messages, model=model, temperature=temperature,max_tokens=max_tokens )
+        return call_compatible_api(messages, model=model, temperature=temperature,max_tokens=max_tokens )
 
 def chat_completion_persuader(messages, model: str = None, temperature: float = 0.3,max_tokens: int = None) -> str:
     """通用对话生成函数（这里用于 Persuader/Persuadee 发言）。"""
     if model is None:
-        return call_openai_api(messages, temperature=temperature)
+        return call_compatible_api(messages, temperature=temperature)
     else:
-        return call_openai_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
+        return call_compatible_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
 
 def chat_completion_persuadee(messages, model: str = None, temperature: float = 0.3,max_tokens: int = None) -> str:
     """通用对话生成函数（这里用于 Persuader/Persuadee 发言）。"""
     if model is None:
-        return call_openai_api(messages, temperature=temperature)
+        return call_compatible_api(messages, temperature=temperature)
     else:
-        return call_openai_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
+        return call_compatible_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
 
 def chat_completion_buyer(messages, model: str = None, temperature: float = 0.3,max_tokens: int = None) -> str:
     """通用对话生成函数（这里用于 Persuader/Persuadee 发言）。"""
     if model is None:
-        return call_openai_api(messages, temperature=temperature)
+        return call_compatible_api(messages, temperature=temperature)
     else:
-        return call_openai_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
+        return call_compatible_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
 
 def chat_completion_seller(messages, model: str = None, temperature: float = 0.3,max_tokens: int = None) -> str:
     """通用对话生成函数（这里用于 Persuader/Persuadee 发言）。"""
     if model is None:
-        return call_openai_api(messages, temperature=temperature)
+        return call_compatible_api(messages, temperature=temperature)
     else:
-        return call_openai_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
+        return call_compatible_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
 
 def history_to_plain_text(dialog_history: List[Dict[str, Any]]) -> str:
     """

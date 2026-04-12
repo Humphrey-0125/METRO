@@ -13,7 +13,7 @@ from src.utils.embed import Embedder, EMBED_MODEL_NAME, EMBED_API_KEY, EMBED_API
 from src.utils.retrieve import retrieve_strategy_chain_by_history
 
 # =============== LLM APIs ===============
-from src.utils.llm_api import call_plato_api
+from src.utils.llm_api import call_compatible_api
 
 # =============== guidance helpers (你已有的，CB里在用) ===============
 from src.utils.guidance_esc import generate_high_level_guidance, generate_strategy_chain_summary  # ✅ 直接复用你已有的工具
@@ -185,7 +185,7 @@ def call_esc_judge(dialog_history: List[Dict[str, Any]], meta: Dict[str, Any], m
     messages = [{"role": "system", "content": ESC_JUDGE_SYSTEM},
                 {"role": "user", "content": user_prompt}]
     print(f"\n[ESC Judge] dialogue_id={meta.get('dialogue_id','')} messages:\n{messages}\n")
-    out = call_plato_api(messages, model=model, temperature=0.0, max_tokens=max_tokens)
+    out = call_compatible_api(messages, model=model, temperature=0.0, max_tokens=max_tokens)
     out = (out or "").strip()
 
     # 只取首行/首字母做稳健解析
@@ -254,10 +254,10 @@ class IncrementalSaver:
 
 def chat_completion_simulator(messages, model: str, temperature: float, max_tokens: int) -> str:
     # 你也可以改成 openai compatible / siliconflow chat completions
-    return call_plato_api(messages, model=model, temperature=temperature, max_tokens=max_tokens)
+    return call_compatible_api(messages, model=model, temperature=temperature, max_tokens=max_tokens)
 
 def chat_completion_seeker(messages, model: str, temperature: float, max_tokens: int) -> str:
-    return call_plato_api(messages, model=model, temperature=temperature, max_tokens=max_tokens)
+    return call_compatible_api(messages, model=model, temperature=temperature, max_tokens=max_tokens)
 
 
 from typing import Optional, Tuple

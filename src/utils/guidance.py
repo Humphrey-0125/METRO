@@ -1,5 +1,5 @@
 from typing import List, Dict, Any, Optional
-from src.utils.llm_api import call_openai_api,call_plato_api   # <-- 你已有的 API
+from src.utils.llm_api import call_openai_api,call_compatible_api   # <-- 你已有的 API
 from prompts.p4g.runtime_template import build_strategy_chain_summary_prompt
 
 def generate_high_level_guidance(
@@ -71,7 +71,7 @@ should do next. Focus only on the next strategic action.
     ]
 
     try:
-        out = call_plato_api(
+        out = call_compatible_api(
             messages, 
             model=model,
             temperature=temperature,
@@ -121,7 +121,7 @@ def generate_strategy_chain_summary(
     ]
 
     try:
-        out = call_plato_api(
+        out = call_compatible_api(
             messages,
             model=model,
             temperature=temperature,

@@ -5,7 +5,7 @@
 ESC (Emotional Support Conversation) guidance + strategy-chain summary generators.
 
 对齐你 CB 版本的写法：
-- 只用 call_plato_api（你已有）
+- 只用 call_compatible_api
 - 不依赖 prompts/*.py
 - prompt 直接写在代码里
 
@@ -15,7 +15,7 @@ ESC (Emotional Support Conversation) guidance + strategy-chain summary generator
 """
 
 from typing import List, Dict, Any, Optional
-from src.utils.llm_api import call_plato_api  # 你已有的 API
+from src.utils.llm_api import call_compatible_api  # 你已有的 API
 
 
 def generate_high_level_guidance(
@@ -87,7 +87,7 @@ Focus only on the next strategic support action (not the actual wording).
     ]
 
     try:
-        out = call_plato_api(
+        out = call_compatible_api(
             messages,
             model=model,
             temperature=temperature,
@@ -165,7 +165,7 @@ describing how the support approach should evolve over time.
     ]
 
     try:
-        out = call_plato_api(
+        out = call_compatible_api(
             messages,
             model=model,
             temperature=temperature,

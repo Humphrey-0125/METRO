@@ -15,7 +15,7 @@ CB (CraigslistBargain) guidance + strategy-chain summary generators.
 """
 
 from typing import List, Dict, Any, Optional
-from src.utils.llm_api import call_plato_api  # <-- 你已有的 API
+from src.utils.llm_api import call_compatible_api  # <-- 你已有的 API
 
 
 def generate_high_level_guidance(
@@ -88,7 +88,7 @@ Focus only on the next strategic action.
     ]
 
     try:
-        out = call_plato_api(
+        out = call_compatible_api(
             messages,
             model=model,
             temperature=temperature,
@@ -163,7 +163,7 @@ describing how the buyer's negotiation approach should evolve over time.
     ]
 
     try:
-        out = call_plato_api(
+        out = call_compatible_api(
             messages,
             model=model,
             temperature=temperature,

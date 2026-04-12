@@ -38,13 +38,13 @@ from src.utils.guidance import generate_high_level_guidance, generate_strategy_c
 DEFAULT_CLUSTER_CONFIG = "kmeans_k150"
 
 # 动态路径：根据聚类配置生成
-CLUSTERS_PATH = "outputs/P4G/cluster/history/{}/clusters.json"
+CLUSTERS_PATH = "outputs/P4G/cluster/{}/clusters.json"
 STATES_PATH   = "outputs/P4G/embedding/history/states_embeddings_train_test.json"
-TREES_DIR     = "outputs/P4G/cluster/history/{}/topk"
-PRINCIPLES_DIR = "outputs/P4G/cluster/history/{}/principles_by_cluster"
+TREES_DIR     = "outputs/P4G/cluster/{}/topk"
+PRINCIPLES_DIR = "outputs/P4G/cluster/{}/principles_by_cluster"
 
 # 按簇保存的 principles 路径（由 split_principles_by_cluster.py 生成）
-PERSUADER_GPT_MODEL = "qwen3-30b-a3b"
+PERSUADER_GPT_MODEL = "gpt-3.5-turbo"
 PERSUADEE_GPT_MODEL = "gpt-3.5-turbo"
 GPT_MODEL="gpt-3.5-turbo"  
 
@@ -939,7 +939,7 @@ if __name__ == "__main__":
    所有进程共享同一个输出文件，通过增量保存机制保证线程安全。
 
 2. 单进程多线程（原有方式）：
-   python src/runtime/history_principle.py --max_samples 200 --cluster_config kmeans_k150
+   python src/runtime/history_principle.py --max_samples 2 --cluster_config kmeans_k150
    
 3. 批次处理（手动指定范围）：
    python src/runtime/history_principle.py \

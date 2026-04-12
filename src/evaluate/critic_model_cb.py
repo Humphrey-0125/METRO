@@ -7,7 +7,7 @@ from statistics import median
 from typing import List, Dict, Any, Tuple, Optional
 
 from src.utils.llm_api import (
-    call_plato_api,
+    call_compatible_api,
     call_siliconflow_api,
     call_openai_api,
 )
@@ -262,14 +262,14 @@ def call_critic_model(
 
     # 多接口来源：先用你最稳定的（比如 siliconflow）
     all_callers = [
-        call_plato_api,
+        call_compatible_api,
         # call_openai_api,
         # call_openai_api,
         # call_openai_api,
         # call_siliconflow_api,
         # 你也可以混合：
         # call_openai_compatible_api,
-        call_plato_api,
+        call_compatible_api,
     ]
     selected_callers = all_callers[: max(len(all_callers), 1)]
 

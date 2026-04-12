@@ -5,7 +5,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import List, Dict, Any, Tuple
 
 from src.utils.llm_api import (
-    call_plato_api,
+    call_compatible_api,
     call_siliconflow_api,
     # call_openai_api,
 )
@@ -163,11 +163,11 @@ def call_critic_model(
 
     try:
         all_callers = [
-            call_plato_api,
-            call_plato_api,
-            call_plato_api,
-            call_plato_api,
-            call_plato_api,
+            call_compatible_api,
+            call_compatible_api,
+            call_compatible_api,
+            call_compatible_api,
+            call_compatible_api,
         ]
         selected_callers = all_callers[: max(1, num_samples)]
 

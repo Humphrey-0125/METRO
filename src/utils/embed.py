@@ -8,7 +8,7 @@ from typing import List, Optional
 EMBED_API_URL = os.getenv("SILICONFLOW_EMBED_URL", "https://api.siliconflow.cn/v1/embeddings")
 EMBED_MODEL_NAME = os.getenv("SILICONFLOW_EMBED_MODEL", "BAAI/bge-large-en-v1.5")
 
-EMBED_API_KEY = os.getenv("SILICONFLOW_KEY").strip()
+EMBED_API_KEY = os.getenv("SILICONFLOW_KEY", "")
 
 MAX_EMBED_TEXT_LENGTH = 800
 CHUNK_OVERLAP = 50

@@ -1,19 +1,6 @@
 # src/utils/guidance_cb.py
 # -*- coding: utf-8 -*-
 
-"""
-CB (CraigslistBargain) guidance + strategy-chain summary generators.
-
-严格按你给的 P4G 版本风格：
-- 只用 call_openai_compatible_api（你已有）
-- 不在参数里加 backend/backbone
-- 所有 prompt 直接写在代码里（不依赖 prompts/*.py）
-
-用途：
-- generate_high_level_guidance_cb: 用“agent”口吻给 buyer 一条高层指导（1–2句）
-- generate_strategy_chain_summary_cb: 总结检索到的策略链，给 buyer 长期规划方向（1–2句）
-"""
-
 from typing import List, Dict, Any, Optional
 from src.utils.llm_api import call_llm_api
 
@@ -26,21 +13,6 @@ def generate_high_level_guidance(
     temperature: float = 0.3,
     max_tokens: int = 200
 ) -> str:
-    """
-    调用大模型，对 top-k principles + 当前 seller 的 utterance 进行总结，
-    形成一条精炼的“高层策略指导”，用于指导 BUYER 下一步怎么谈价。
-
-    Args:
-        principles: top-k 检索得到的 principles 列表
-        last_user_utt: 最近的 seller 一句话（CB里把 seller 当作 user-signal）
-        recent_dialogue: 最近对话上下文（建议：最近两句 buyer+seller）
-        model: OpenAI-compatible model 名
-        temperature: 生成温度
-        max_tokens: 最大输出 token
-
-    Returns:
-        一条字符串，高层策略指导（1-2 句）
-    """
     if not principles:
         return ""
 
@@ -107,19 +79,6 @@ def generate_strategy_chain_summary(
     temperature: float = 0.5,
     max_tokens: int = 200
 ) -> str:
-    """
-    调用大模型，对“成功谈判轨迹”的策略链进行总结，生成 BUYER 的长期规划方向（1–2 句）。
-
-    Args:
-        strategy_chain_hint: format_strategy_hint 输出的策略链文本（长）
-        recent_dialogue: 最近对话上下文（建议：最近两句 buyer+seller）
-        model: OpenAI-compatible model 名
-        temperature: 生成温度
-        max_tokens: 最大输出 token
-
-    Returns:
-        一条字符串，长期规划指导（1-2 句）
-    """
     if not strategy_chain_hint or not strategy_chain_hint.strip():
         return ""
 

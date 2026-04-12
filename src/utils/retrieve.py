@@ -23,12 +23,6 @@ _CLUSTER_BEST_CHAIN_CACHE: Dict[str, List[List[str]]] = {}
 
 
 def _normalize_strategy_chain(chain: Any) -> List[str]:
-    """
-    与 MCT.py 保持一致的策略链序列化逻辑：
-      - 单个字符串：strip 后直接使用；
-      - 列表/元组：表示并列策略，转成 "[a, b]" 这种格式，便于后续识别；
-      - 其他类型：转成字符串兜底。
-    """
     if not isinstance(chain, list):
         return []
     normalized: List[str] = []
@@ -51,10 +45,6 @@ def _normalize_strategy_chain(chain: Any) -> List[str]:
 
 
 def _standardize_tree_step(step: Any) -> str:
-    """
-    读取树节点时，将旧格式（使用 '->' 表示并列策略）的名称
-    转换成统一的 '[a, b]' 格式，方便后续识别。
-    """
     if isinstance(step, str):
         stripped = step.strip()
         if stripped.startswith("[") and stripped.endswith("]"):
@@ -70,13 +60,6 @@ def _standardize_tree_step(step: Any) -> str:
 
 
 def _parse_strategy_step(step: str) -> List[str]:
-    """
-    将字符串格式的策略步骤解析为策略列表。
-
-    例如：
-    - "[acknowledgement, credibility-appeal]" -> ["acknowledgement", "credibility-appeal"]
-    - "single-strategy" -> ["single-strategy"]
-    """
     step = step.strip()
     if step.startswith("[") and step.endswith("]"):
         content = step[1:-1].strip()
@@ -88,14 +71,6 @@ def _parse_strategy_step(step: str) -> List[str]:
         return [step] if step else []
 
 def load_cluster_centroids(clusters_path: str) -> Dict[int, np.ndarray]:
-    """
-    从 clusters.json 中加载每个聚类簇的 centroid 向量：
-    返回: { cluster_id: np.ndarray([...]) }
-
-    参数:
-        clusters_path: clusters.json 的路径，例如:
-            "outputs/P4G/cluster/cluster_k200/clusters.json"
-    """
     global _CLUSTER_CENTROIDS_CACHE
 
     if clusters_path in _CLUSTER_CENTROIDS_CACHE:
@@ -121,13 +96,6 @@ def load_cluster_centroids(clusters_path: str) -> Dict[int, np.ndarray]:
     return centroids
 
 def _get_node_metric(node: Dict[str, Any], metric: str = "avg_value") -> float:
-    """
-    从节点中取评价指标:
-    - 优先用 node[metric];
-    - 如果 metric == "avg_value" 且没有该字段，则回退为 value_sum / count;
-    - metric == "success_rate" 且没有，则回退为 success / count;
-    - 其他情况则为 0.0。
-    """
     if metric in node:
         try:
             return float(node[metric])
@@ -149,14 +117,6 @@ def _find_best_path_from_tree(
     metric: str = "avg_value",
     path_prefix: List[List[str]] = None,
 ) -> Tuple[List[List[str]], float]:
-    """
-    在一棵 MCT 上做 DFS，找到指定 metric 最高的叶子节点路径。
-
-    返回:
-        (best_path, best_score)
-        - best_path: 从 ROOT 下方到最佳叶子节点的策略序列（不含 "ROOT"），每个元素是策略列表
-        - best_score: 该叶子节点的 metric 值
-    """
     if path_prefix is None:
         path_prefix = []
 
@@ -198,15 +158,6 @@ def load_best_chains_from_trees_dir(
     trees_dir: str,
     metric: str = "avg_value",
 ) -> List[List[List[str]]]:
-    """
-    扫描某个 trees_value 目录下的所有 cluster_*.json，
-    为每个 cluster 选出一条"价值最高"的策略链。
-
-    返回:
-        List[best_chain]，其中 best_chain 是 List[List[str]]，
-        列表索引即 cluster_id，每条链的每个步骤都是策略列表，例如:
-        result[0] = [["acknowledgement"], ["credibility-appeal"], ["ask-donation-amount"], ...]
-    """
     global _CLUSTER_BEST_CHAIN_CACHE
     if trees_dir in _CLUSTER_BEST_CHAIN_CACHE:
         return _CLUSTER_BEST_CHAIN_CACHE[trees_dir]
@@ -255,9 +206,6 @@ def load_cluster_to_chains(
     clusters_path: str,
     states_path: str,
 ) -> Dict[int, List[List[str]]]:
-    """
-    构建: cluster_id -> 该簇下所有状态对应的 strategy_chain 列表。
-    """
     global _CLUSTER_TO_CHAINS_CACHE
     cache_key = (clusters_path, states_path)
 
@@ -299,11 +247,6 @@ def load_cluster_to_chains(
     return cluster_to_chains
 
 def _extract_aspect_dict(aspect_states: Any) -> Dict[str, str]:
-    """
-    把 analyze_aspects 的返回统一成 dict 形式:
-    - 如果本身是 dict，则直接转成 {k: str(v)}
-    - 如果是其他结构，则放到 "raw" 里兜底
-    """
     if isinstance(aspect_states, dict):
         return {k: str(v) for k, v in aspect_states.items()}
     return {"raw": str(aspect_states)}
@@ -315,22 +258,6 @@ def _aspect_top_clusters_by_embedding(
     clusters_path: str,
     top_k: int = 3,
 ) -> List[Tuple[int, float]]:
-    """
-    利用 aspect 的 embedding 和 cluster centroid 做相似度匹配:
-      1) 使用 concat_states_text 将 aspect 拼成文本;
-      2) 用外部传入的 emb_fn 编码为向量;
-      3) 与每个 cluster 的 centroid 做 cosine 相似度;
-      4) 返回 top_k 个最相似簇 (cluster_id, similarity)。
-
-    参数:
-        aspect_states: analyze_aspects 返回的状态 (dict 或其他)
-        emb_fn: 文本 -> 向量的函数，由外部提供
-        clusters_path: clusters.json 文件路径
-        top_k: 需要返回的簇个数 (默认 3)
-
-    返回:
-        List[(cluster_id, similarity)]
-    """
     aspect_dict = _extract_aspect_dict(aspect_states)
     query_text = concat_states_text(aspect_dict)  # e.g. "value_state: ... | stage_state: ... | persona_state: ..."
     if not query_text:
@@ -362,26 +289,6 @@ def retrieve_strategy_chain_by_aspects(
     trees_dir: str,
     top_k: int = 1,
 ) -> List[List[List[str]]]:
-    """
-    根据当前对话的 aspect，从历史中检索最相似的“最佳策略链”。
-
-    流程:
-      1) 使用 concat_states_text 拼接 aspect 文本;
-      2) emb_fn 将文本编码为向量;
-      3) 利用簇 centroid 找到 top-3 相似 cluster;
-      4) 对每个 cluster 取出其 MCT 中“价值最高”的 strategy_chain，最多返回 top_k 条。
-
-    参数:
-        current_states: analyze_aspects 的结果
-        emb_fn: 文本 -> 向量的函数，由外部模块实现并传入
-        clusters_path: clusters.json 路径
-        trees_dir: 保存 MCT 的目录，如: "outputs/P4G/cluster/cluster_k200/trees_value"
-        top_k: 最多返回多少条策略链
-
-    返回:
-        List[ strategy_chain ]，其中 strategy_chain 是 List[List[str]]，
-        每个策略步骤都是策略列表（如[["acknowledgement"], ["credibility-appeal", "emotion-appeal"]]）
-    """
     top_clusters = _aspect_top_clusters_by_embedding(
         aspect_states=current_states,
         emb_fn=emb_fn,
@@ -426,31 +333,6 @@ def retrieve_strategy_chain_by_history(
     top_k: int = 2,
     max_history_turns: Optional[int] = None,
 ) -> List[Dict[str, Any]]:
-    """
-    根据当前对话的历史，从历史中检索最相似的"最佳策略链"。
-
-    流程:
-      1) 使用 concat_history_utterances_from_map 拼接历史对话文本;
-      2) emb_fn 将文本编码为向量;
-      3) 利用簇 centroid 找到最相似的一个 cluster;
-      4) 根据该 cluster id 读取 topk 目录中对应文件的最佳策略链。
-
-    参数:
-        dialog_history: 当前的对话历史
-        emb_fn: 文本 -> 向量的函数，由外部模块实现并传入
-        clusters_path: clusters.json 路径
-        trees_dir: 现在应为 topk 目录，如:
-            "outputs/P4G/cluster/history/kmeans_k150/topk"
-        current_turn_id: 当前轮次 ID，用于确定历史范围
-        top_k: 最多返回多少条策略链，从每个簇的topk文件中选择
-        max_history_turns: 可选，限制历史轮数
-
-    返回:
-        List[Dict[str, Any]]，每个字典包含：
-        - "chain": List[List[str]]，策略链（每个策略步骤都是策略列表）
-        - "cluster_id": int，簇ID
-        - "similarity": float，相似度分数
-    """
     from src.state.history_state_chain import build_turn_map, concat_history_utterances_from_map
 
     turn_map = build_turn_map(dialog_history)

@@ -1,19 +1,6 @@
 # src/utils/guidance_esc.py
 # -*- coding: utf-8 -*-
 
-"""
-ESC (Emotional Support Conversation) guidance + strategy-chain summary generators.
-
-对齐你 CB 版本的写法：
-- 只用 call_compatible_api
-- 不依赖 prompts/*.py
-- prompt 直接写在代码里
-
-用途：
-- generate_high_level_guidance: 用“supporter”视角给出下一步高层指导（1–2句）
-- generate_strategy_chain_summary: 总结检索到的策略链，给 supporter 长期规划方向（1–2句）
-"""
-
 from typing import List, Dict, Any, Optional
 from src.utils.llm_api import call_llm_api
 
@@ -29,13 +16,6 @@ def generate_high_level_guidance(
     temperature: float = 0.3,
     max_tokens: int = 200
 ) -> str:
-    """
-    调用大模型，对 top-k principles + seeker 最新一句话 + 最近对话上下文进行总结，
-    形成一条精炼的“高层支持策略指导”，用于指导 supporter 下一步如何回应/引导。
-
-    Returns:
-        一条字符串，高层支持策略指导（1-2 句）
-    """
     if not principles:
         return ""
 
@@ -109,12 +89,6 @@ def generate_strategy_chain_summary(
     temperature: float = 0.5,
     max_tokens: int = 200
 ) -> str:
-    """
-    调用大模型，对“成功支持轨迹”的策略链进行总结，生成 supporter 的长期规划方向（1–2 句）。
-
-    Returns:
-        一条字符串，长期规划指导（1-2 句）
-    """
     if not strategy_chain_hint or not strategy_chain_hint.strip():
         return ""
 

@@ -38,10 +38,6 @@ def chat_completion_seller(messages, model: str = None, temperature: float = 0.3
         return call_llm_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
 
 def history_to_plain_text(dialog_history: List[Dict[str, Any]]) -> str:
-    """
-    把对话历史拼成纯文本，保证每行只出现一次 speaker 前缀。
-    会自动去除 text 中重复出现的 'Speaker:' 前缀（仅限行首）。
-    """
     lines = []
 
     for turn in dialog_history:
@@ -61,11 +57,6 @@ def history_to_plain_text(dialog_history: List[Dict[str, Any]]) -> str:
 
 
 def _render_step(step: str) -> str:
-    """
-    将单个策略步骤转换为更易读的字符串：
-    - 对于形如 "[a, b]" 的并列策略，转成 "a + b (并行)"；
-    - 其他情况保持原样。
-    """
     if not isinstance(step, str):
         return str(step)
     stripped = step.strip()
@@ -81,17 +72,6 @@ def _render_step(step: str) -> str:
 
 
 def format_strategy_hint(chains: Union[List[List[str]], List[List[List[str]]], List[Dict[str, Any]]], depth: Optional[int] = None) -> Optional[str]:
-    """
-    将多个 strategy_chain 格式化成一段可读的提示文本，喂给 Persuader。
-
-    支持三种输入格式：
-    - List[List[str]]: 旧格式，每个策略链是字符串列表
-    - List[List[List[str]]]: 新格式，每个策略链是嵌套的策略列表
-    - List[Dict[str, Any]]: 最新格式，每个元素是包含"chain"键的字典
-
-    参数:
-    - depth: 可选参数，控制只显示前几层的策略。如果为None则显示全部层
-    """
     if not chains:
         return None
 
@@ -130,12 +110,6 @@ def generate_persuader_utterance(
     model: Optional[str] = None,
     prompt_type: str = "default"
 ) -> str:
-    """
-    调用模型生成 Persuader 下一句（ablation-aware）。
-
-    depth  = 是否使用 strategy_chain_hint
-    breadth = 是否使用 guidance_text
-    """
     dialogue_text = history_to_plain_text(dialog_history)
 
     use_depth = bool(strategy_chain_hint and str(strategy_chain_hint).strip())
@@ -186,13 +160,6 @@ def generate_persuadee_utterance(
     model: str = None,
     persona_description: str = None
 ) -> str:
-    """
-    生成 Persuadee 下一句。
-
-    persona_description:
-        - 若 prompt_type == "personas"，则必须传入
-        - 否则忽略
-    """
 
     dialogue_text = history_to_plain_text(dialog_history)
 

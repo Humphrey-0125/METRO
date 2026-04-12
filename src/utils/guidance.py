@@ -9,20 +9,6 @@ def generate_high_level_guidance(
     temperature: float = 0.3,
     max_tokens: int = 200
 ) -> str:
-    """
-    调用大模型，对 top-k principles + 当前 persuadee 的 utterance 
-    进行总结，形成一条精炼的“高层策略指导”。
-
-    Args:
-        principles: top-k 检索得到的 principles 列表
-        last_user_utt: 最近的用户一句话
-        model: SiliconFlow 的 model 名
-        temperature: 生成温度
-        max_tokens: 最大输出 token
-
-    Returns:
-        一条字符串，高层策略指导（1-2 句）
-    """
 
     if not principles:
         return ""
@@ -91,20 +77,6 @@ def generate_strategy_chain_summary(
     temperature: float = 0.5,
     max_tokens: int = 200
 ) -> str:
-    """
-    调用大模型，对长策略链进行总结，生成一个关于"如何长期规划"的指导。
-    
-    Args:
-        strategy_chain_hint: 格式化的策略链文本（来自 format_strategy_hint）
-        current_turn_id: 当前对话轮次
-        recent_dialogue: 最近的对话历史（上一轮 Persuader 和 Persuadee 的对话），用于理解当前状况
-        model: 使用的模型名称
-        temperature: 生成温度
-        max_tokens: 最大输出 token
-        
-    Returns:
-        一条字符串，长期规划指导（1-2 句）
-    """
     if not strategy_chain_hint or not strategy_chain_hint.strip():
         return ""
     

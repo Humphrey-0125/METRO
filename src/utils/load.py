@@ -19,5 +19,5 @@ def load_dev_dataset() -> List[Dict[str, Any]]:
         with open(dev_file, "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
-        print(f"文件 {dev_file} 未找到")
+        print(f"File not found: {dev_file}")
         return []

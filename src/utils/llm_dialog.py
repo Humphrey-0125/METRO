@@ -1,42 +1,41 @@
 from typing import List, Dict, Any, Optional, Union
-from src.utils.llm_api import call_siliconflow_api,call_compatible_api, call_openai_api
+from src.utils.llm_api import call_llm_api
 import re
-# ===================== LLM 对话封装 =====================
 
 def chat_completion(messages, model: str = None, temperature: float = 0.3,max_tokens: int = None) -> str:
     """通用对话生成函数。"""
     if model is None:
-        return call_compatible_api(messages, temperature=temperature)
+        return call_llm_api(messages, temperature=temperature)
     else:
-        return call_compatible_api(messages, model=model, temperature=temperature,max_tokens=max_tokens )
+        return call_llm_api(messages, model=model, temperature=temperature,max_tokens=max_tokens )
 
 def chat_completion_persuader(messages, model: str = None, temperature: float = 0.3,max_tokens: int = None) -> str:
     """通用对话生成函数（这里用于 Persuader/Persuadee 发言）。"""
     if model is None:
-        return call_compatible_api(messages, temperature=temperature)
+        return call_llm_api(messages, temperature=temperature)
     else:
-        return call_compatible_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
+        return call_llm_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
 
 def chat_completion_persuadee(messages, model: str = None, temperature: float = 0.3,max_tokens: int = None) -> str:
     """通用对话生成函数（这里用于 Persuader/Persuadee 发言）。"""
     if model is None:
-        return call_compatible_api(messages, temperature=temperature)
+        return call_llm_api(messages, temperature=temperature)
     else:
-        return call_compatible_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
+        return call_llm_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
 
 def chat_completion_buyer(messages, model: str = None, temperature: float = 0.3,max_tokens: int = None) -> str:
     """通用对话生成函数（这里用于 Persuader/Persuadee 发言）。"""
     if model is None:
-        return call_compatible_api(messages, temperature=temperature)
+        return call_llm_api(messages, temperature=temperature)
     else:
-        return call_compatible_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
+        return call_llm_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
 
 def chat_completion_seller(messages, model: str = None, temperature: float = 0.3,max_tokens: int = None) -> str:
     """通用对话生成函数（这里用于 Persuader/Persuadee 发言）。"""
     if model is None:
-        return call_compatible_api(messages, temperature=temperature)
+        return call_llm_api(messages, temperature=temperature)
     else:
-        return call_compatible_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
+        return call_llm_api(messages, model=model, temperature=temperature,max_tokens=max_tokens)
 
 def history_to_plain_text(dialog_history: List[Dict[str, Any]]) -> str:
     """
@@ -52,18 +51,14 @@ def history_to_plain_text(dialog_history: List[Dict[str, Any]]) -> str:
         if not isinstance(text, str):
             text = str(text)
 
-        # 构造一个正则：行首可能出现的 "Persuader:" / "persuader :" 等
-        # 仅在 text 的最开头匹配
         prefix_pattern = rf"^\s*{re.escape(speaker)}\s*:\s*"
 
-        # 如果 text 里已经有 speaker 前缀，就去掉
         text = re.sub(prefix_pattern, "", text, flags=re.IGNORECASE)
 
         lines.append(f"{speaker}: {text}")
 
     return "\n".join(lines)
 
-# ===================== 角色发言封装 =====================
 
 def _render_step(step: str) -> str:
     """
@@ -102,29 +97,23 @@ def format_strategy_hint(chains: Union[List[List[str]], List[List[List[str]]], L
 
     formatted = []
     for idx, chain_item in enumerate(chains, start=1):
-        # 如果是字典格式，提取chain字段
         if isinstance(chain_item, dict):
             chain = chain_item.get("chain", chain_item)
         else:
             chain = chain_item
         
-        # 应用 depth 参数限制层数
         if depth is not None and chain:
             chain = chain[:depth]
 
-        # 处理嵌套格式：如果chain是List[List[str]]，则将其扁平化
         if chain and isinstance(chain[0], list):
-            # 新格式：List[List[str]] -> List[str]
             flattened_steps = []
             for step_list in chain:
                 if len(step_list) == 1:
                     flattened_steps.append(step_list[0])
                 else:
-                    # 多个策略并行，用方括号表示
                     flattened_steps.append(f"[{', '.join(step_list)}]")
             rendered_chain = [_render_step(step) for step in flattened_steps]
         else:
-            # 旧格式：List[str]
             rendered_chain = [_render_step(step) for step in chain]
 
         chain_str = " → ".join(rendered_chain)
@@ -149,7 +138,6 @@ def generate_persuader_utterance(
     """
     dialogue_text = history_to_plain_text(dialog_history)
 
-    # -------- ablation inference（关键） --------
     use_depth = bool(strategy_chain_hint and str(strategy_chain_hint).strip())
     use_breadth = bool(guidance_text and str(guidance_text).strip())
 
@@ -171,7 +159,6 @@ def generate_persuader_utterance(
         ]
 
     else:
-        # 非 Ours / Ours_1：保持旧行为（但仍然传 use_depth/use_breadth 以防未来统一）
         from prompts.p4g.runtime_template import build_persuader_generation_prompt
 
         system_prompt, user_prompt = build_persuader_generation_prompt(
@@ -197,7 +184,7 @@ def generate_persuadee_utterance(
     dialog_history: List[Dict[str, Any]], 
     prompt_type: str = "default",
     model: str = None,
-    persona_description: str = None    # 新增参数
+    persona_description: str = None
 ) -> str:
     """
     生成 Persuadee 下一句。
@@ -219,7 +206,6 @@ def generate_persuadee_utterance(
         ]
 
     elif prompt_type == "personas":
-        # 必须指定 persona_description
         from prompts.p4g.persuadee.persona import build_persuadee_generation_prompt_persona
         system_prompt, user_prompt = build_persuadee_generation_prompt_persona(
             dialogue_text,
@@ -232,7 +218,6 @@ def generate_persuadee_utterance(
         ]
 
     elif prompt_type == "resistance":
-        # 必须指定 persona_description
         if persona_description is None:
             raise ValueError("persona_description must be provided when prompt_type is 'resistance'")
         from prompts.p4g.persuadee.resistance import build_persuadee_generation_prompt_resistance

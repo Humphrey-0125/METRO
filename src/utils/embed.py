@@ -3,6 +3,9 @@ import time
 import json
 import requests
 from typing import List, Optional
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # ---------------- Config ----------------
 EMBED_API_URL = os.getenv("SILICONFLOW_EMBED_URL", "https://api.siliconflow.cn/v1/embeddings")
@@ -15,7 +18,6 @@ CHUNK_OVERLAP = 50
 REQUEST_TIMEOUT = 30
 MAX_RETRIES = 3
 
-# backoff 参数：更可控
 RETRY_BASE_DELAY = 1.0
 RETRY_BACKOFF_FACTOR = 1.8
 
@@ -99,7 +101,6 @@ class Embedder:
         if text and len(text) > 1200:
             text = text[:1200] + "...(truncated)"
 
-        # 只显示 input 的长度，不显示内容
         input_len = None
         if isinstance(payload, dict) and "input" in payload and isinstance(payload["input"], str):
             input_len = len(payload["input"])
@@ -118,13 +119,10 @@ class Embedder:
             try:
                 resp = self.session.post(self.api_url, json=payload, timeout=REQUEST_TIMEOUT)
 
-                # ✅ 先在这里做诊断输出，再 raise
                 if resp.status_code in (401, 403):
                     self._debug_http(resp, payload)
-                    # 这类错误重试也没意义，直接抛出
                     resp.raise_for_status()
 
-                # 其他错误：也打印一下 body，方便定位（比如 429/5xx）
                 if resp.status_code >= 400:
                     self._debug_http(resp, payload)
                     resp.raise_for_status()

@@ -5,11 +5,7 @@ from collections import Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import List, Dict, Any, Tuple, Optional
 
-from src.utils.llm_api import (
-    call_compatible_api,
-    # call_siliconflow_api,
-    # call_openai_api,
-)
+from src.utils.llm_api import call_llm_api
 
 ATTITUDE_REWARD = {
     "A": -1.0,
@@ -46,7 +42,6 @@ def _extract_attitude(raw_response: str) -> Optional[str]:
 
     text = raw_response.strip()
 
-    # 去掉 ```...``` 包裹
     if text.startswith("```"):
         first_newline = text.find("\n")
         if first_newline != -1:
@@ -56,11 +51,9 @@ def _extract_attitude(raw_response: str) -> Optional[str]:
 
     upper = text.strip().upper()
 
-    # 最稳：看开头第一个字母
     if upper and upper[0] in ("A", "B", "C", "D"):
         return upper[0]
 
-    # 备选：找第一个独立的 A/B/C/D
     m = re.search(r"\b([ABCD])\b", upper)
     if m:
         return m.group(1)
@@ -105,18 +98,11 @@ def _call_critic_once_with_retry(
 
 def call_critic_model(
     dialog_history: List[Dict[str, Any]],
-    meta: Optional[Dict[str, Any]] = None,   # ✅ 改成 meta dict
+    meta: Optional[Dict[str, Any]] = None,
     num_samples: int = NUM_SAMPLES,
     max_retries: int = 3,
     return_details: bool = True,
 ) -> Tuple[str, bool, float, List[str]]:
-    """
-    返回固定 4 元组：
-    - final_attitude: 众数 A/B/C/D（若都失败，默认 B）
-    - should_end
-    - avg_reward
-    - sampled_attitudes
-    """
 
     meta = meta or {}
     emotion_type = (meta.get("emotion_type") or "").strip() or "N/A"
@@ -129,11 +115,11 @@ def call_critic_model(
 
     try:
         all_callers = [
-            call_compatible_api,
-            call_compatible_api,
-            call_compatible_api,
-            call_compatible_api,
-            call_compatible_api,
+            call_llm_api,
+            call_llm_api,
+            call_llm_api,
+            call_llm_api,
+            call_llm_api,
         ]
         selected_callers = all_callers[: max(1, num_samples)]
 

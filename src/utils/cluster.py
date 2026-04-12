@@ -88,7 +88,7 @@ def hdbscan_fit_predict(
         import hdbscan
     except ImportError as e:
         raise ImportError(
-            "未安装 hdbscan。请先执行：pip install hdbscan"
+            "hdbscan not installed. Run: pip install hdbscan"
         ) from e
 
     model = hdbscan.HDBSCAN(
@@ -208,7 +208,7 @@ def load_ids_and_embeddings_auto(path: str) -> Tuple[List[str], np.ndarray]:
                 push(obj)
 
     if not ids:
-        raise ValueError("未找到任何有效的 id/embedding。")
+        raise ValueError("No valid id/embedding entries found.")
     X = np.asarray(embs, dtype=np.float32)
     return ids, X
 
@@ -333,7 +333,6 @@ def export_clusters(
 
     groups = labels_to_groups(ids, labels)
 
-    # n_clusters：只统计非噪声簇
     unique = set(int(x) for x in np.unique(labels).tolist()) if len(labels) else set()
     non_noise = sorted([x for x in unique if x != -1])
     n_clusters = int(centroids.shape[0]) if centroids is not None else len(non_noise)
@@ -349,7 +348,6 @@ def export_clusters(
         cid = int(cid_str)
         entry = {"cluster": cid, "size": len(members), "members": members}
 
-        # 只有非噪声簇且提供了 centroids 才写 centroid
         if centroids is not None and cid != -1:
             if 0 <= cid < centroids.shape[0]:
                 entry["centroid"] = centroids[cid].tolist()

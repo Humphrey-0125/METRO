@@ -32,39 +32,35 @@ def main():
     time1 = time.time()
     ap = argparse.ArgumentParser()
 
-    # ✅ 新增：任务选择
-    ap.add_argument("--task", required=True, choices=["P4G", "CB", "ESC"], help="选择数据集任务：p4g / cb / esc")
+    ap.add_argument("--task", required=True, choices=["P4G", "CB", "ESC"], help="dataset task: p4g / cb / esc")
 
-    ap.add_argument("--state_type", required=True, help="状态类型，用于构建输入输出路径")
-    ap.add_argument("--normalize", action="store_true", help="对嵌入做 L2 归一化（用于 cosine）")
+    ap.add_argument("--state_type", required=True, help="state type, used to build input/output paths")
+    ap.add_argument("--normalize", action="store_true", help="apply L2 normalization to embeddings (for cosine similarity)")
 
     ap.add_argument(
         "--cluster-method",
         type=str,
         choices=["kmeans", "optics", "hdbscan"],
         default="kmeans",
-        help="聚类方法：kmeans / optics / hdbscan",
+        help="clustering method: kmeans / optics / hdbscan",
     )
 
-    # ----- KMeans 相关参数 -----
-    ap.add_argument("--k", type=int, default=None, help="指定聚类簇数；若不指定则自动网格搜索（仅 kmeans 有效）")
-    ap.add_argument("--k_grid", type=str, default=None, help="网格范围（如 '5-50' 或 '8,12,16'），未指定则默认 5-50 步长5（仅 kmeans 有效）")
-    ap.add_argument("--minibatch", action="store_true", help="使用 MiniBatchKMeans（默认更省内存，仅 kmeans 有效）")
+    ap.add_argument("--k", type=int, default=None, help="number of clusters; if not set, grid search is used (kmeans only)")
+    ap.add_argument("--k_grid", type=str, default=None, help="k grid range (e.g. '5-50' or '8,12,16'); default 5-50 step 5 (kmeans only)")
+    ap.add_argument("--minibatch", action="store_true", help="use MiniBatchKMeans (more memory efficient, kmeans only)")
     ap.add_argument("--random-state", type=int, default=0)
-    ap.add_argument("--batch-size", type=int, default=2048, help="MiniBatchKMeans 的 batch 大小")
+    ap.add_argument("--batch-size", type=int, default=2048, help="MiniBatchKMeans batch size")
 
     ap.add_argument(
         "--use-gpu",
         action="store_true",
-        help="使用 GPU 上的 KMeans（依赖 cuML & CuPy，仅对 kmeans 生效）",
+        help="use GPU KMeans (requires cuML & CuPy, kmeans only)",
     )
 
-    # ----- OPTICS 相关参数 -----
-    ap.add_argument("--min-samples", type=int, default=5, help="OPTICS 的 min_samples（核心点最小样本数）")
-    ap.add_argument("--xi", type=float, default=0.05, help="OPTICS 中用于提取簇结构的 xi 参数")
-    ap.add_argument("--min-cluster-size", type=int, default=5, help="OPTICS 中的 min_cluster_size（最小簇大小，绝对数）")
+    ap.add_argument("--min-samples", type=int, default=5, help="OPTICS min_samples (minimum neighborhood size)")
+    ap.add_argument("--xi", type=float, default=0.05, help="OPTICS xi parameter for cluster extraction")
+    ap.add_argument("--min-cluster-size", type=int, default=5, help="OPTICS min_cluster_size (absolute minimum cluster size)")
 
-    # ----- HDBSCAN 相关参数 -----
     ap.add_argument("--hdb-min-cluster-size", type=int, default=15)
     ap.add_argument("--hdb-min-samples", type=int, default=None)
     ap.add_argument("--hdb-metric", type=str, default="euclidean", choices=["euclidean","cosine"])
@@ -81,18 +77,14 @@ def main():
     else:
         task_dir = "ESC"
 
-    # ✅ 统一后的 embedding 文件名（对齐你前面统一脚本）
-    # 你之前 cluster 写死 states_embeddings_train_test.json，这里改成 history_embeddings_train_test.json
     input_path = f"outputs/{task_dir}/embedding/{args.state_type}/states_embeddings_train_test.json"
     # input_path = f"outputs/{task_dir}/embedding/{args.state_type}/history_embeddings_train_expert.json"
     # input_path = f"outputs/{task_dir}/embedding/{args.state_type}/history_embeddings_filtered.json"
 
-    # 1) 读取
     ids, X = load_ids_and_embeddings_auto(input_path)
     print(ids[0])
     print(f"Loaded: {len(ids)} embeddings, dim={X.shape[1]}")
 
-    # 2) 归一化
     if args.normalize:
         X = l2_normalize(X)
 

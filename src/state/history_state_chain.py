@@ -13,14 +13,6 @@ except ImportError:
 from src.utils.embed import Embedder, EMBED_MODEL_NAME, EMBED_API_KEY, EMBED_API_URL
 
 def build_turn_map(dialog: List[Dict[str, Any]]) -> Dict[int, Dict[str, Dict[str, Any]]]:
-    """
-    将 dialog 转为按 turn_id 聚合的字典：
-    {
-      0: {"Persuader": {...}, "Persuadee": {...}},
-      1: {...},
-      ...
-    }
-    """
     turn_map: Dict[int, Dict[str, Dict[str, Any]]] = {}
     for entry in dialog:
         if not isinstance(entry, dict):
@@ -37,11 +29,6 @@ def build_turn_map(dialog: List[Dict[str, Any]]) -> Dict[int, Dict[str, Dict[str
 def concat_history_utterances_from_map(turn_map: Dict[int, Dict[str, Dict[str, Any]]],
                                        current_turn_id: int,
                                        max_history_turns: Optional[int] = None) -> str:
-    """
-    将所有 tid < current_turn_id 的 Persuader 与 Persuadee 的 text 按升序 tid 拼接为 history_text。
-    可选限制最近 N 轮：max_history_turns (None 表示不限制)。
-    输出空字符串表示没有历史发言可用。
-    """
     parts: List[str] = []
     sorted_tids = sorted([tid for tid in turn_map.keys() if isinstance(tid, int) and tid < current_turn_id])
     if max_history_turns is not None and max_history_turns > 0:
@@ -67,10 +54,6 @@ def concat_history_utterances_from_map(turn_map: Dict[int, Dict[str, Dict[str, A
 
 def get_persuader_strategy_chain_from_map(turn_map: Dict[int, Dict[str, Dict[str, Any]]],
                                           start_turn_id: int) -> List[List[str]]:
-    """
-    从 start_turn_id 到最大 turn_id，按每轮只收集 Persuader 条目的 strategy（保持每轮为 list）
-    例如：[[s1,s2], [], [s3]]
-    """
     if not turn_map:
         return []
     max_tid = max(turn_map.keys())
@@ -85,7 +68,6 @@ def get_persuader_strategy_chain_from_map(turn_map: Dict[int, Dict[str, Dict[str
                 for s in ss:
                     if isinstance(s, str) and s.strip():
                         strategies_for_turn.append(s.strip())
-        # 去重但保持顺序
         seen = set()
         cleaned = []
         for s in strategies_for_turn:
@@ -152,7 +134,7 @@ def main():
     ap.add_argument("--api-url", default=None)
     ap.add_argument("--api-key", default=None)
     ap.add_argument("--history-max-turns", type=int, default=None,
-                    help="若需限制历史轮数（只保留最近 N 轮），传 N；默认不限制")
+                    help="limit history to last N turns; default: no limit")
     args = ap.parse_args()
 
     embedder = Embedder(
@@ -165,7 +147,6 @@ def main():
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
     with out_path.open("w", encoding="utf-8") as fout:
-        # 写入数组开始
         fout.write("[\n")
         wrote = 0
         first = True
@@ -179,17 +160,14 @@ def main():
                 continue
 
             turn_map = build_turn_map(dialog)
-            # 只处理 turn_id >= 1 且该轮存在 Persuader 发言
             candidate_turn_ids = sorted([tid for tid in turn_map.keys()
                                         if isinstance(tid, int) and tid >= 1 and ("Persuader" in turn_map.get(tid, {}))])
 
             for tid in candidate_turn_ids:
                 rec_id = f"{index}:{tid}"
 
-                # 1) 构建 history_text：所有 tid < tid 的发言文本（Persuader+Persuadee 等）
                 history_text = concat_history_utterances_from_map(turn_map, tid, max_history_turns=args.history_max_turns)
                 if not history_text:
-                    # fallback: 尝试使用上一轮（tid-1）双方发言拼接
                     fallback_parts = []
                     prev = turn_map.get(tid - 1, {})
                     if prev:
@@ -199,15 +177,12 @@ def main():
                             fallback_parts.append(f"turn_{tid-1}|Persuadee: {prev['Persuadee'].get('text')}")
                     history_text = " \n ".join(fallback_parts).strip()
 
-                # 2) 构造 strategy_chain：从当前轮开始，只收集 Persuader 条目的 strategy（二维列表）
                 strategy_chain = get_persuader_strategy_chain_from_map(turn_map, tid)
 
-                # 3) 获取本轮的 persuader / persuadee 文本
                 pair_texts = get_pair_texts_from_map(turn_map, tid)
                 current_persuader_text = pair_texts.get("persuader", "")
                 current_persuadee_text = pair_texts.get("persuadee", "")
 
-                # 4) 嵌入（使用 history_text）
                 emb = embedder.encode(history_text)
 
                 prev_id = f"{index}:{tid-1}"
@@ -222,7 +197,6 @@ def main():
                     "history_text": history_text
                 }
 
-                # 以漂亮的多行缩进格式写入（streaming safe）
                 item_json = json.dumps(item, ensure_ascii=False, indent=2)
                 if not first:
                     fout.write(",\n")
@@ -240,7 +214,6 @@ def main():
             if args.max_items and count >= args.max_items:
                 break
 
-        # 结束数组
         fout.write("\n]\n")
         pbar.close()
 
@@ -250,7 +223,6 @@ if __name__ == "__main__":
     main()
 
 '''
-# 基本用法（按回合合并所有 *_state）
 python src/state/history_state_chain.py \
   --input data/P4G/merged_train_test.json \
   --output outputs/P4G/embedding/history/states_embeddings_train_test.json

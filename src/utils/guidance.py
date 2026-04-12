@@ -1,5 +1,5 @@
 from typing import List, Dict, Any, Optional
-from src.utils.llm_api import call_openai_api,call_compatible_api   # <-- 你已有的 API
+from src.utils.llm_api import call_llm_api
 from prompts.p4g.runtime_template import build_strategy_chain_summary_prompt
 
 def generate_high_level_guidance(
@@ -71,7 +71,7 @@ should do next. Focus only on the next strategic action.
     ]
 
     try:
-        out = call_compatible_api(
+        out = call_llm_api(
             messages, 
             model=model,
             temperature=temperature,
@@ -108,7 +108,6 @@ def generate_strategy_chain_summary(
     if not strategy_chain_hint or not strategy_chain_hint.strip():
         return ""
     
-    # 使用 runtime_template.py 中的 prompt 构建函数
     system_prompt, user_prompt = build_strategy_chain_summary_prompt(
         strategy_chain_hint=strategy_chain_hint,
         current_turn_id=current_turn_id,
@@ -121,7 +120,7 @@ def generate_strategy_chain_summary(
     ]
 
     try:
-        out = call_compatible_api(
+        out = call_llm_api(
             messages,
             model=model,
             temperature=temperature,

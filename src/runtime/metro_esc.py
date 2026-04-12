@@ -13,34 +13,27 @@ from src.utils.embed import Embedder, EMBED_MODEL_NAME, EMBED_API_KEY, EMBED_API
 from src.utils.retrieve import retrieve_strategy_chain_by_history
 
 # =============== LLM APIs ===============
-from src.utils.llm_api import call_compatible_api
+from src.utils.llm_api import call_llm_api
 
-# =============== guidance helpers (你已有的，CB里在用) ===============
-from src.utils.guidance_esc import generate_high_level_guidance, generate_strategy_chain_summary  # ✅ 直接复用你已有的工具
-# =============== 如果你已有类似 format_strategy_hint 的工具，就复用 ===============
+from src.utils.guidance_esc import generate_high_level_guidance, generate_strategy_chain_summary
 from src.utils.llm_dialog import format_strategy_hint
 
-# ===================== 路径配置（ESC版） =====================
 DEFAULT_CLUSTER_CONFIG = "kmeans_k150"
 
 CLUSTERS_PATH   = "outputs/ESC/cluster/history/{}/clusters.json"
 TREES_DIR       = "outputs/ESC/cluster/history/{}/topk"
 PRINCIPLES_DIR  = "outputs/ESC/cluster/history/{}/principles_by_cluster"
 
-# =============== 模型配置 ===============
 MODEL = os.getenv("GPT_MODEL", "gpt-3.5-turbo-0125")
 
-# =============== 数据路径（你按需改） ===============
 DEFAULT_DEV_PATH = os.getenv("ESC_DEV_PATH", "data/ESC/dev.json")
 DEFAULT_PERSONA_PATH = os.getenv("ESC_PERSONA_PATH", "outputs/P4G/personas/personas_eval.jsonl")
 
-# =============== 全局 Embedder 与缓存 ===============
 _EMBEDDER: Optional[Embedder] = None
 _CLUSTER_PRINCIPLES_CACHE: Dict[str, List[Dict[str, Any]]] = {}
 _CLUSTER_PRINCIPLES_EMB_CACHE: Dict[str, List[List[float]]] = {}
 
 
-# ===================== 基础工具 =====================
 
 def get_embedder() -> Embedder:
     global _EMBEDDER
@@ -74,7 +67,6 @@ def load_json_auto(path: str) -> Any:
     return json.loads(content)
 
 
-# ===================== principles 检索 =====================
 
 def extract_when_clause(text: str) -> str:
     if not text:
@@ -165,7 +157,6 @@ def get_last_utterance(dialog_history: List[Dict[str, Any]], speaker: str) -> st
                 return txt.strip()
     return ""
 def history_to_plain_text_esc(dialog_history: List[Dict[str, Any]]) -> str:
-    # 简单格式化：turn_id|speaker: text
     lines = []
     for t in dialog_history:
         tid = t.get("turn_id", 0)
@@ -185,10 +176,9 @@ def call_esc_judge(dialog_history: List[Dict[str, Any]], meta: Dict[str, Any], m
     messages = [{"role": "system", "content": ESC_JUDGE_SYSTEM},
                 {"role": "user", "content": user_prompt}]
     print(f"\n[ESC Judge] dialogue_id={meta.get('dialogue_id','')} messages:\n{messages}\n")
-    out = call_compatible_api(messages, model=model, temperature=0.0, max_tokens=max_tokens)
+    out = call_llm_api(messages, model=model, temperature=0.0, max_tokens=max_tokens)
     out = (out or "").strip()
 
-    # 只取首行/首字母做稳健解析
     first = out.splitlines()[0].strip() if out else ""
     if first.startswith("A"):
         return "A"
@@ -198,11 +188,9 @@ def call_esc_judge(dialog_history: List[Dict[str, Any]], meta: Dict[str, Any], m
         return "C"
     if first.startswith("D"):
         return "D"
-    # 兜底：如果模型跑偏
     return "B"
 
 
-# ===================== 增量保存（ESC：按 dialogue_id 去重） =====================
 
 class IncrementalSaver:
     def __init__(self, output_file: str):
@@ -250,14 +238,12 @@ class IncrementalSaver:
             return len(self._read_all())
 
 
-# ===================== ESC 生成（Simulator / Seeker） =====================
 
 def chat_completion_simulator(messages, model: str, temperature: float, max_tokens: int) -> str:
-    # 你也可以改成 openai compatible / siliconflow chat completions
-    return call_compatible_api(messages, model=model, temperature=temperature, max_tokens=max_tokens)
+    return call_llm_api(messages, model=model, temperature=temperature, max_tokens=max_tokens)
 
 def chat_completion_seeker(messages, model: str, temperature: float, max_tokens: int) -> str:
-    return call_compatible_api(messages, model=model, temperature=temperature, max_tokens=max_tokens)
+    return call_llm_api(messages, model=model, temperature=temperature, max_tokens=max_tokens)
 
 
 from typing import Optional, Tuple
@@ -305,7 +291,7 @@ def build_simulator_prompt(
     [Instruction]
     Think from two perspectives:
     1) Long-term planning: follow the long-term planning block to keep a coherent helping trajectory.
-    2) Immediate response: follow the immediate guidance to address the seeker’s latest needs.
+    2) Immediate response: follow the immediate guidance to address the seeker's latest needs.
 
     Use both to decide your next move,don't just copy one of them.
     Please reply with only one short and succinct sentence for simulator.
@@ -386,10 +372,8 @@ def generate_seeker_utterance(
     return (out or "").strip()
 
 
-# ===================== 初始 turn0（ESC） =====================
 
 def build_initial_turn0(meta: Dict[str, Any]) -> List[Dict[str, Any]]:
-    # 你也可以改成 ESC 官方的初始两句模板
     return [
         {"turn_id": 0, "speaker": "simulator", "text": "Hello, how can I help you today?"},
         {"turn_id": 0, "speaker": "seeker", "text": (meta.get("situation") or "").strip()},
@@ -406,23 +390,6 @@ def count_rounds(dialog_history: List[Dict[str, Any]]) -> int:
     return (max(tids) + 1) if tids else 0
 
 
-def get_first_strategy_group_from_retrieved(retrieved_chains: List[Any]) -> str:
-    if not retrieved_chains:
-        return ""
-    c0 = retrieved_chains[0]
-    if not isinstance(c0, dict):
-        return ""
-    chain = c0.get("chain")
-    if not isinstance(chain, list) or not chain:
-        return ""
-    first_group = chain[0]
-    if not isinstance(first_group, list) or not first_group:
-        return ""
-    parts = [str(x).strip() for x in first_group if str(x).strip()]
-    return " | ".join(parts) if parts else ""
-
-
-# ===================== 主模拟流程（ESC版） =====================
 
 def run_simulation_one_dialog(
     dialogue_id: str,
@@ -432,22 +399,10 @@ def run_simulation_one_dialog(
     cluster_config: str = DEFAULT_CLUSTER_CONFIG,
     verbose: bool = False,
     max_retries: int = 3,
-    ablation_mode: str = "none",  # none | w/o_depth | w/o_breadth | w/o_both | w/o_expend
 ) -> Dict[str, Any]:
 
     dialog_history = build_initial_turn0(meta)
     current_turn_id = 1
-
-    mode = (ablation_mode or "none").strip()
-    valid_modes = {"none", "w/o_depth", "w/o_breadth", "w/o_both", "w/o_expend"}
-    if mode not in valid_modes:
-        mode = "none"
-
-    disable_depth = mode in {"w/o_depth", "w/o_both"}
-    disable_breadth = mode in {"w/o_breadth", "w/o_both"}
-    use_first_group_as_immediate = (mode == "w/o_expend")
-
-    final_label = "B"
 
     while True:
         clusters_path = CLUSTERS_PATH.format(cluster_config)
@@ -464,7 +419,7 @@ def run_simulation_one_dialog(
                 top_k=1,
             )
             print(f"[info] retrieved strategy chains: {retrieved_chains}")
-        
+
         except Exception as e:
             print(f"[warn] retrieve_strategy_chain_by_history failed: {e}")
             retrieved_chains = []
@@ -477,7 +432,6 @@ def run_simulation_one_dialog(
             c0 = retrieved_chains[0]
             if isinstance(c0, dict):
                 cluster_id = c0.get("cluster_id") or c0.get("cluster") or c0.get("cluster_idx")
-                # ✅ 把字符串 cluster_id 尝试转 int，避免 principles 永远空
                 if isinstance(cluster_id, str):
                     try:
                         cluster_id = int(cluster_id)
@@ -486,7 +440,6 @@ def run_simulation_one_dialog(
 
         # ---- 3) principles retrieval: query = last seeker utterance ----
         query_text = get_last_utterance(dialog_history, speaker="seeker")
-        # print(f"[info] last seeker utterance for principle retrieval: '{query_text}'")
         top_principles: List[Dict[str, Any]] = []
         if isinstance(cluster_id, int):
             top_principles = get_top_principles_for_cluster(
@@ -496,46 +449,28 @@ def run_simulation_one_dialog(
                 cluster_config=cluster_config,
             )
 
-        # recent dialogue for summary/guidance
         recent_dialogue = history_to_plain_text_esc(dialog_history)
 
-        # ---- breadth ----
-        breadth_guidance_to_feed = ""
-        if use_first_group_as_immediate:
-            first_group = get_first_strategy_group_from_retrieved(retrieved_chains)
-            breadth_guidance_to_feed = f"Immediate suggestion (use this now): {first_group}" if first_group else ""
-        else:
-            if not disable_breadth:
-                breadth_guidance_to_feed = generate_high_level_guidance(
-                    principles=top_principles,
-                    last_user_utt=query_text,         # ✅ seeker last utt
-                    recent_dialogue=recent_dialogue,  # ✅ 让 guidance 更贴近上下文
-                    model=MODEL,
-                    temperature=0.5,
-                    max_tokens=120,
-                )
-                print(f"[info] breadth guidance generated: '{breadth_guidance_to_feed}'")
-            else:
-                breadth_guidance_to_feed = ""
+        # ---- breadth: principles → high-level guidance ----
+        breadth_guidance_to_feed = generate_high_level_guidance(
+            principles=top_principles,
+            last_user_utt=query_text,
+            recent_dialogue=recent_dialogue,
+            model=MODEL,
+            temperature=0.5,
+            max_tokens=120,
+        )
+        print(f"[info] breadth guidance generated: '{breadth_guidance_to_feed}'")
 
-        # ---- depth ----
-        depth_hint_to_feed = ""
-        used_strategy_hint = ""
-
-        if disable_depth:
-            depth_hint_to_feed = ""
-            used_strategy_hint = ""
-        else:
-            strategy_chain_summary = generate_strategy_chain_summary(
-                strategy_chain_hint=strategy_hint_text,
-                recent_dialogue=recent_dialogue,
-                model=MODEL,
-                temperature=0.5,
-                max_tokens=120,
-            )
-            depth_hint_to_feed = strategy_chain_summary
-            used_strategy_hint = strategy_chain_summary
-            print(f"[info] depth strategy hint generated: '{depth_hint_to_feed}'")
+        # ---- depth: strategy chain summary ----
+        depth_hint_to_feed = generate_strategy_chain_summary(
+            strategy_chain_hint=strategy_hint_text,
+            recent_dialogue=recent_dialogue,
+            model=MODEL,
+            temperature=0.5,
+            max_tokens=120,
+        )
+        print(f"[info] depth strategy hint generated: '{depth_hint_to_feed}'")
 
         # ---- 4) Simulator utterance ----
         sim_text = generate_simulator_utterance(
@@ -554,10 +489,9 @@ def run_simulation_one_dialog(
             "speaker": "simulator",
             "text": sim_text,
             "strategy_hint": retrieved_chains,
-            "strategy_hint_text": used_strategy_hint,
+            "strategy_hint_text": depth_hint_to_feed,
             "principle_hint": top_principles,
             "high_level_guidance": breadth_guidance_to_feed,
-            "ablation_mode": mode,
         }
         dialog_history.append(sim_turn)
 
@@ -573,13 +507,13 @@ def run_simulation_one_dialog(
         dialog_history.append({"turn_id": current_turn_id, "speaker": "seeker", "text": seeker_text})
 
         if verbose:
-            print(f"\n[dialogue_id={dialogue_id}] turn={current_turn_id} mode={mode}")
+            print(f"\n[dialogue_id={dialogue_id}] turn={current_turn_id}")
             print("[simulator]:", sim_text)
             print("[seeker]:", seeker_text)
             print("------------------------------------------------")
 
         # ---- 6) judge ----
-        from src.evaluate.critic_model_esc import call_critic_model  # ✅ 直接复用你已有的 ESC critic 调用（带重试）
+        from src.evaluate.critic_model_esc import call_critic_model
         attitude, should_end, reward, critic_attitudes = call_critic_model(
             dialog_history,
             meta=meta,
@@ -596,20 +530,16 @@ def run_simulation_one_dialog(
                 print(f"[ESC Critic] attitude={attitude}, reward={reward:.3f}, should_end={should_end}")
             break
 
-
         current_turn_id += 1
 
     return {
         "dialogue_id": dialogue_id,
         "num_turns": count_rounds(dialog_history),
-        "final_attitude_prediction": final_label,
         "dialog": dialog_history,
         "meta": meta,
-        "ablation_mode": mode,
     }
 
 
-# ===================== Batch evaluation（ESC版） =====================
 
 def load_esc_dev_dataset(dev_path: str) -> List[Dict[str, Any]]:
     data = load_json_auto(dev_path)
@@ -643,7 +573,6 @@ def run_batch_evaluation(
     enable_incremental_save: bool = True,
     verbose: bool = False,
     max_retries: int = 3,
-    ablation_mode: str = "none",
 ) -> List[Dict[str, Any]]:
 
     dev_data = load_esc_dev_dataset(dev_path)
@@ -662,8 +591,7 @@ def run_batch_evaluation(
 
     if output_file is None:
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        safe_mode = ablation_mode.replace("/", "_").replace(" ", "")
-        output_file = f"outputs/ESC/evaluate/history/{cluster_config}/results_{safe_mode}_{ts}.json"
+        output_file = f"outputs/ESC/evaluate/history/{cluster_config}/results_{ts}.json"
 
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
@@ -702,7 +630,6 @@ def run_batch_evaluation(
                 "situation": sample.get("situation", ""),
             }
 
-            # 如果 dev 里自带 seeker_persona_used，就优先用它（比外部 persona 更稳）
             if isinstance(sample.get("seeker_persona_used"), str) and sample["seeker_persona_used"].strip():
                 seeker_persona = sample["seeker_persona_used"].strip()
 
@@ -715,7 +642,6 @@ def run_batch_evaluation(
                     cluster_config=cluster_config,
                     verbose=verbose,
                     max_retries=max_retries,
-                    ablation_mode=ablation_mode,
                 )
 
                 if saver:
@@ -759,12 +685,6 @@ if __name__ == "__main__":
     parser.add_argument("--disable_incremental_save", action="store_true")
     parser.add_argument("--verbose", action="store_true")
     parser.add_argument("--max_retries", type=int, default=3)
-    parser.add_argument(
-        "--ablation_mode",
-        type=str,
-        default="none",
-        choices=["none", "w/o_depth", "w/o_breadth", "w/o_both", "w/o_expend"],
-    )
     args = parser.parse_args()
 
     results = run_batch_evaluation(
@@ -779,7 +699,6 @@ if __name__ == "__main__":
         enable_incremental_save=not args.disable_incremental_save,
         verbose=args.verbose,
         max_retries=args.max_retries,
-        ablation_mode=args.ablation_mode,
     )
 
     if args.disable_incremental_save:

@@ -274,7 +274,7 @@ def main():
         HISTORY_MAX_TURNS = None
 
     else:  # esc
-        INPUT_PATH = "data/ESC/train.json"  # 你按实际路径改
+        INPUT_PATH = "data/ESC/train.json"
         OUTPUT_PATH = "outputs/ESC/embedding/history/history_embeddings_train.json"
         AGENT_ROLE = "supporter"
         OTHER_ROLE = "seeker"

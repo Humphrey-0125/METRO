@@ -21,7 +21,6 @@ from datetime import datetime
 from tqdm import tqdm
 from filelock import FileLock
 
-# =============== CB judge (对齐 raw_model_cb.py) ===============
 from src.evaluate.critic_model_cb import call_critic_model
 
 # =============== retrieval / embedding ===============
@@ -33,13 +32,10 @@ from src.utils.llm_dialog import (
     chat_completion_seller,
     history_to_plain_text,
 )
-# =============== guidance helpers (你已有的) ===============
 from src.utils.guidance_cb import generate_high_level_guidance, generate_strategy_chain_summary
 
-# =============== 如果你想沿用 format_strategy_hint，可继续用 ===============
 from src.utils.llm_dialog import format_strategy_hint
 
-# =============== 路径配置（CB版） ===============
 DEFAULT_CLUSTER_CONFIG = "kmeans_k80"
 
 CLUSTERS_PATH = "outputs/CB/cluster/history/{}/clusters.json"
@@ -56,16 +52,13 @@ PRINCIPLES_DIR = "outputs/CB/cluster/history/{}/principles_by_cluster"
 
 MODEL = os.getenv("GPT_MODEL", "gpt-3.5-turbo-0125")
 
-# =============== 数据路径（对齐 raw_model_cb.py） ===============
 DEFAULT_DEV_PATH = os.getenv("CB_DEV_PATH", "data/CB/dev.json")
 DEFAULT_PERSONA_PATH = os.getenv("CB_PERSONA_PATH", "outputs/P4G/personas/personas_eval.jsonl")
 
-# =============== 全局 Embedder 与缓存 ===============
 _EMBEDDER: Optional[Embedder] = None
 _CLUSTER_PRINCIPLES_CACHE: Dict[str, List[Dict[str, Any]]] = {}
 _CLUSTER_PRINCIPLES_EMB_CACHE: Dict[str, List[List[float]]] = {}
 
-# =============== 生成对话内容 ===============
 def generate_buyer_utterance_cb_ours(
     dialog_history: List[Dict[str, Any]],
     meta: Dict[str, Any],
@@ -128,7 +121,6 @@ def generate_seller_utterance_cb_persona(
     temperature: float = 0.5,
     max_tokens: Optional[int] = 96,
 ) -> str:
-    # 先沿用 raw_model_cb.py 的 persona prompt
     from prompts.cb.seller.persona import build_seller_generation_prompt_persona
 
     dialogue_text = history_to_plain_text(dialog_history)
@@ -161,7 +153,6 @@ def emb_fn(text: str) -> List[float]:
     return get_embedder().encode(text or "")
 
 
-# ===================== principles 工具 =====================
 
 def extract_when_clause(text: str) -> str:
     if not text:
@@ -200,7 +191,7 @@ def load_principles_for_cluster(cluster_id: int, cluster_config: str = DEFAULT_C
         })
 
     _CLUSTER_PRINCIPLES_CACHE[cache_key] = cleaned
-    _CLUSTER_PRINCIPLES_EMB_CACHE[cache_key] = []  # 延迟 embedding
+    _CLUSTER_PRINCIPLES_EMB_CACHE[cache_key] = []
     return cleaned
 
 
@@ -260,7 +251,6 @@ def get_last_utterance(dialog_history: List[Dict[str, Any]], speaker: str) -> st
     return ""
 
 
-# ===================== CB 数据加载（对齐 raw_model_cb.py） =====================
 
 def load_json_auto(path: str) -> Any:
     """
@@ -303,7 +293,6 @@ def load_cb_personas(persona_path: str = DEFAULT_PERSONA_PATH) -> List[str]:
     return persona_list
 
 
-# ===================== 增量保存（CB：按 dialogue_id 去重） =====================
 
 class IncrementalSaver:
     def __init__(self, output_file: str):
@@ -363,7 +352,6 @@ def count_rounds(dialog_history: List[Dict[str, Any]]) -> int:
     return (max(tids) + 1) if tids else 0
 
 
-# ===================== CB judge（对齐 raw_model_cb.py） =====================
 
 def call_cb_judge(dialog_history: List[Dict[str, Any]], max_retries: int = 3) -> Dict[str, Any]:
     deal, should_end, price, details = call_critic_model(
@@ -376,7 +364,6 @@ def call_cb_judge(dialog_history: List[Dict[str, Any]], max_retries: int = 3) ->
     return {"deal": bool(deal), "price": price if deal else None, "details": details, "should_end": bool(should_end)}
 
 
-# ===================== 初始 turn0（对齐 raw_model_cb.py） =====================
 
 def build_initial_turn0(meta: Dict[str, Any]) -> List[Dict[str, Any]]:
     item_name = meta["item_name"]
@@ -386,31 +373,9 @@ def build_initial_turn0(meta: Dict[str, Any]) -> List[Dict[str, Any]]:
         {"turn_id": 0, "speaker": "seller", "text": f"Hi, this is a good {item_name} and its price is {seller_price}."},
     ]
 
-def get_first_strategy_group_from_retrieved(retrieved_chains: List[Any]) -> str:
-    """
-    从 top-1 retrieved_chains 中取 chain 的第一层策略组。
-    chain 格式: List[List[str]]，第一层可能多个策略。
-    返回: "ask_question" 或 "ask_question | build_rapport"
-    失败返回空串。
-    """
-    if not retrieved_chains:
-        return ""
-    c0 = retrieved_chains[0]
-    if not isinstance(c0, dict):
-        return ""
-    chain = c0.get("chain")
-    if not isinstance(chain, list) or not chain:
-        return ""
-    first_group = chain[0]
-    if not isinstance(first_group, list) or not first_group:
-        return ""
-    parts = [str(x).strip() for x in first_group if str(x).strip()]
-    return " | ".join(parts) if parts else ""
 
-# ===================== 主模拟流程（CB版） =====================
-
-BUYER_PROMPT_TYPE = "Ours_1"      # 先占位
-SELLER_PROMPT_TYPE = "personas"  # 先占位
+BUYER_PROMPT_TYPE = "Ours_1"
+SELLER_PROMPT_TYPE = "personas"
 
 def run_simulation_one_dialog(
     dialogue_id: str,
@@ -422,27 +387,13 @@ def run_simulation_one_dialog(
     cluster_config: str = DEFAULT_CLUSTER_CONFIG,
     verbose: bool = False,
     max_retries: int = 3,
-    ablation_mode: str = "none",  # "none" | "w/o_depth" | "w/o_breadth" | "w/o_both" | "w/o_expend"
 ) -> Dict[str, Any]:
-    """
-    Pure ablation:
-    - depth   = strategy chain hint (strategy_hint_text / strategy_chain_summary)
-    - breadth = high-level guidance generated from principles (expand)
-
-    Modes:
-    - none:        depth + breadth (full)
-    - w/o_depth:   breadth only (skip chain summary; do not feed chain hint)
-    - w/o_breadth: depth only (skip guidance generation; do not feed guidance)
-    - w/o_both:    neither
-    - w/o_expend:  still 2-view, but NO principle->guidance expansion:
-                  Immediate view = first strategy group from retrieved chain
-    """
+    """Run a single CB dialogue simulation (retrieve strategy chain + principles for guidance)."""
     if buyer_prompt_type is None:
         buyer_prompt_type = BUYER_PROMPT_TYPE
     if seller_prompt_type is None:
         seller_prompt_type = SELLER_PROMPT_TYPE
 
-    # 价格 sanity check（建议早点暴露数据异常）
     bp = meta.get("buyer_price", None)
     sp = meta.get("seller_price", None)
     if bp is not None and sp is not None:
@@ -454,18 +405,7 @@ def run_simulation_one_dialog(
     dialog_history = build_initial_turn0(meta)
     current_turn_id = 1
 
-    # --------- ablation flags (pure) ----------
-    mode = (ablation_mode or "none").strip()
-    valid_modes = {"none", "w/o_depth", "w/o_breadth", "w/o_both", "w/o_expend"}
-    if mode not in valid_modes:
-        mode = "none"
-
-    disable_depth = mode in {"w/o_depth", "w/o_both"}
-    disable_breadth = mode in {"w/o_breadth", "w/o_both"}
-    use_first_group_as_immediate = (mode == "w/o_expend")
-
     while True:
-        # ---- 1) 检索策略链（top-1）----
         clusters_path = CLUSTERS_PATH.format(cluster_config)
         trees_dir = TREES_DIR.format(cluster_config)
 
@@ -476,17 +416,14 @@ def run_simulation_one_dialog(
                 clusters_path=clusters_path,
                 trees_dir=trees_dir,
                 current_turn_id=current_turn_id,
-                top_k=1,  # 返回前3个候选策略链
+                top_k=1,
             )
         except Exception as e:
             print(f"[warn] retrieve_strategy_chain_by_history failed: {e}")
             retrieved_chains = []
 
-        # depth 原始文本形态（可读链）
-        strategy_hint_text = format_strategy_hint(retrieved_chains,depth=3) or ""
-        # print(f"strategy_hint_text: {strategy_hint_text}")
-        # print(f"retrieved_chains: {retrieved_chains}")
-        # ---- 2) principles：用最近 seller utterance 检索 ----
+        strategy_hint_text = format_strategy_hint(retrieved_chains, depth=3) or ""
+
         cluster_id = None
         if retrieved_chains:
             c0 = retrieved_chains[0]
@@ -504,81 +441,35 @@ def run_simulation_one_dialog(
                 cluster_config=cluster_config,
             )
 
-        # ---- 3) depth/breadth inputs（纯消融控制）----
-        # 注意：query_text 必须是 “卖家上一句”
-        query_text = get_last_utterance(dialog_history, speaker="seller")
-
-        # recent dialogue（用于 Ours_1 的 summary 或 guidance）
         from src.utils.llm_dialog import history_to_plain_text
         recent_dialogue = history_to_plain_text(dialog_history)
-        # if len(dialog_history) >= 2:
-        #     recent_dialogue = history_to_plain_text(dialog_history[-2:])
-        # elif len(dialog_history) >= 1:
-        #     recent_dialogue = history_to_plain_text(dialog_history[-1:])
-        # else:
-        #     recent_dialogue = ""
 
-        # ---------- breadth (immediate / guidance) ----------
-        breadth_guidance_to_feed = ""
+        # ---- 3) breadth：principles → guidance ----
+        breadth_guidance_to_feed = generate_high_level_guidance(
+            principles=top_principles,
+            last_user_utt=query_text,
+            recent_dialogue=recent_dialogue,
+            model=MODEL,
+            temperature=0.5,
+            max_tokens=100
+        )
 
-        if use_first_group_as_immediate:
-            # ✅ w/o_expend：不调用 generate_high_level_guidance
-            first_group = get_first_strategy_group_from_retrieved(retrieved_chains)
-            if first_group:
-                breadth_guidance_to_feed = f"Immediate suggestion (use this now): {first_group}"
-            else:
-                breadth_guidance_to_feed = ""
-        else:
-            # 原逻辑：breadth 来自 principles -> guidance（除非 w/o_breadth/w/o_both）
-            if not disable_breadth:
-                if buyer_prompt_type == "Ours_1":
-                    breadth_guidance_to_feed = generate_high_level_guidance(
-                        principles=top_principles,
-                        last_user_utt=query_text,  # ✅ seller last utt
-                        recent_dialogue=recent_dialogue,
-                        model=MODEL,
-                        temperature=0.5,
-                        max_tokens=100
-                    )
-                else:
-                    breadth_guidance_to_feed = generate_high_level_guidance(
-                        principles=top_principles,
-                        last_user_utt=query_text,  # ✅ seller last utt
-                        model=MODEL,
-                        temperature=0.5,
-                        max_tokens=100
-                    )
-            else:
-                breadth_guidance_to_feed = ""
+        # ---- 4) depth：strategy chain summary ----
+        strategy_chain_summary = generate_strategy_chain_summary(
+            strategy_chain_hint=strategy_hint_text,
+            recent_dialogue=recent_dialogue,
+            model=MODEL,
+            temperature=0.5,
+            max_tokens=100
+        )
+        depth_hint_to_feed = strategy_chain_summary
 
-        # ---------- depth (strategy chain hint) ----------
-        depth_hint_to_feed = ""
-        used_strategy_hint = ""
-
-        if disable_depth:
-            depth_hint_to_feed = ""
-            used_strategy_hint = ""
-        else:
-            if buyer_prompt_type == "Ours_1":
-                strategy_chain_summary = generate_strategy_chain_summary(
-                    strategy_chain_hint=strategy_hint_text,
-                    recent_dialogue=recent_dialogue,
-                    model=MODEL,
-                    temperature=0.5,
-                    max_tokens=100
-                )
-                depth_hint_to_feed = strategy_chain_summary
-                used_strategy_hint = strategy_chain_summary
-            else:
-                depth_hint_to_feed = strategy_hint_text
-                used_strategy_hint = strategy_hint_text
-
-        # ---- 3.5) buyer utterance（ablation 生效于两个输入）----
+        # ---- 5) buyer utterance ----
         buyer_text = generate_buyer_utterance_cb_ours(
             dialog_history=dialog_history,
             meta=meta,
-            strategy_chain_hint=depth_hint_to_feed,          # depth
-            guidance_text=breadth_guidance_to_feed,          # breadth / immediate
+            strategy_chain_hint=depth_hint_to_feed,
+            guidance_text=breadth_guidance_to_feed,
             prompt_type=buyer_prompt_type,
             model=MODEL,
             temperature=0.0,
@@ -590,14 +481,13 @@ def run_simulation_one_dialog(
             "speaker": "buyer",
             "text": buyer_text,
             "strategy_hint": retrieved_chains,
-            "strategy_hint_text": used_strategy_hint,              # summary/原始/空
+            "strategy_hint_text": depth_hint_to_feed,
             "principle_hint": top_principles,
-            "high_level_guidance": breadth_guidance_to_feed,       # guidance/first-group/空
-            "ablation_mode": mode,
+            "high_level_guidance": breadth_guidance_to_feed,
         }
         dialog_history.append(buyer_turn)
 
-        # ---- 4) seller reply（persona seller）----
+        # ---- 6) seller reply ----
         seller_text = generate_seller_utterance_cb_persona(
             dialog_history=dialog_history,
             meta=meta,
@@ -610,12 +500,12 @@ def run_simulation_one_dialog(
         dialog_history.append({"turn_id": current_turn_id, "speaker": "seller", "text": seller_text})
 
         if verbose:
-            print(f"\n[dialogue_id={dialogue_id}] turn={current_turn_id} mode={mode}")
+            print(f"\n[dialogue_id={dialogue_id}] turn={current_turn_id}")
             print("[buyer]:", buyer_text)
             print("[seller]:", seller_text)
             print("------------------------------------------------")
 
-        # ---- 5) judge ----
+        # ---- 7) judge ----
         outcome = call_cb_judge(dialog_history, max_retries=max_retries)
 
         if outcome["deal"]:
@@ -627,10 +517,9 @@ def run_simulation_one_dialog(
                 "dialog": dialog_history,
                 "details": outcome["details"],
                 "meta": meta,
-                "ablation_mode": mode,
             }
 
-        # ---- 6) stop? ----
+        # ---- 8) stop? ----
         if outcome.get("should_end", False) or current_turn_id >= max_turns - 1:
             break
 
@@ -644,11 +533,9 @@ def run_simulation_one_dialog(
         "dialog": dialog_history,
         "details": [],
         "meta": meta,
-        "ablation_mode": mode,
     }
 
 
-# ===================== Batch evaluation（CB版，对齐 raw_model_cb.py 的索引方式） =====================
 
 def run_batch_evaluation(
     dev_path: str = DEFAULT_DEV_PATH,
@@ -662,7 +549,6 @@ def run_batch_evaluation(
     enable_incremental_save: bool = True,
     verbose: bool = False,
     max_retries: int = 3,
-    ablation_mode: str = "none",  # ✅ 新增：none | w/o_depth | w/o_breadth | w/o_both
 ) -> List[Dict[str, Any]]:
 
     dev_data = load_cb_dev_dataset(dev_path)
@@ -681,8 +567,7 @@ def run_batch_evaluation(
 
     if output_file is None:
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        safe_mode = ablation_mode.replace("/", "_").replace(" ", "")
-        output_file = f"outputs/CB/evaluate/history/{cluster_config}/results_{safe_mode}_{ts}.json"
+        output_file = f"outputs/CB/evaluate/history/{cluster_config}/results_{ts}.json"
 
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
@@ -734,7 +619,6 @@ def run_batch_evaluation(
                     cluster_config=cluster_config,
                     verbose=verbose,
                     max_retries=max_retries,
-                    ablation_mode=ablation_mode,  # ✅ 新增
                 )
 
 
@@ -779,12 +663,6 @@ if __name__ == "__main__":
     parser.add_argument("--disable_incremental_save", action="store_true")
     parser.add_argument("--verbose", action="store_true")
     parser.add_argument("--max_retries", type=int, default=3)
-    parser.add_argument(
-        "--ablation_mode",
-        type=str,
-        default="none",
-        choices=["none", "w/o_depth", "w/o_breadth", "w/o_both", "w/o_expend"],
-    )
     args = parser.parse_args()
 
     results = run_batch_evaluation(
@@ -799,11 +677,9 @@ if __name__ == "__main__":
         enable_incremental_save=not args.disable_incremental_save,
         verbose=args.verbose,
         max_retries=args.max_retries,
-        ablation_mode=args.ablation_mode,  # ✅ 新增
     )
 
     if args.disable_incremental_save:
-        # 统一保存
         if args.output_file is None:
             ts = datetime.now().strftime("%Y%m%d_%H%M%S")
             args.output_file = f"outputs/CB/evaluate/history/{args.cluster_config}/results_{ts}.json"

@@ -6,7 +6,6 @@ from typing import Any, Dict, List, Tuple, Callable, Optional
 import numpy as np
 import glob
 
-# 伪代码：计算 messages token 数
 def count_tokens(messages, tokenizer):
     return sum(len(tokenizer.encode(m["content"])) for m in messages)
 
@@ -17,12 +16,9 @@ def concat_states_text(states: Dict[str, Any]) -> str:
             parts.append(f"{k}: {v.strip()}")
     return " | ".join(parts).strip()
 
-# ===================== Aspect / Strategy 检索工具 =====================
 
-# 全局缓存：可以减少重复读文件的开销
 _CLUSTER_CENTROIDS_CACHE: Dict[str, Dict[int, np.ndarray]] = {}
 _CLUSTER_TO_CHAINS_CACHE: Dict[Tuple[str, str], Dict[int, List[List[str]]]] = {}
-# 新增：每个 trees_dir 对应的 List[best_chain]，索引为 cluster_id
 _CLUSTER_BEST_CHAIN_CACHE: Dict[str, List[List[str]]] = {}
 
 
@@ -83,14 +79,12 @@ def _parse_strategy_step(step: str) -> List[str]:
     """
     step = step.strip()
     if step.startswith("[") and step.endswith("]"):
-        # 移除方括号，分割并清理
         content = step[1:-1].strip()
         if content:
             return [s.strip() for s in content.split(",") if s.strip()]
         else:
             return []
     else:
-        # 单策略，直接返回
         return [step] if step else []
 
 def load_cluster_centroids(clusters_path: str) -> Dict[int, np.ndarray]:
@@ -104,7 +98,6 @@ def load_cluster_centroids(clusters_path: str) -> Dict[int, np.ndarray]:
     """
     global _CLUSTER_CENTROIDS_CACHE
 
-    # 如果同一个路径之前加载过，直接复用缓存
     if clusters_path in _CLUSTER_CENTROIDS_CACHE:
         return _CLUSTER_CENTROIDS_CACHE[clusters_path]
 
@@ -171,20 +164,16 @@ def _find_best_path_from_tree(
     name = _standardize_tree_step(raw_name)
     children = node.get("children", []) or []
 
-    # ROOT 节点不计入策略链
     if name == "ROOT":
         current_path = []
     else:
         strategy_list = _parse_strategy_step(name)
         current_path = path_prefix + [strategy_list]
 
-    # 如果是叶子节点（没有子节点），返回当前路径和得分
     if not children:
         score = _get_node_metric(node, metric=metric)
         return current_path, score
 
-    # 如果有子节点，总是探索所有子树找到最好的叶子路径
-    # 不使用当前节点的得分作为默认，因为我们想要完整的路径
     best_path = None
     best_score = float('-inf')
 
@@ -198,11 +187,9 @@ def _find_best_path_from_tree(
             best_score = child_score
             best_path = child_path
 
-    # 如果找到了子路径，返回最好的子路径
     if best_path is not None:
         return best_path, best_score
 
-    # 理论上不应该到达这里，因为有子节点就应该有子路径
     score = _get_node_metric(node, metric=metric)
     return current_path, score
 
@@ -224,7 +211,6 @@ def load_best_chains_from_trees_dir(
     if trees_dir in _CLUSTER_BEST_CHAIN_CACHE:
         return _CLUSTER_BEST_CHAIN_CACHE[trees_dir]
 
-    # 先找到最大 cluster id 以初始化列表
     pattern = str(Path(trees_dir) / "cluster_*.json")
     cids = []
     for path in glob.glob(pattern):
@@ -258,7 +244,6 @@ def load_best_chains_from_trees_dir(
             continue
 
         best_path, best_score = _find_best_path_from_tree(tree, metric=metric)
-        # 这里也可以打印一下 debug:
         # print(f"[debug] cluster {cid}: best_{metric}={best_score}, path={best_path}")
         result[cid] = best_path
 
@@ -276,11 +261,9 @@ def load_cluster_to_chains(
     global _CLUSTER_TO_CHAINS_CACHE
     cache_key = (clusters_path, states_path)
 
-    # 如果之前已经加载过同一对路径，直接用缓存
     if cache_key in _CLUSTER_TO_CHAINS_CACHE:
         return _CLUSTER_TO_CHAINS_CACHE[cache_key]
 
-    # 1) 加载 id -> strategy_chain
     if not os.path.exists(states_path):
         raise FileNotFoundError(f"states_embeddings file not found: {states_path}")
     with open(states_path, "r", encoding="utf-8") as f:
@@ -295,7 +278,6 @@ def load_cluster_to_chains(
             if normalized:
                 id2chain[rid] = normalized
 
-    # 2) 加载 clusters.json，构建 cluster -> chains
     p = Path(clusters_path)
     if not p.exists():
         raise FileNotFoundError(f"clusters.json not found: {p}")
@@ -354,7 +336,6 @@ def _aspect_top_clusters_by_embedding(
     if not query_text:
         return []
 
-    # 文本 -> embedding (由外部 embedding 模型实现)
     q_emb = emb_fn(query_text)
     if q_emb is None:
         return []
@@ -401,7 +382,6 @@ def retrieve_strategy_chain_by_aspects(
         List[ strategy_chain ]，其中 strategy_chain 是 List[List[str]]，
         每个策略步骤都是策略列表（如[["acknowledgement"], ["credibility-appeal", "emotion-appeal"]]）
     """
-    # 1) 先找到 top-3 相似簇
     top_clusters = _aspect_top_clusters_by_embedding(
         aspect_states=current_states,
         emb_fn=emb_fn,
@@ -411,13 +391,11 @@ def retrieve_strategy_chain_by_aspects(
     if not top_clusters:
         return []
 
-    # 2) 加载每个 cluster 的“最佳策略链”
     cluster_best_chains = load_best_chains_from_trees_dir(
         trees_dir=trees_dir,
-        metric="avg_value",   # 也可以换成 "success_rate"
+        metric="avg_value",
     )
 
-    # 3) 根据 top_clusters 顺序，取出这些簇的最佳链，最多 top_k 条
     results: List[List[List[str]]] = []
     seen = set()
 
@@ -475,14 +453,12 @@ def retrieve_strategy_chain_by_history(
     """
     from src.state.history_state_chain import build_turn_map, concat_history_utterances_from_map
 
-    # 1) 构建 turn_map 并拼接历史文本
     turn_map = build_turn_map(dialog_history)
     history_text = concat_history_utterances_from_map(turn_map, current_turn_id, max_history_turns)
 
     if not history_text:
         return []
 
-    # 2) 文本 -> embedding
     q_emb = emb_fn(history_text)
     if q_emb is None:
         return []
@@ -495,7 +471,6 @@ def retrieve_strategy_chain_by_history(
     import time
     time1=time.time()
 
-    # 3) 计算相似度，找到最相似的簇（余弦相似度最大）
     sims: List[Tuple[int, float]] = []
     for cid, c_vec in centroids.items():
         c_norm = float(np.linalg.norm(c_vec) + 1e-8)
@@ -508,9 +483,8 @@ def retrieve_strategy_chain_by_history(
     sims.sort(key=lambda x: x[1], reverse=True)
     best_cid, best_sim = sims[0]
     time2=time.time()
-    print(f"检索策略链耗时: {time2-time1:.2f} 秒")
+    print(f"Strategy chain retrieval time: {time2-time1:.2f}s")
 
-    # 4) 直接从 topk 目录中读取对应 cluster 的最佳策略链
     topk_dir = Path(trees_dir)
     topk_file = topk_dir / f"cluster_{best_cid}_top3.json"
     if not topk_file.exists():
@@ -526,7 +500,6 @@ def retrieve_strategy_chain_by_history(
     if not top_chains:
         return []
 
-    # 取前top_k条链
     selected_chains = top_chains[:top_k]
     result = []
 
@@ -535,7 +508,6 @@ def retrieve_strategy_chain_by_history(
         if not isinstance(raw_chain, list) or not raw_chain:
             continue
 
-        # 将字符串形式的步骤（如 "[a, b]"）转换为 List[List[str]]
         parsed_chain: List[List[str]] = []
         for step in raw_chain:
             if not isinstance(step, str):
@@ -547,14 +519,13 @@ def retrieve_strategy_chain_by_history(
         if not parsed_chain:
             continue
 
-        # 为每条链创建返回字典
         result.append({
             "chain": parsed_chain,
             "cluster_id": best_cid,
-            "cluster": best_cid,      # 兼容性：多个可能的 key 名
+            "cluster": best_cid,
             "cluster_idx": best_cid,
             "similarity": best_sim,
-            "rank": i,  # 在该簇内的排名
+            "rank": i,
         })
 
     return result

@@ -15,12 +15,12 @@ ESC (Emotional Support Conversation) guidance + strategy-chain summary generator
 """
 
 from typing import List, Dict, Any, Optional
-from src.utils.llm_api import call_compatible_api  # 你已有的 API
+from src.utils.llm_api import call_llm_api
 
 
 def generate_high_level_guidance(
     principles: List[Dict[str, Any]],
-    last_user_utt: str,   # ESC里这里是 seeker 最新一句（user-signal）
+    last_user_utt: str,
     recent_dialogue: str,
     emotion_type: Optional[str] = None,
     problem_type: Optional[str] = None,
@@ -87,7 +87,7 @@ Focus only on the next strategic support action (not the actual wording).
     ]
 
     try:
-        out = call_compatible_api(
+        out = call_llm_api(
             messages,
             model=model,
             temperature=temperature,
@@ -165,7 +165,7 @@ describing how the support approach should evolve over time.
     ]
 
     try:
-        out = call_compatible_api(
+        out = call_llm_api(
             messages,
             model=model,
             temperature=temperature,

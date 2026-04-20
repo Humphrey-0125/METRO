@@ -5,7 +5,7 @@
 Official implementation of:
 > "METRO: Towards Strategy Induction from Expert Dialogue Transcripts for Non-collaborative Dialogues"
 
-📄 Paper: *(to be added)* &nbsp;|&nbsp; 🧪 Baselines: [non-cooperative-dialogue-baseline](https://github.com/Humphrey-0125/non-cooperative-dialogue-baseline)
+📄 Paper: [arxiv](https://arxiv.org/abs/2604.11427) &nbsp;|&nbsp; 🧪 Baselines: [non-cooperative-dialogue-baseline](https://github.com/Humphrey-0125/non-cooperative-dialogue-baseline)
 
 ---
 
